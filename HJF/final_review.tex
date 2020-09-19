@@ -1,0 +1,552 @@
+\documentclass[UTF8]{ctexart}
+
+\input{preamble_homework.tex}
+
+\title{\bfseries 固体物理期末考试复习题}
+\author{\slshape 制作者: 何剑锋}
+\date{}
+
+\usepackage{braket}
+\usepackage{comment}
+\newenvironment{Answer}{}{}
+% \excludecomment{Answer}
+
+\ctexset{
+    subparagraph/aftername = \hspace{0em},
+    subparagraph/number = \zhnum{subparagraph}、,
+    subparagraph/beforeskip = 0.4875ex plus 0.15ex minus 0.03ex, % 15% of original
+    subparagraph/afterskip = 0.15em, % 15% of original
+    subparagraph/hang = false,
+    subparagraph/runin = false
+}
+
+\newlist{Question}{enumerate}{2}
+\setlist[Question, 1]{
+    itemsep = 0pt,
+    parsep = 0pt,
+    topsep = 0pt,
+    partopsep = 0pt,
+    label = \arabic*.,
+    labelsep = 0.3em,
+    leftmargin = 1.4em
+}
+\setlist[Question, 2]{
+    itemsep = 0pt,
+    parsep = 0pt,
+    topsep = 0pt,
+    partopsep = 0pt,
+    label = \arabic*\BraPR.,
+    labelsep = 0.3em,
+    % itemindent = -1.5em
+}
+
+\begin{document}
+\maketitle
+
+\hspace*{2em}期末考试题型及分数分布: 简答题 (6 $\times$ 5分 = 30分), 论述题 (5 $\times$ 6分 = 30分), 计算题 (15分 + 25分 = 40分)
+
+\section{晶体结构}
+    \subparagraph{简答题及论述题}
+        \begin{Question}
+            \item 写出 BCC 和 FCC 的基矢, 并画出格子的晶胞和原胞
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \begin{figure}
+            \centering
+            \parbox[t]{.49\textwidth}{
+                \centering
+                \includegraphics[height=.39\textwidth]{./figure/BCC_pr_cell.jpg}
+                \caption{BCC 原胞}\label{fig: BCC原胞}
+            }
+            \parbox[t]{.49\textwidth}{
+                \centering
+                \includegraphics[height=.39\textwidth]{./figure/FCC_pr_cell.jpg}
+                \caption{FCC 原胞}\label{fig: FCC原胞}
+            }
+        \end{figure}
+
+        \hspace*{2em}对于 BCC, 基矢为:
+            \begin{equation*}
+                \begin{dcases}
+                    \bm{a}_1 = \dfrac{a}{2} (\widehat{i} + \widehat{j} - \widehat{k})  \\
+                    \bm{a}_2 = \dfrac{a}{2} (-\widehat{i} + \widehat{j} + \widehat{k}) \\
+                    \bm{a}_3 = \dfrac{a}{2} (\widehat{i} - \widehat{j} + \widehat{k})
+                \end{dcases}
+            \end{equation*}
+        BCC 原胞见图 \ref{fig: BCC原胞}.
+
+        \hspace*{2em}对于 FCC, 基矢为:
+            \begin{equation*}
+                \begin{dcases}
+                    \bm{a}_1 = \dfrac{a}{2} (\widehat{i} + \widehat{j}) \\
+                    \bm{a}_2 = \dfrac{a}{2} (\widehat{j} + \widehat{k}) \\
+                    \bm{a}_3 = \dfrac{a}{2} (\widehat{k} + \widehat{i})
+                \end{dcases}
+            \end{equation*}
+        FCC 原胞见图 \ref{fig: FCC原胞}.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么原胞? 什么是晶胞? 晶胞反映了什么样的物理意义?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}原胞是晶格的最小周期性单元. 晶胞由一个或多个原胞组成, 反映了晶格的对称性.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是布拉伐格子? 什么是简单晶格和复式晶格? 试简述金刚石的晶体结构, 并说明其属于简单晶格还是复式晶格? 以及是哪种布拉伐格子?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        布拉伐格子是一种数学抽象, 每个两个布拉伐格子间的物理, 化学, 几何性质完全相同. 简单晶格的每一个布拉伐格子只含一个原子, 复式晶格则含多个原子. 金刚石晶体由一个个小正四面体单元构成, 由几何位置的不同, 可以将其分为两类, 其每一个布拉伐格子中这两类小四面体单元各含一个, 因而其布拉伐格子为复式的, 且属于 FCC 的布拉伐格子.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是晶向指数? 什么是晶面的密勒指数? 如何判断不同晶向或晶面是否等价?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}若某族彼此平行的直线上分别排列了一系列布拉伐格子, 则称该族直线为一个\,\textbf{晶列}. 设某直线上格子间的最短矢量为 $l_1 \bm{a}_1 + l_2 \bm{a}_2 + l_3 \bm{a}_3$ (这里 $\bm{a}_1$, $\bm{a}_2$, $\bm{a}_3$ 为晶格基矢), 则称对应的方向为该晶列的\,\textbf{晶向}\,. 由于基矢确定, 因此矢量的分量 $l_1$, $l_2$, $l_3$, 已包含了晶向的所有信息, 称这组数为\,\textbf{晶向指数}\,, 通常用中括号扩起, 记为 $[l_1, l_2, l_3]$.
+
+        \hspace*{2em}布拉伐格子也可排列在彼此平行的等距平面系上, 这样的平面称为\,\textbf{晶面}. 在每一组晶面中, 总可选取一个离原点距离最短的晶面, 设其截距为 $(1 / h_1) \bm{a}_1 + (1 / h_2) \bm{a}_2 + (1 / h_3) \bm{a}_3$ (可以证明, $h_i$ 均为大于 1 的整数), 则可用诸 $h_i$ 来标记这族晶面, 称其为晶面的\,\textbf{密勒指数}, 记为 $(h_1 h_2 h_3)$ (即用圆括号括住). 可以发现, 由于每一族晶面中必有晶面过原点, 因而晶面在增长时, 在坐标轴上的截距总是按密勒指数的整数倍增长. 换句话说, 第 $i$ 个密勒指数 $h_i$ 代表这将基矢 $\bm{a}_i$ 等距地分为了 $h_i$ 份.
+
+        \hspace*{2em}在给定晶体后, 若存在一个该晶体的对称变换可以使某个晶列 (或晶面) 变成另一个晶列 (或晶面), 则称这两个晶列 (或晶面) 是等价的. 通常用尖括号表示等价晶列的集合, 如 $\Braket{l_1 l_2 l_3}$, 用花括号表示等价晶面的集合, 如 $\{h_1 h_2 h_3\}$ (这里 $h_i$ 是密勒指数).
+    \end{Solve}
+\end{Answer}
+
+            \item 第一布里渊区的画法是什么? 试用布里渊区诠释劳厄衍射条件.
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}在倒空间中, 对于原点 $O$, 向其余所有倒格点 $p_j$ ($i \neq j$) 的连线做垂直平分线, 每一个垂直平分线均将空间分为两个半平面. 记点 $O$ 与 $p_j$ 所做的垂直平分线分隔出的半平面中含 $p_i$ 点的半平面为 $h(O, p_j)$, 则第一布里渊区 $\mathscr{V}$可以表示为所有这些含 $p_i$ 的半平面的交集:
+            \begin{equation*}
+                \mathscr{V} = \bigcap_{j} h(O, p_j)
+            \end{equation*}
+        其中可发生衍射的波矢均落在布里渊区边界上.
+    \end{Solve}
+\end{Answer}
+
+            \item 倒空间的物理意义是什么? 晶格衍射图样与倒空间有何联系?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}倒空间是对实空间进行傅里叶变换后得到的频率空间 (当然, 其也是实空间的对偶空间), 其每一个点代表了该方向上的一族晶面, 其倒原点的长度恰为晶面对应的空间频率 (即晶面间距的倒数). 
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是反射球? 如何用反射球解释劳厄 X 射线测试单晶法?
+        \end{Question}
+
+    \subparagraph{计算题及证明题}
+        \begin{Question}
+            \item 证明倒格子矢量 $\boldsymbol G = k_1 \boldsymbol b_1 + k_2 \boldsymbol b_2 + k_3 \boldsymbol b_3$ 垂直于密勒指数为 $(h_1, h_2, h_3)$ 对应的晶面系.
+            \item 证明: 倒格子原胞的体积是 $(2 \MaPI)^3 / V$, 其中 $V$ 是正格子原胞体积.
+            \item 证明: 体心立方的倒格子是面心立方, 面心立方的倒格子是体心立方.
+            \item 已知金属 Al 具有面心立方结构, 假设两 Al 原子间距为 $d - \sqrt{2} \mathrm{\r{A}}$, 试求:
+                \begin{Question}
+                    \item 晶格常数;
+                    \item 原胞基矢及倒格子基矢;
+                    \item 密勒指数为 (1, 1, 1) 晶面的面间距;
+                \end{Question}
+            \item 推导劳厄衍射方程.
+            \item 从劳厄衍射方程导出布拉格反射公式
+        \end{Question}
+
+\section{晶体的结合}
+    \subparagraph{简答题及论述题}
+        \begin{Question}
+            \item 离子晶体的内能具有形式:
+                    \begin{equation*}
+                        U = N \left[ - \dfrac{A}{r} + \dfrac{B}{r^n} \right]
+                    \end{equation*}
+                试简要说明如何从实验上确定未知系数 $n$
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}通过平衡条件可得到体变模量 $K$ 的表达式, 其与 $n$, 平衡距离 $r_0$, 马德隆常数 $\alpha$ 有关. 原则上来说, 只要测得了晶格常数, 体变模量, 马德隆常数后即可反解出 $n$.
+    \end{Solve}
+\end{Answer}
+
+            \item 简述离子键和共价键的特性, 从而阐述离子晶体和共价晶体的不同性质.
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \vspace*{-1.7em}
+        \begin{enumerate}
+            \item 离子键: 正负离子在空间中交替排列, 阴离子与阳离子的电子云称球对称分布, 因而没有方向性及饱和性. 由于没有方向性和饱和性, 相对共价晶体更容易出现杂质, 导致具有比共价晶体更低的溶沸点.
+            \item 共价键: 成键的两原子间会形成非球对称的电子云, 因而有方向性及饱和性. 由于成键的方向性和饱和性, 共价晶体中不容易出现杂质, 从而普遍具有比离子晶体更高的溶沸点.
+        \end{enumerate}
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是分子轨道? 对于由完全相同的原子组成的双原子体系, 在忽略电子相互作用的情况下, 其分子轨道与单原子波函数有什么关系? 成键态与反键态的电子云分布各有什么特点?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \vspace*{-1.7em}
+        \begin{enumerate}
+            \item 多原子体系的波函数的解称为分子轨道;
+            \item 若忽略电子之间的耦合, 则分子轨道可取单原子波函数的线性组合;
+            \item 成键态的电子云集中在两个原子核之间, 反键态则在两原子核间电子云密度较小;
+        \end{enumerate}
+    \end{Solve}
+\end{Answer}
+
+            \item 简述为什么 $sp^{3}$ 杂化形成金刚石结构, 而 $sp^{2}$ 杂化形成石墨?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}$sp^3$ 杂化的四条轨道对应正四面体的四个顶点, $sp^2$ 杂化对应正三角形的三个顶点. 另有一条垂直该平面的轨道. 由于成键具有方向性, $sp^3$ 杂化的晶格将形成三维网格, 因而是金刚石型; $sp^2$ 杂化则主要形成二维网格, 因而是石墨型.
+    \end{Solve}
+\end{Answer}
+
+            \item 金属晶体的特点是什么? 为什么会有这些特点? 一般金属具有何种结构? 最大配位数是多少?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}金属主要特点及成因是:
+            \begin{enumerate}
+                \item 具有金属光泽, 具有较好的导热性及导电性: 这是由于金属中原子核对外层电子束缚能力较弱, 使得电子以共有化电子的形式存在.
+                \item 具有较大范性: 金属成键主要是一种体积效应, 因而没有特定的方向性.
+            \end{enumerate}
+
+        \hspace*{2em}一般金属具有三维密堆积结构或体心立方结构, 最大配位数为 12.
+    \end{Solve}
+\end{Answer}
+
+            \item 离子晶体, 共价晶体, 金属晶体的组成原子间均存在斥力及吸引力, 试分别说明三种晶体的斥力与吸引力的来源.
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}三种晶体的吸引力及斥力成因如下所示:
+            \begin{enumerate}
+                \item 离子晶体: 吸引力主要来自异种电荷离子之间的库伦力, 排斥力来源于满壳层粒子相互接近带来的电子云重叠, 其可追溯到泡利原理. 具体来说, 电子的动能与电子云密度正相关, 当电子云密度增大时电子动能增大, 从而带来斥力.
+                \item 共价晶体: 吸引力可归因于能量最低原理. 当一对自旋相反的电子填充在成键态时体系能量更低, 从而带来相互吸引作用. 斥力的解释与离子晶体同理.
+                \item 金属晶体: 吸引力来源于共有化电子云和正离子实之间的库伦相互作用, 由于体积越小负电子云越密集, 进而库伦能降低, 使得晶体趋于体积较小的状态. 排斥作用有两个来源: 一个是共有化电子密度增加时电子的动能增加带来的斥力; 另一部分来自是原子实电子云显著重叠时原子实电子动能增加带来的斥力.
+            \end{enumerate}
+    \end{Solve}
+\end{Answer}
+
+            \item 请简述范德瓦耳斯力的三种产生机制, 以及为何氢键往往强于范德瓦耳斯力?
+
+\begin{Answer}
+    \begin{Solve}[Answer:]
+        \hspace*{2em}主要产生机制及简介如下:
+            \begin{enumerate}
+                \item 偶极--偶极相互作用: 两个极性分子均存在非零电偶极矩, 从而具有相互作用;
+                \item 偶极--诱导偶极相互作用: 极性分子靠近非极性分子时, 极性分子的偶极电场会时非极性分子的电子分布不再对称, 从而产生诱导偶极矩与极性分子发生相互作用;
+                \item 色散力: 由于量子涨落, 非极性分子也会具有瞬时偶极 (但在时间平均下为零), 色散力正是瞬时偶极间的相互作用.
+            \end{enumerate}
+
+        \hspace*{2em}氢键本质上是一种特殊的偶极--偶极相互作用, 形成氢键的分子中包含了氢原子和一个电负性较强的原子. 正因为另一种原子较强的电负性, 使得整个分子具有较强的偶极矩, 进而作用强度远大于一般的分子间作用力, 且具有较强的方向性.
+    \end{Solve}
+\end{Answer}
+        \end{Question}
+
+    \subparagraph{计算题及证明题}
+        \begin{Question}
+            \item 讨论使离子电荷加倍所引起的对 NaCl 晶格常数及结合能的影响 (排斥势 (交换势) 视为不变)
+            \item 若一晶体相互作用能可以表为:
+                    \begin{equation*}
+                        U = - \dfrac{\alpha}{r^m} + \dfrac{\beta}{r^n}
+                    \end{equation*}
+                求:
+                    \begin{Question}
+                        \item 平衡时的原子间距 $r_0$;
+                        \item 单个原子的结合能 $W$;
+                        \item 体弹性摸量;
+                        \item 若 $m = 2$, $n = 10$, $r_0 = 3 \mathrm{\r{A}}$, $W = 4 \mathrm{eV}$, 求 $\alpha$, $\beta$;
+                    \end{Question}
+        \end{Question}
+
+\section{晶格振动与晶体的热学性质}
+    \subparagraph{简答题及论述题}
+        \begin{Question}
+            \item 什么叫简谐近似? 引入广义坐标的目的是什么? 如何理解其物理含义?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}将势能 (只于各坐标相对平衡位置的偏离有关) 展开后保留二阶项, 忽略更高阶项的近似叫简谐近似. 引入简正坐标是为了消除各个振动的耦合, 使之变成各个独立的振动模式 (数学上看是将势能的 Hessian 矩阵对角化).
+    \end{Solve}
+\end{Answer}
+
+            \item 什么叫格波? 如何理解格波的低通滤波器效应? 光学支格波和声学支格波本质上有何差异? 这种差异如何反映在格波的支数上的?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}格点上各原子的振动状态以波的形式在传递, 因而称之为格波. 光学支格波反映的是原胞内部自由度的振动, 声学支格波反映的是原胞整体的振动 (或者说质心的振动). 对于原胞中含 $n$ 个原子, 共有 $N$ 个原胞的晶体, 其有 $3n$ 支格波, 每支格波上有 $N$ 中振动模式 (亦即 $N$ 个 $q$). 因为质心只有三个自由度, 因而声学格波只有三支; 除此之外单个原胞还有 $3n - 3$ 个自由度, 因而光学支格波共有 $3n - 3$ 支.
+    \end{Solve}
+\end{Answer}
+
+            \item 波矢空间与倒格空间有何关系? 写出波矢的表达式,
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}波矢是在倒空间表达出来的, 二者属于同一空间.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是声子? 引入声子的目的是什么? 其与实物粒子有何区别? 其是玻色子还是费米子? 极低温下具有什么样的统计效应?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}声子是晶格量子化振动的最小激发 (元激发), 每个声子具有的能量为 $\hbar \omega$. 其是原子集体振动的效应, 是一种准粒子, 不是真实粒子. 由于不同声子可以填充在一个能态上, 其服从玻色统计, 因而是玻色子. 极低温下可能会产生玻色--爱因斯坦凝聚, 亦即绝大部分声子都处于基态.
+    \end{Solve}
+\end{Answer}
+
+            \item 固体热容的量子理论的出发点是什么? Einstein 模型和 Debye 模型的主要差别在什么地方? 为什么低温下 Einstein 模型与实验差异较大, 而 Debye 模型与实验符合较好? 为什么德拜模型仍然无法与实验完全符合?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}主要出发点是认为固体的热容主要来自于声子的贡献, 只要通过对声子进行统计即可计算热容. 具体来说, 声子服从的是玻色统计, 具体计算时主要用到的是玻色统计下的平均粒子数公式. 不同振动模式下振动频率是不同的, 因而不同模式下单个声子的能量一般是不同的. 
+
+        \hspace*{2em}Einstein 模型认为所有声子的频率都是一致的, 而 Debye 模型则采用的是弹性波近似, 亦即认为频率的变化关于波矢是线性的. 在低温下, 光学支上几乎没有声子, 因此声子主要分布在声学支上. 另一方面, 低温时振动的波的波长较长, 意味着声子主要分布在原点附近, 则附近声学支的色散关系接近线性, 故而采用弹性波近似可以得到较好的结果. 这就是为何低温下 Einstein 模型与实验的符合不如 Debye 模型. 在温度升高时, 光学支上开始填充声子, 服从的色散关系越来越偏离弹性波, 因而 Debye 模型依然无法与实验完全符合.
+    \end{Solve}
+\end{Answer}
+
+            \item 试写出 LST 关系式, 从而解释为什么长光学纵波的频率总是大于长光学横波的频率?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}LST 关系式描述了光学波纵波和横波频率的联系:
+            \begin{equation}
+                \dfrac{\omega^{2}_{\mathrm{LO}}}{\omega^{2}_{\mathrm{TO}}} = \dfrac{\varepsilon(0)}{\varepsilon(\infty)}
+            \end{equation}
+        这里 $\varepsilon_{r}$ 是相对介电常数, 括号中表示的是电场的频率. 由于 $\varepsilon_r(0) > \varepsilon_r(\infty)$ (物理原因是频率过高时原子跟不上电磁波的运动, 从而像没有电场一样), 因而纵波频率大于横波频率.
+    \end{Solve}
+\end{Answer}
+
+            \item 简谐近似下会有热膨胀和热传导吗? 为什么?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}不会, 热膨胀和热传导均是非简谐效应. 热传导需要声子之间发生能量和动量的交换, 但间歇近似下总可以取合适的广义坐标使得声子间的耦合去除, 从而不会存在热传导. 另一面, 在采用间歇近似时, 势函数关于平衡位置是对称的, 因而不会产生额外的力; 但保留到三阶以上的项时, 势函数关于极值点的对称性破缺了, 从而会产生额外的斥力, 使得晶体发生膨胀.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是相速度? 什么是群速度?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}相速度是单个平面波的传播速度, 是通过波的波长乘以频率来计算的; 群速度是波包整体的移动速度, 是通过振动频率对波矢求导来计算的.
+    \end{Solve}
+\end{Answer}
+        \end{Question}
+
+    \subparagraph{计算题及证明题}
+        \begin{Question}
+            \item 推导一维单原子链的色散关系, 并利用周期性边界条件求出波矢的限制, 求出每个波矢 $q$ 在 $k$ 空间中占有的体积, 以及 $q$ 的平均分布密度.
+            \item 推导一维双原子链的色散关系, 并证明当两原子的质量相等时其退化为一维单原子链.
+            \item 若色散关系为 $\omega = c q^2$, 试分别计算一维, 二维, 三维情况下的模式密度
+            \item 在三维晶体中, 若以 $\omega_\mathrm{D}$ 表示 Debye 频率, 试利用 Debye 模型:
+                \begin{Question}
+                    \item 证明: 高温时, $(0, \omega_\mathrm{D})$ 范围内的声子总数与温度 $T$ 成正比;
+                    \item 证明: 低温极限下 $(0, \omega_\mathrm{D})$ 范围内的声子总数目正比于 $T^{3}$;
+                \end{Question}
+            \item 在一维双原子模型中, 对光学支采用 Einstein 模型, 对声学支采用 Debye 模型, 计算总的晶格热容.
+        \end{Question}
+
+\section{能带理论}
+    \subparagraph{简答题及论述题}
+        \begin{Question}
+            \item 试简述能带论的三个基本近似.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}主要近似有:
+            \begin{enumerate}
+                \item 周期场近似: 认为电子感受到的势场是一个严格的周期性势场;
+                \item 平均场近似: 将电子之间的相互作用近似为一个全局的场, 称之为平均场;
+                \item 绝热近似: 电子运动速度远大于原子核的, 因此描述电子时可近似认为原子核保持不动.
+            \end{enumerate}
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是 Bloch 定理? Bloch 电子具有什么样的性质?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}Bloch 定理: 若势场具有严格的周期性, 则波函数具有 Bloch 波函数的形式:
+            \begin{equation*}
+                \psi(\bm{r}) = \MaE^{\bm{k} \cdot \bm{r}} u(\bm{r})
+            \end{equation*}
+        这里 $\bm{k}$ 是一个常矢量, $u(\bm{r})$ 是一个与势场具有相同周期性的函数. 可以看出, 乘上时间项 $\MaE^{-i E t / \hbar}$ 后, Bloch 可以视为通过 $u(\bm{r})$ 进行调幅的平面波.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是简约波矢? 为何要引入简约波矢? 其与电子波矢的联系是什么?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}简约波矢是将第一布里渊区内的波矢, 引入简约波矢是为了对使其与平移算符的本征值一一对应, 从而可以用简约波矢来标记平移算符的本征值. 电子波矢的取值可以在第一布里渊区以外, 但可以将其平移到第一布里渊区内, 使得一个简约波矢同时对应了多个电子波矢.
+    \end{Solve}
+\end{Answer}
+
+            \item 试简述经典自由电子论模型 (Drude) 模型, 量子自由电子论模型 (Sommerfeld) 模型, 近自由电子模型的主要出发点.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \vspace*{-1.7em}
+        \begin{enumerate}
+            \item Drude 模型: 采用自由电子近似及独立电子近似, 将电子视为理想气体分子;
+            \item Sommerfeld 模型: 对 Drude 模型进行量子修正, 考虑到电子为费米子, 采用了 Fermi--Dirac 统计;
+            \item 近自由电子模型: 当电子的动能远大于势阱时, 将势阱的起伏视为对自由电子的微扰.
+        \end{enumerate}
+    \end{Solve}
+\end{Answer}
+
+            \item 二维及三维周期性势场中能带为发生交叠的原因是什么? 出现带隙的条件?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}沿各个方向, BLZ 界面上出现不同的能带分布, 这些不同方向的能带分布叠加后, 可能出现某方向带底低于令一方向带顶的情况, 从而出现能带交叠. 若要出现带隙, 则带隙对应能态在所有方向上都不存在, 且 $k$ 应限制在 BLZ 边界上.
+    \end{Solve}
+\end{Answer}
+
+            \item 简述近自由电子模型与紧束缚模型, 以及二者的区别与联系.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \vspace*{-1.7em}
+        \begin{enumerate}
+            \item 近自由电子模型: 将自由电子波函数作为零阶微扰, 将势场相对平均值的周期性波动作为微扰算符, 以及认为周期性势场对电子的影响是微弱的;
+            \item 紧束缚模型: 将单原子电子波函数视为零阶微扰, 将总的周期势场与电子所处的原子势场之差作为微扰算符, 亦即认为其它原子对该电子的影响是微弱的;
+        \end{enumerate}
+        二者的主要区别在于零阶微扰以及微扰算符所取不同, 但主要思想均是通过对简单模型做微扰来实现对复杂现象的近似.
+    \end{Solve}
+\end{Answer}
+
+            \item 画出近自由电子的等能面和状态密度曲线, 简述二者的主要特点.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}等能面是在 $k$ 空间绘制的. 由于能级的排斥效应, 相比自由电子, 靠近第一布里渊区边界时, 同等波矢对应的能量会更低. 换句话说, 这导致了等能面向第一布里渊区凸出, 从而使相邻两等能面包围的 $k$ 空间面积更大, 所含态的数目越多 (亦即态密度更大). 另一面, 当波矢长度在横向或纵向超过布里渊区边界时, 由于带隙的存在, 等能面将变得不连续 (超出第一布里渊区的部分应当平移回第一布里渊区), 且相邻两等能面包含的态数目下降. 当达到布里渊区的顶点时, 等能面收缩为几何点, 态数目将下降到零, 对应于 $x$ 与 $y$ 方向同时处于带隙的状态.
+    \end{Solve}
+\end{Answer}
+
+            \item 根据紧束缚理论, 解释元素周期表上同一族元素从上到下带隙宽度减小, 金属性越来越强的原因.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}同组元素中, 越靠下的元素最外层电子运动半径更大, 从而交叠积分越大, 使得能带的展宽变大, 带隙变小, 从而金属性越强.
+    \end{Solve}
+\end{Answer}
+
+            \item 价带与导带是什么? 费米面与费米能级是什么? 费米球和费米半径是什么? 费米能级与价带/导带有什么关系?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}电子填满最低的一系列能带时, 最高的满带称为价带, 最低的空带称为导带. 若没有完全填满, 则最高的被部分填充的能带称为价带, 最低的空带称为满带.
+
+        \hspace*{2em}费米能级是填充的最高能级. 若约束能量为费米能级, 在 $k$ 空间中将对应一个曲面, 其称为费米面. 对于自由电子, 费米面为球形, 因而称为费米球, 相应的半径称为费米半径. 费米能级处于价带以内.
+    \end{Solve}
+\end{Answer}
+
+        \end{Question}
+
+    \subparagraph{计算题及证明题}
+        \begin{Question}
+            \item 试用近自由电子近似计算一维周期性势场中电子的能带结构, 分析带隙产生的原因.
+            \item 写出近自由电子近似下一阶微扰的波函数及能级, 分析波函数的. 在第一 BLZ 边界上会发生什么? 原因是什么?
+            \item 推导出一维, 二维, 三维情况下自由电子的态密度.
+            \item 对于晶格常数为 $a$ 的 FCC 晶体:
+                \begin{Question}
+                    \item 以紧束缚近似来求非简并 $s$ 态电子的能带;
+                    \item 画出第一 BLZ [110] 及 [100] 方向的能带曲线, 求出带宽;
+                \end{Question}
+            \item 回答下面关于二维及三维简单晶格的相关问题
+                \begin{Question}
+                    \item 证明: 一个简单正方晶格 (2 维) 在第一 BLZ 顶角上一个自由电子的动能比该区一边中点大两倍;
+                    \item 对一个简单立方晶格 (3 维) 在第一 BLZ 顶角上一个自由电子的动能比该区面心上大多少?
+                    \item 说明 2\BraPR. 的结果对 2 价金属的导电性有什么影响? (提示: 不考虑能带交叠时, 二价金属的价带满带)
+                \end{Question}
+        \end{Question}
+
+\section{晶体中电子在电场和磁场中的运动}
+    \subparagraph{简答题及论述题}
+        \begin{Question}
+            \item 电子准经典速度与能量在 $k$ 空间的分布有何关系? 其是怎么被引入的?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}电子速度正比于能量在 $k$ 空间中的梯度, 比例系数为 $1 / \hbar$. 其是通过计算 Bloch 波包的移动引入的.
+    \end{Solve}
+\end{Answer}
+
+            \item 有效质量是怎么被引入的? 其物理意义是什么? 带顶与带底的有效质量有和特点? 有效质量张量退化为标量时, 反映了晶格的什么性质?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}假设加速度与电子受到的外场力成线性关系, 那么它们应通过一个二阶张量相联系. 对比牛顿运动方程, 可以将这个二阶张量解释为电子的 ``有效'' 质量. 就具体计算而言, 直接将电子准经典运动的速度对时间求导, 再将得到的 Hessian 矩阵 (严格来说还要除上 $\hbar^2$) 求逆即可得到有效质量张量.
+
+        \hspace*{2em}有效质量反映了电子与晶格的相互作用, 因而若晶格的对称性亦会影响有效质量张量的形式. 带顶处有效质量为负, 带底处为正. 若有效质量张量退化为标量, 则表明晶格具有较高对称性 (如 O 群对称性?).
+    \end{Solve}
+\end{Answer}
+
+            \item 当电子波矢落在布里渊区边界上时, 其有效质量为何会与真实质量有显著差异? 有效质量变为无穷意味着什么?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}当电子波矢落在第一布里渊区边界上时, 于布里渊区平行的晶面族对电子的散射作用最强烈. 而在反射方向上, 各格点散射波的相位相同 (或者说彼此相差一个周期), 叠加形成很强的反射波. 因此, 这时电子与晶格的相互作用最强烈, 使得有效质量与真实质量有显著差异.
+
+        \hspace*{2em}有效质量变为无穷意味着外场影响与晶格的影响相互抵消. 由于外力是非零的, 为了使加速度无限接近 0, 只能让有效质量变为无穷.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是电子的准动量? 其物理意义是什么?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}$\hbar \bm{k}$ 称为电子的准动量, 这里 $k$ 是电子波矢. 由于这个物理量在很多方面的表现类似于经典物理中的动量 (例如对时间求导可得外场力), 因而称为准动量.
+    \end{Solve}
+\end{Answer}
+
+            \item 用能带理论说明什么是导体与非导体, 以及半导体与绝缘体的区别.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}导体中存在部分填满的能带, 非导体只有空带和满带. 相对绝缘体, 半导体的带隙较小, 在通常的热激发中容易产生空穴从而导电.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是空穴? 为何空穴可以视为带正电的载流子? 在什么情况下可能产生空穴?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}近满带上未被填充的状态称为空穴. 近满带的电流可以视为满带电流减去空穴填充电子后产生的电流. 由于近满带电流为零, 移项后可得空穴电流恰为填充了电子后电流的负值, 因而空穴可以被视为带正电的载流子. 当非导体的带隙较小时, 通过热激发, 部分电子会跑到上面的导带上去, 从而原本填满的能带成为近满带, 包含了产生的空穴.
+    \end{Solve}
+\end{Answer}
+
+            \item 写出描述电子在磁场中的准经典运动的方程, 说明在沿 $z$ 轴的恒定磁场下, 电子在实空间与 $k$ 空间中的运动的特点.
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}电子在恒定外磁场下只受洛仑兹力, 运动方程可以写为:
+            \begin{equation*}
+                \begin{dcases}
+                    \bm{v} = \dfrac{1}{\hbar} \nabla_{\bm{k}} E(\bm{k}) \\
+                    \hbar \dfrac{\mathrm{d} \bm{v}}{\mathrm{d} t} = (-q) \bm{v} \times \bm{B}
+                \end{dcases}
+            \end{equation*}
+        \hspace*{2em}若磁场为沿 $z$ 的匀强磁场, 则电子在实空间中进行绕 $z$ 轴的螺旋运动, 在 $\bm{k}$ 空间中在某一垂直于 $z$ 轴的平面上进行圆周运动.
+    \end{Solve}
+\end{Answer}
+
+            \item 什么是 De Hass--Van Alphen 效应? 如何理解其产生机制?
+
+\begin{Answer}
+    \begin{Solve}[Solve:]
+        \hspace*{2em}Da Hass--Van Alphen 效应指随着磁感应强度的倒数的变化, 固体的磁化率成周期性振荡. 其产生是由于磁场的变化引起了朗道能级的改变, 进而使得费米能级发生变化. 由于 $M = - \partial E / \partial B$, 从而磁矩及磁化率发生周期性变化
+    \end{Solve}
+\end{Answer}
+        \end{Question}
+
+    \subparagraph{计算题及证明题}
+        \begin{Question}
+            \item 证明: 均匀磁场中电子在波矢空间中运动的轨道是与磁场垂直的平面和等能面的交线.
+            \item 计算二维自由电子气在恒定磁场下电子的准经典运动的图像, 以及其朗道能级和能级简并度.
+        \end{Question}
+
+\end{document}

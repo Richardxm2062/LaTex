@@ -1,0 +1,200 @@
+% documentclass need: ctexart
+
+% global setting
+    \ctexset{autoindent = 0em} % cancel autoindent
+
+    % keep appropriate distance while there being a large equation in a row
+    \setlength\lineskiplimit{0.3em} 
+    \setlength\lineskip{0.3em}
+
+    % change the symbol size in math mode
+    \DeclareMathSizes{10.54}{10.54}{5.27}{3.16}
+
+% other packages
+    \usepackage{import}
+    \usepackage{xifthen}
+    \usepackage{pdfpages}
+    \usepackage{transparent}
+
+% package in drawing
+    \usepackage{tikz}
+    \usetikzlibrary{scopes}        % let use of scopes environment easier
+    \usetikzlibrary{optics}        % use library: optics (made the draw of optic much easier)
+    \usetikzlibrary{arrows.meta}   % more type of arrow
+    \usetikzlibrary{intersections} % calcuate intersection
+    \usetikzlibrary{calc}
+    \usetikzlibrary{trees}         % tree graph
+    \usetikzlibrary{chains}        % chain plot
+    \usetikzlibrary{matrix}
+
+% package using in text mode
+    \usepackage[a4paper, left=2.54cm, right=2.54cm, top=2.54cm, bottom=2.54cm]{geometry}
+    \usepackage{listings}
+    \usepackage{xcolor}
+    \usepackage{enumitem}
+    \usepackage{graphicx}
+    \usepackage{float}
+    \usepackage{placeins}[section] % control the output of float environment
+    \usepackage{booktabs}          % triple lines table
+    \usepackage{caption}           % control the caption format of picture
+    \usepackage{longtable}         % auto-change-page-table
+    \usepackage{nameref}           % provide command: \nameref
+    \usepackage{fontspec}          % font select and set
+    \usepackage{CJKfntef}          % enhanced under modify, the parameter can cancel replacing '\emph' with '\CJKunderline'
+    \usepackage[normalem]{ulem}    % 除可以用于下划线修饰以外, 还提供了指令 \bgroup 与 \markoverwith \Ulon, 可用于自定义文字上的风格.
+    \usepackage{multirow}          % allow generate cross-row table (command "\multirow")
+    \usepackage{changepage}        % indent the entire paragraph
+    \usepackage{theorem}           % control theorem enviroment
+    \usepackage{draftwatermark}    % provide command to add water marker (such as \SetWatermarkText, \SetWatermarkLightness, SetWatermarkScale ect.)
+    \usepackage{zhnumber}          % transfer number to Chinese
+    \usepackage{comment}           % control if compile the content inside the environment
+
+% package using in math mode
+    \usepackage{amsmath}
+        \allowdisplaybreaks[4] % allowed multiline equation can change page
+    \usepackage{amssymb}
+    \usepackage{mathtools}
+    \usepackage{mathrsfs}      % provide the font of \mathscr
+    \usepackage{tensor}
+    \usepackage{upgreek}
+    \usepackage{extarrows}
+    \usepackage{yhmath}
+    \usepackage{nccmath}       % realign the equation
+    \usepackage{xfrac}         % split level fractions
+    \usepackage{bbm}           % hollow number
+    \usepackage{bm}            % bold, but keep italic
+
+% self define
+    \definecolor{CodeGrey}{RGB}{240, 240, 240}      % the grey used in code block or single code
+    \definecolor{InLineCodeColor}{RGB}{94, 160, 40} % the grey used in code block or single code
+
+% command/environment building and renewing
+    % text
+        % env
+            % Solve: used to "proof", "solve" and so on. The command \Box is better than $\square$
+                \newcommand\QedSymbol{\ensuremath{\Box}}
+
+                \newenvironment{Solve}
+                [1][解:]%
+                {\upshape\textbf{#1 \\}}%
+                {\begin{flushright}\vspace{-2.5ex}\QedSymbol\vspace{-1ex}\end{flushright}}
+
+            % Answer: used to make control if compile answer
+                \newenvironment{Answer}{}{}
+
+            % Question: used to write question
+                \newlist{Question}{enumerate}{2}
+                \setlist[Question, 1]{
+                    itemsep = 0pt,
+                    parsep = 0pt,
+                    topsep = 0pt,
+                    partopsep = 0pt,
+                    label = \arabic*.,
+                    labelsep = 0.3em,
+                    leftmargin = 1.4em
+                }
+                \setlist[Question, 2]{
+                    itemsep = 0pt,
+                    parsep = 0pt,
+                    topsep = 0pt,
+                    partopsep = 0pt,
+                    label = \arabic*\BraPR.,
+                    labelsep = 0.3em,
+                    % itemindent = -1.5em
+                }
+
+        % command
+            \newcommand{\Code}[1]{\lstinline[basicstyle=\color{InLineCodeColor}\ttfamily]{#1}} % in-line code
+            \newcommand{\CodeA}[1]{\textcolor{InLineCodeColor}{\texttt{#1}}}                   % in-line code, box version, can be used at table
+            \newcommand{\CodeB}[1]{\colorbox{CodeGrey}{\rule{0pt}{1ex}\texttt{#1}}}            % code with box, had the less height "ex", which means even the punctuation like comma had the height "ex".
+
+        % parenthesis (为了避免因只输入单侧括号而造成文本编辑器错误的语法高亮, 不过这种情况较为少见)
+            \newcommand\BraPL{(}  % bracket: left parenthesis
+            \newcommand\BraPR{)}  % bracket: right parenthesis
+            \newcommand\BraSL{[}  % bracket: left square parenthesis
+            \newcommand\BraSR{]}  % bracket: right square parenthesis
+            \newcommand\BraBL{\{} % bracket: left brace
+            \newcommand\BraBR{\}} % bracket: right brace
+
+        % font
+            \newfontfamily\Zapfino{Zapfino}
+
+    % math
+        % notation
+            \newcommand{\Dbar}{\mathrm{d} \hspace*{-0.15em}\bar{}\hspace*{0.1em}} % \mathrm{d} with bar
+            \newcommand\MaE{\mspace{2mu}\mathrm{e}\mspace{2mu}}                   % "Ma" is the abbreviation of "Math", "E" means natural constant "e"
+            \newcommand\MaPI{\mspace{2mu}\uppi\mspace{2mu}}                       % ratio of the circumference of a circle to its diameter
+
+    % set the display style of enumerate number
+        % rank 1
+            \renewcommand\theenumi{\arabic{enumi}}
+            \renewcommand\labelenumi{\theenumi\BraPR.}
+        % rank 2
+            \renewcommand\theenumii{\arabic{enumii}}
+        % rank 3
+            \renewcommand\theenumiii{\Roman{enumiii}}
+        % rank 4
+            \renewcommand\theenumiv{\Alph{enumiv}}
+
+% initialize the setting
+    % font of float caption
+        \captionsetup{font = small}
+
+    % water marker
+        \SetWatermarkText{\Zapfino Jianfeng He} % the Text
+        \SetWatermarkLightness{0.95} % the lightness from 0 to 1, default 0.8
+        \SetWatermarkScale{0.3} % the scale, default 1.2
+
+    % triple-line table
+        \setlength\heavyrulewidth{0.1em} % width of top and bottom line
+
+    % avoid too large interval between picture's caption and picture
+    \captionsetup{skip = 5pt}
+
+    % section style
+        \setcounter{secnumdepth}{5}
+        \ctexset{
+            subsection/beforeskip = 1.3ex plus 0.4ex minus 0.08ex,       % 40% of original
+            subsection/afterskip = 0.375ex plus 0.05ex,                  % 25% of original
+            paragraph/aftertitle = \hspace{-0.125em},
+            paragraph/aftername = \hspace{0.3em},
+            paragraph/number = \arabic{paragraph}.,
+            paragraph/beforeskip = 0.4875ex plus 0.15ex minus 0.03ex,    % 15% of original
+            paragraph/afterskip = 0.15em,                                % 15% of original
+            paragraph/hang = false,
+            subparagraph/aftername = \hspace{0em},
+            subparagraph/number = \zhnum{subparagraph}、,
+            subparagraph/beforeskip = 0.4875ex plus 0.15ex minus 0.03ex, % 15% of original
+            subparagraph/afterskip = 0.15em,                             % 15% of original
+            subparagraph/hang = false,
+            subparagraph/runin = false
+        }
+
+    \lstset{
+        tabsize=4,                                         % size of tab
+        xleftmargin=2em,                                   % distance between frame and paper edge
+        xrightmargin=2em,
+        % framexleftmargin=1.5em,                          % are the dimensions which are used additionally to framesep to make up the margin of a frame (distance between code and frame)
+        % framexrightmargin=1.5em,
+        basicstyle=\ttfamily,
+        breaklines=true,
+        columns=flexible,
+        numbers=left,                                      % 在左侧显示行号
+        % numberstyle=\color{gray},                          % 设定行号格式
+        % numbersep=5pt,                                     % 行号与代码的间距
+        frame=lrtb,                                        % 显示背景边框 (l, r, t, b 分别代表四周的边框)
+        % backgroundcolor=\color{CodeGrey},                  % 设定背景颜色
+        keywordstyle=\color[RGB]{40,40,255},               % 设定关键字颜色
+        numberstyle=\footnotesize\color{darkgray},
+        commentstyle=\ttfamily\color[RGB]{49,150,49},      % 设置代码注释的格式
+        stringstyle=\rmfamily\slshape\color[RGB]{128,0,0}, % 设置字符串格式
+        showstringspaces=false                             % 不显示字符串中的空格
+    }
+
+    \setlist[enumerate]{
+        itemsep = 0pt,
+        topsep = 0pt,
+        partopsep = 0pt,
+        parsep = 0pt,
+        labelsep = 0.3em,
+    }
