@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.10)  10 JUN 2021 22:43
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.10)  10 JUN 2021 22:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/richard/Documents/Code/GitHub/LaTex/templates/template2
-(/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex
+**/Users/richard/Documents/Code/GitHub/LaTex/templates/homework
+(/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/ctexart.cls (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -256,8 +256,8 @@ File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
 \g__pdf_backend_annotation_int=\count281
 \g__pdf_backend_link_int=\count282
 )
-No file template2.aux.
-\openout1 = `template2.aux'.
+No file homework.aux.
+\openout1 = `homework.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
@@ -341,7 +341,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 7.
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:7: Undefined control sequence.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:7: Undefined control sequence.
 \@author ->\slshape物理 
                       1班\quad name \quad 20172801
 l.7 \maketitle
@@ -353,7 +353,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:11: LaTeX Error: Environment Question undefined.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:11: LaTeX Error: Environment Question undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -366,7 +366,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:12: LaTeX Error: Lonely \item--perhaps a missing list environment.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:12: LaTeX Error: Lonely \item--perhaps a missing list environment.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -378,7 +378,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:14: LaTeX Error: Environment Answer undefined.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:14: LaTeX Error: Environment Answer undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -391,7 +391,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:15: LaTeX Error: Environment Solve undefined.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:15: LaTeX Error: Environment Solve undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -404,7 +404,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:17: LaTeX Error: \begin{document} ended by \end{Solve}.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:17: LaTeX Error: \begin{document} ended by \end{Solve}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -417,7 +417,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:18: LaTeX Error: \begin{document} ended by \end{Answer}.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:18: LaTeX Error: \begin{document} ended by \end{Answer}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -430,7 +430,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-/Users/richard/Documents/Code/GitHub/LaTex/templates/template2.tex:20: LaTeX Error: \begin{document} ended by \end{Question}.
+/Users/richard/Documents/Code/GitHub/LaTex/templates/homework.tex:20: LaTeX Error: \begin{document} ended by \end{Question}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -444,14 +444,14 @@ or  <return>  to continue without it.
 
 [1
 
-] (./template2.aux) ) 
+] (./homework.aux) ) 
 Here is how much of TeX's memory you used:
  6356 strings out of 476919
- 190426 string characters out of 5821840
- 518981 words of memory out of 5000000
+ 190418 string characters out of 5821840
+ 518980 words of memory out of 5000000
  26304 multiletter control sequences out of 15000+600000
  406318 words of font info for 55 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,6n,104p,398b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,6n,104p,397b,246s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template2.pdf (1 page).
+Output written on homework.pdf (1 page).
