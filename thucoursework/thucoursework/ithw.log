@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.11)  11 JUN 2021 14:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.11)  11 JUN 2021 17:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -330,7 +330,7 @@ Package: fcnumparser 2017/06/15
 \@DT@loopN=\count310
 \@DT@X=\count311
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
  (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count312
@@ -365,12 +365,14 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/bm.sty
-Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+Package: bm 2021/04/25 v1.2e Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
-LaTeX Info: Redefining \bm on input line 209.
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
@@ -601,10 +603,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11620 strings out of 476469
- 263463 string characters out of 5814087
- 643318 words of memory out of 5000000
- 31852 multiletter control sequences out of 15000+600000
+ 11628 strings out of 476469
+ 263549 string characters out of 5814087
+ 643815 words of memory out of 5000000
+ 31860 multiletter control sequences out of 15000+600000
  409242 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,12n,131p,1044b,642s stack positions out of 5000i,500n,10000p,200000b,80000s
