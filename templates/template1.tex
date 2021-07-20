@@ -1,36 +1,105 @@
-\documentclass{article} % 选择模版，这里是使用Latex自带的article模版
-    \author{my name}
-    \title{title}
-    \usepackage{graphicx}   % 插入图片用到的宏包
-    \usepackage{multirow}   % 插入表格用到的宏包
+\documentclass{article}    
+
+\usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
+\usepackage{geometry}   %调整页边距等
+\usepackage{indentfirst}    %首行缩进
+\usepackage{graphicx}   %插入图片:\includegraphics{myimage.png}
+\usepackage{hyperref}   %超链接插入包:\href{url}{name}
+\usepackage{multirow}   % 插入表格用到的宏包:\begin{tabular}{|c|c|}
+\usepackage{xcolor}  %颜色包:\color{}
+\usepackage{listings}   %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
+\usepackage{verbatim}   %使用 comment 环境进行注释
+
+\geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好,点击pacakge geometry 查看文档
+\setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
+\hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
+\newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用
+
+\title{Title}
+\author{Richardxm2062}
+
+
 \begin{document} 
     \maketitle
-   \section{Hello China} China is in East Asia. 
+    \tableofcontents
+    \newpage 
 
-        \subsection{Hello Beijing} Beijing is the capital of China. 
+    \section{Section1} 
 
-        \subsubsection{Hello Dongcheng District} 
-            \paragraph{Tian'anmen Square}is in the center of Beijing 
-            \subparagraph{Chairman Mao} is in the center of Tian'anmen Square 
+    \paragraph{} This is paragraph.  
 
-        \subsection{Hello Guangzhou} 
-            \paragraph{Sun Yat-sen University} is the best university in Guangzho
-        \subsection{My test}
+            \subparagraph{} This is subparagraph.
 
-            \paragraph{}Beijing is the capital of \\ China.  % \\强制换行
+    \indent This is an indent.
 
-            \paragraph{} Washington is the capital of America. 
-            
-            \paragraph{}Washington is the capital of America.
+    \subsection{Subsection2}  
+
+    \subsubsection{This is subsubsection} 
+
+    \textbf{Items}   
+    
+    \begin{itemize} %items without serial numbers.
+        \item This is a item. 
+        \item This is a item.
+        \item This is a item.
+    \end{itemize}
+
+    \begin{enumerate}   %items with serial numbers.
+        \item This is a item.
+        \item This is a item.
+        \item This is a item.
+    \end{enumerate} 
+
+
+    \textbf{Table} 
+
+
+    \href{tablegenerator.com}{Latex表格生成网站}    %superlink
+
+
+    \begin{tabular}{|c|c|} 
+        \hline 
+        a & b \\ 
+        \hline 
+        c & dcccc\\ 
+        \hline 
+    \end{tabular} 
+\\
+\\
+
+    \textbf{Eaquations}
+
+    \begin{itemize}
+        \item inline mode:    % \textbf:bold text
+        $a^2+b^2=c^2$ 
+
+        \item display mode:   
+        \[a^2+b^2=c^2\]        % \[ \]  equation without serial numbers
+        \begin{equation}       % basic eaquation environment
+            a^2+b^2=c^2
+        \end{equation}
 
         
-            
-            \begin{tabular}{|c|c|} 
-            \hline 
-            a & b \\ 
-            \hline 
-            c & dcccc\\ 
-            \hline 
-            \end{tabular} 
+        for more complicate equation, plz use package \emph{amsmath}
+    
+    \end{itemize}
+
+
+    \textbf{Therom}
+
+    \begin{thm}
+        这是一个定理
+    \end{thm}
+    
+
+    \begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=Code]
+        #includ<stido.h>
+    \end{lstlisting}
+
+    \begin{center}  % decide the position of the picture 
+        \includegraphics[scale=0.2]{picture.jpeg}   % include picture and scale
+    \end{center}
+
+     
 
 \end{document} 

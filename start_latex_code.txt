@@ -1,0 +1,46 @@
+\input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble.tex}
+
+%以下为前言文件引用的包以及相关用法
+
+\begin{comment}
+
+\usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
+\usepackage{geometry}					 %调整页边距等
+\usepackage{indentfirst}					 %首行缩进
+\usepackage{graphicx}					 %插入图片:\includegraphics{myimage.png}
+\usepackage{hyperref}					 %超链接插入包:\href{url}{name}
+\usepackage{multirow}					 %插入表格用到的宏包:\begin{tabular}{|c|c|}
+\usepackage{xcolor} 					 %颜色包:\color{}
+\usepackage{listings}					 %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
+\usepackage{verbatim}					 %使用 comment 环境进行大段备注
+
+
+
+\geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好
+\setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
+\hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
+\newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用 
+
+\end{comment}
+
+\begin{comment}
+
+center environment %居中
+\textbf \emph %加粗和斜体
+thm environment	%定理
+$equation$ (inline) or equation environment or package amsmah %公式
+itemize environment or enumerate environment %列表
+
+\end{comment}
+
+
+\title{Title}
+\author{Richardxm2062}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+  
+\end{document}

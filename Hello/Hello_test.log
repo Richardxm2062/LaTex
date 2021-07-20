@@ -1,69 +1,57 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.10)  10 JUN 2021 22:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.11)  20 JUL 2021 23:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/Users/richard/Documents/Code/GitHub/LaTex/Hello/Hello_test
 (/Users/richard/Documents/Code/GitHub/LaTex/Hello/Hello_test.tex
-LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
+LaTeX2e <2021-06-01>
+L3 programming layer <2021-06-01> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/02/12 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count175
-\c@section=\count176
-\c@subsection=\count177
-\c@subsubsection=\count178
-\c@paragraph=\count179
-\c@subparagraph=\count180
-\c@figure=\count181
-\c@table=\count182
+\c@part=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-06-01 L3 programming layer (loader) 
-
-
-/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty:77: LaTeX3 Error: Mismatched LaTeX support files detected.
-(LaTeX3)        Loading 'expl3.sty' aborted!
-(LaTeX3)        
-(LaTeX3)        The L3 programming layer in the LaTeX format
-(LaTeX3)        is dated 2021-02-18, but in your TeX tree the files require
-(LaTeX3)        at least 2021-06-01.
-
-For immediate help type H <return>.
- ...                                              
-                                                  
-l.77      \ExplLoaderFileDate{expl3.sty}}
-                                         %
-
-The most likely causes are:
- - A recent format generation failed;
- - A stray format file in the user tree which needs to be removed or rebuilt;
- - You are running a manually installed version of expl3.sty
-   which is incompatible with the version in LaTeX.
-
-LaTeX will abort loading the incompatible support files but this may lead to
-later errors. Please ensure that your LaTeX format is correctly regenerated.
-
-
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
+ (|extractbb --version)
+\c__kernel_sys_dvipdfmx_version_int=\count186
+\l__color_backend_stack_int=\count187
+\g__color_backend_stack_int=\count188
+\g__graphics_track_int=\count189
+\l__pdf_internal_box=\box50
+\g__pdf_backend_object_int=\count190
+\g__pdf_backend_annotation_int=\count191
+\g__pdf_backend_link_int=\count192
+))
+Package: xparse 2021-06-01 L3 Experimental document command parser
+)
 Package: fontspec 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
  (/usr/local/texlive/2021/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 Package: fontspec-xetex 2020/02/21 v2.7i Font selection for XeLaTeX and LuaLaTeX
-\l__fontspec_script_int=\count183
-\l__fontspec_language_int=\count184
-\l__fontspec_strnum_int=\count185
-\l__fontspec_tmp_int=\count186
-\l__fontspec_tmpa_int=\count187
-\l__fontspec_tmpb_int=\count188
-\l__fontspec_tmpc_int=\count189
-\l__fontspec_em_int=\count190
-\l__fontspec_emdef_int=\count191
-\l__fontspec_strong_int=\count192
-\l__fontspec_strongdef_int=\count193
+\l__fontspec_script_int=\count193
+\l__fontspec_language_int=\count194
+\l__fontspec_strnum_int=\count195
+\l__fontspec_tmp_int=\count196
+\l__fontspec_tmpa_int=\count197
+\l__fontspec_tmpb_int=\count198
+\l__fontspec_tmpc_int=\count199
+\l__fontspec_em_int=\count266
+\l__fontspec_emdef_int=\count267
+\l__fontspec_strong_int=\count268
+\l__fontspec_strongdef_int=\count269
 \l__fontspec_tmpa_dim=\dimen139
 \l__fontspec_tmpb_dim=\dimen140
 \l__fontspec_tmpc_dim=\dimen141
@@ -74,14 +62,14 @@ File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many o
  (/usr/local/texlive/2021/texmf-dist/tex/latex/tipa/t3enc.def
 File: t3enc.def 2001/12/31 T3 encoding
 )
-\tipaTiiicode=\count194
-\tipasavetokens=\toks15
-\tipachecktokens=\toks16
+\tipaTiiicode=\count270
+\tipasavetokens=\toks16
+\tipachecktokens=\toks17
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/12/05 v1.2c Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks18
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
@@ -108,16 +96,16 @@ Package: realscripts 2016/02/13 v0.3d Access OpenType subscripts and superscript
 \subsupersep=\dimen144
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/metalogo/metalogo.sty
 Package: metalogo 2010/05/29 v0.12 Extended TeX logo macros
-\xl@everylogo=\toks18
-\xl@@everylogo=\toks19
+\xl@everylogo=\toks19
+\xl@@everylogo=\toks20
 LaTeX Info: Redefining \TeX on input line 193.
 LaTeX Info: Redefining \LaTeX on input line 202.
 LaTeX Info: Redefining \LaTeXe on input line 219.
 )
-\l__xetex_show_hyphens_wrapping_box=\box47
-\l__xetex_show_hyphens_temp_box=\box48
-\l__xetex_show_hyphens_final_box=\box49
-\g__xetex_show_hyphens_word_box=\box50
+\l__xetex_show_hyphens_wrapping_box=\box51
+\l__xetex_show_hyphens_temp_box=\box52
+\l__xetex_show_hyphens_final_box=\box53
+\g__xetex_show_hyphens_word_box=\box54
 )
 
 Package fontspec Info: Could not resolve font "Hiragino Sans GB/I" (it
@@ -141,19 +129,7 @@ Package fontspec Info: Font family 'HiraginoSansGB(0)' created for font
 (fontspec)             GB/BI/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
- (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2021-05-07 L3 backend support: XeTeX
- (|extractbb --version)
-\c__kernel_sys_dvipdfmx_version_int=\count195
-\l__color_backend_stack_int=\count196
-\g__color_backend_stack_int=\count197
-\g__graphics_track_int=\count198
-\l__pdf_internal_box=\box51
-\g__pdf_backend_object_int=\count199
-\g__pdf_backend_annotation_int=\count266
-\g__pdf_backend_link_int=\count267
-)
-No file Hello_test.aux.
+ (./Hello_test.aux)
 \openout1 = `Hello_test.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -166,7 +142,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 7.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 7.
@@ -254,12 +230,12 @@ Overfull \hbox (17.14003pt too wide) in paragraph at lines 10--11
 
 ] (./Hello_test.aux) ) 
 Here is how much of TeX's memory you used:
- 6648 strings out of 476919
- 149590 string characters out of 5821840
- 463862 words of memory out of 5000000
- 26617 multiletter control sequences out of 15000+600000
+ 6688 strings out of 476469
+ 150210 string characters out of 5814087
+ 475172 words of memory out of 5000000
+ 27116 multiletter control sequences out of 15000+600000
  406310 words of font info for 54 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 83i,4n,88p,334b,241s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,5n,81p,334b,243s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Hello_test.pdf (1 page).
