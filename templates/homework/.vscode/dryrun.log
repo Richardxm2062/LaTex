@@ -1,0 +1,16 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/richard/Documents/Code/GitHub/LaTex/documents/homework'
+wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+mkdir -p ./install-texlive
+tar -zxvf install-tl-unx.tar.gz -C ./install-texlive --strip-components 1 
+./install-texlive/install-tl -profile tl.profile
+# tricky, to make variable assignment in recipe, and to execute shell command and assign the print result to a variable.
+echo $PATH	
+# to make tlmgr work, we need perl
+tlmgr install xkeyval matlab-prettifier caption doublestroke xcolor listings l3kernel l3packages ms ulem fontspec environ trimspaces booktabs moreenum mathtools oberdiek enumitem fmtcount etoolbox latex-bin alphalph
+pdflatex iihw.tex
+xelatex ithw.tex
+make: Leaving directory `/Users/richard/Documents/Code/GitHub/LaTex/documents/homework'
+ 
+/bin/sh: ./install-texlive/install-tl: No such file or directory
+

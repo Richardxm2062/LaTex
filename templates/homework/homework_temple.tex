@@ -1,0 +1,61 @@
+\documentclass[a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{moreenum}
+\usepackage{mathtools}
+\usepackage{url}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs} 
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}   %多行注释
+\usepackage[thehwcnt = 1]{iidef} 
+
+\begin{comment}
+    package iidef:
+        指定学校名      \thecourseinstitute{}      
+        指定课程名      \thecoursename{} 
+        指定学期        \theterm{}
+        作业名         \hwname{}
+        生成作业标题    \courseheader           放在document环境内 不需要再maketile
+        名字           \name                   放在document环境内
+        自动编号环境    \begin{enumerate}       
+            题号           \item               自动编号 
+        证明           \begin{proof}           证明环境由amsthm包提供
+        求解           \begin{solution}       
+        方程           \begin{equation}        
+            方程编号    \labe{eq:[number]}      为方程设置编号  
+            引用房产    \eqref{eq:[number]}     引用方程
+        行内方程        $...$
+        多行公式        \begin{align}           
+                            ... & = ... \\ 
+                                & = ...
+                       \begin{array}{lcl}      
+                            ... & = & ... \\ 
+                            ... & = & ...
+        方程组          \begin{cases}
+                            ... & \mbox{if} x \mbox{is even} \\ 带假设
+
+        
+
+
+\end{comment}
+
+\ctexset{proofname = \heiti{证明}} %中文证明环境设置    
+\slname{\heiti{解}}     %中文的sl名字，需要放在solution环境以前
+
+\thecourseinstitute{重庆大学物理学院}
+\thecoursename{量子力学}
+\theterm{2022年春季学期}
+\hwname{定态薛定谔方程}
+
+
+\begin{document}
+\courseheader
+\name{马祥芸20166085}
+
+
+\end{document}
+
