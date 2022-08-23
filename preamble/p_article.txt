@@ -13,6 +13,7 @@
 \usepackage{xcolor} 					 %颜色包:\color{}
 \usepackage{listings}					 %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
 \usepackage{verbatim}					 %使用 comment 环境进行大段备注
+\usepackage{ntheorem} 					 %修改定理环境编号
 
 
 
@@ -20,6 +21,9 @@
 \setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
 \newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用 
+\newtheorem*{proof}{\indent 证明}
+\newtheorem{lemma}{引理}[section]
+\newtheorem*{corollary}{推论}
 
 \end{comment}
 

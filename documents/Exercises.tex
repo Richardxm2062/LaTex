@@ -1,0 +1,104 @@
+\input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_article.tex}
+
+
+%以下为前言文件引用的包以及相关用法
+
+\begin{comment}
+
+\usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
+\usepackage{geometry}					 %调整页边距等
+\usepackage{indentfirst}					 %首行缩进
+\usepackage{graphicx}					 %插入图片:\includegraphics{myimage.png}
+\usepackage{hyperref}					 %超链接插入包:\href{url}{name}
+\usepackage{multirow}					 %插入表格用到的宏包:\begin{tabular}{|c|c|}
+\usepackage{xcolor} 					 %颜色包:\color{}
+\usepackage{listings}					 %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
+\usepackage{verbatim}					 %使用 comment 环境进行大段备注
+
+
+
+\geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好
+\setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
+\hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
+\newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用 
+center environment %居中
+\textbf \emph %加粗和斜体
+thm environment	%定理
+$equation$ (inline) or equation environment or package amsmah %公式
+itemize environment or enumerate environment %列表
+
+\end{comment}
+
+
+
+\title{量子力学习题集}
+\author{马祥芸}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
+
+    \section{薛定谔方程与一维定态问题}
+        \subsection{一维有限势场}
+        \begin{thm}\label{1.1}                                                %添加\lable{书签名}进行标记，使用\pageref{书签名}添加标记位置的页码 \ref{书签名}引用定理编号
+            势函数具有偶宇称$V(x)=V(-x)$,$\psi(x)$和$\psi(-x)$均是波函数的解
+            
+            \begin{proof}
+                
+                $\frac{d^2}{[d(-x)]^2}=\frac{d^2}{dx^2}$ 
+                
+            \end{proof}
+        
+        \end{thm}
+    
+
+        \begin{thm}
+            设$V(x)=V(-x)$,$\psi(x)$都有确定的宇称(奇偶性)(注意每一个解的宇称可以不相同)
+            
+            \begin{proof}
+                
+                由于定理\ref*{1.1}，构造 
+                   
+                    $$ f(x) = \psi(x)+\psi(-x) $$                          % $$行公式不带编号
+                    $$ g(x) = \psi(x)-\psi(-x) $$
+                
+                $f(x)$为偶宇称，$g(x)$为奇宇称，它们均为能量$E$的解       \par  %另起段落保留缩进
+                而$\psi(x)$与$\psi(-x)$都可以用$f(x)$和$g(x)$表示    
+
+                $$ \psi(x) = \frac{1}{2} [f(x)+g(x)]  $$
+                $$ \psi(-x) = \frac{1}{2} [f(x)-g(x)] $$    
+
+           \end{proof}
+
+        \end{thm}
+        
+       
+        
+        \subsection{一维 \texorpdfstring{$\delta$}{}势}   %使用\texorpdfstring{}{}来包括tex公式或者string需要两个参数或者仅用一个括号并用.连接
+        \subsection{一维分段无限深势阱}
+
+
+
+    \section{力学量算符}
+
+
+    \section{表象}
+
+
+    \section{三维定态问题}
+
+    \section{近似方法}
+
+    \section{自旋}
+
+    \section{全同粒子体系}
+
+    \section{散射}
+    
+    
+
+
+
+  
+\end{document}
