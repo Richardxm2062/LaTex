@@ -1,5 +1,6 @@
 \input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_article.tex}
 
+\usepackage{latexalpha2}
 
 %以下为前言文件引用的包以及相关用法
 
@@ -7,7 +8,7 @@
 
 \usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
 \usepackage{geometry}					 %调整页边距等
-\usepackage{indentfirst}					 %首行缩进
+\usepackage{indentfirst}			     %首行缩进
 \usepackage{graphicx}					 %插入图片:\includegraphics{myimage.png}
 \usepackage{hyperref}					 %超链接插入包:\href{url}{name}
 \usepackage{multirow}					 %插入表格用到的宏包:\begin{tabular}{|c|c|}
@@ -21,6 +22,10 @@
 \setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
 \newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用 
+corollary 推论环境
+lemma 引理环境
+proof 证明环境
+solution 解环境
 center environment %居中
 \textbf \emph %加粗和斜体
 thm environment	%定理
@@ -41,24 +46,27 @@ itemize environment or enumerate environment %列表
 
     \section{薛定谔方程与一维定态问题}
         \subsection{一维有限势场}
-        \begin{thm}\label{1.1}                                                %添加\lable{书签名}进行标记，使用\pageref{书签名}添加标记位置的页码 \ref{书签名}引用定理编号
-            势函数具有偶宇称$V(x)=V(-x)$,$\psi(x)$和$\psi(-x)$均是波函数的解
+        \begin{thm}\label{thm:1.1}                                                %添加\lable{书签名}进行标记，使用\pageref{书签名}添加标记位置的页码 \ref{书签名}引用定理编号
+            势函数具有偶对称$V(x)=V(-x)$,$\psi(x)$和$\psi(-x)$均是波函数的解
             
             \begin{proof}
                 
-                $\frac{d^2}{[d(-x)]^2}=\frac{d^2}{dx^2}$ 
-                
+                $$ \frac{d^2}{[d(-x)]^2}=\frac{d^2}{dx^2} $$ 
+
             \end{proof}
         
         \end{thm}
     
 
-        \begin{thm}
-            设$V(x)=V(-x)$,$\psi(x)$都有确定的宇称(奇偶性)(注意每一个解的宇称可以不相同)
+        \begin{thm}\label{thm:1.2}
+            \thmindent
+            
+            设$V(x)=V(-x)$,\textbf{每一个}$\psi(x)$都有确定的宇称(奇偶性)(注意每一个解的宇称可以不相同)
             
             \begin{proof}
+                \pfindent
                 
-                由于定理\ref*{1.1}，构造 
+                由于定理\ref*{thm:1.1}，构造 
                    
                     $$ f(x) = \psi(x)+\psi(-x) $$                          % $$行公式不带编号
                     $$ g(x) = \psi(x)-\psi(-x) $$
@@ -70,15 +78,94 @@ itemize environment or enumerate environment %列表
                 $$ \psi(-x) = \frac{1}{2} [f(x)-g(x)] $$    
 
            \end{proof}
+           
+           \begin{corollary}\label{cl:1}
+                \clindent 
+                
+                设$v(-x) = v(x)$,而且对应于能量本征值E,方程的解无简并,则该能量本征态必有确定的宇称,例如一维 \par
+                谐振子，一维对称方势阱
+                
+                \begin{itemize}
+                    \item 若$E$非简并  \quad 本征函数具有确定宇称(两种宇称) 
+                        $$ \psi(-x) = \hat{P}\psi(x) = c\psi \quad c=\pm 1 $$ %\hat{}输入算符的帽子
+                    \item 若$E$简并 \quad $\psi(x)$和$\psi(-x)$分别为独立的波函数，它们的线性组合是具有宇称的解
+                        $$ \psi_{\pm}(x) = \frac{1}{\sqrt{2}}[\psi(x) \pm \psi(-x)] $$
+                \end{itemize}
+            
+           \end{corollary}
 
         \end{thm}
+        \par
+        偶宇称涉及到的函数图像如下
+
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}{0.48\textwidth}
+                    
+                \centering
+                \wolframgraphics[png]{Plot[y=Tan[x],{x,0,2.5}]}{tanx}
+                \includegraphics[scale=0.4]{tanx.png}
+                \caption{$y=\tan{x}$}
+                
+            \end{subfigure}
+            \begin{subfigure}{0.48\textwidth}
+                
+                \centering
+                \wolframgraphics[png]{Plot[y=x*Tan[x],{x,0,2.5}]}{xtanx}
+                \includegraphics[scale=0.4]{xtanx.png}
+                \caption{$y=x \tan{x}$}
+
+            \end{subfigure}
+              
+        \end{figure}
+
+        奇宇称涉及到的函数图像如下
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}{0.48\textwidth}
+                    
+                \centering
+                \wolframgraphics[png]{Plot[y=-x*Cot[x],{x,0,2.5}]}{-xcotx}
+                \includegraphics[scale=0.4]{-xcotx.png}
+                \caption{$y=-x \cot{x}$}
+                
+            \end{subfigure}
+            \begin{subfigure}{0.48\textwidth}
+                
+                \centering
+                \wolframgraphics[png]{Plot[{y=-x*Cot[x],y=x*Tan[x],y=Sqrt[4-x^2]},{x,0,2.5}]}{3plot}
+                \includegraphics[scale=0.4]{3plot.png}
+                \caption{三个函数曲线}
+
+            \end{subfigure}
+              
+        \end{figure}
+
+            %两个subfigure之间不能存在空行否则会出现竖排列
+
+            
         
-       
+        由于此题的势能函数具有偶对称,因此波函数可能存在偶or奇宇称(需要分开讨论),此题中偶宇称至少存在一个交点,
+        而奇宇称有解必须有条件$Q>\frac{\pi}{2}$,由题意可知存在且仅存在一个束缚态，所以保留偶宇称的唯一解即可($Q<\frac{\pi}{2}$)
         
         \subsection{一维 \texorpdfstring{$\delta$}{}势}   %使用\texorpdfstring{}{}来包括tex公式或者string需要两个参数或者仅用一个括号并用.连接
-        \subsection{一维分段无限深势阱}
-
-
+        
+        先不考虑$x\neq0$的局部区域,丢掉$\delta(x)$势阱,需要用到一阶微分变化值的关系    
+        
+        $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$     %\int_{}^{}   \hbar 
+        
+        注意不要丢了$\delta(x)$前面的参数，需要用到其积分性质
+        
+        $$\int_{-\varepsilon}^{+\varepsilon} \delta(x) \psi(x) dx =\psi(0) $$
+        
+        在归一化中，由于在$x\neq 0$其他的区域的波函数具有对称性，对其中一边积分时其值为$\frac{1}{2}$
+        
+        $$ \int_{0}^{+\infty}A^2 e^{-2kx} dx = \frac{1}{2} $$
+        
+        
+    \subsection{一维分段无限深势阱}
+        
+      
 
     \section{力学量算符}
 
@@ -97,7 +184,6 @@ itemize environment or enumerate environment %列表
     \section{散射}
     
     
-
 
 
   

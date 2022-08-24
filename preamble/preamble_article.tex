@@ -3,23 +3,31 @@
 \usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
 \usepackage{geometry}   %调整页边距等
 \usepackage{indentfirst}    %首行缩进
+
 \usepackage{graphicx}   %插入图片:\includegraphics{myimage.png}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
 \usepackage{hyperref}   %超链接插入包:\href{url}{name}
 \usepackage{multirow}   % 插入表格用到的宏包:\begin{tabular}{|c|c|}
 \usepackage{xcolor}  %颜色包:\color{}
 \usepackage{listings}   %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
 \usepackage{verbatim}   %使用 comment 环境进行注释
 \usepackage{amsmath,amsthm}  %amsmath包应该在前
+\usepackage{braket} %狄拉克符号系统 \bra{} \ket{}
+
+
 
 
 \geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好,点击pacakge geometry 查看文档
 \setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
 \hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
 \newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用
-\renewcommand{\proofname}{ \indent \bf 证明} %更改proof为中文证明
+\renewcommand{\proofname}{ \qquad \bf 证明} %更改proof为中文证明
 \newenvironment{solution}{\proof[\indent \bf 解]}{\renewcommand{\qedsymbol}{}\endproof} %提供解环境
 \newtheorem{lemma}{引理}[section]
 \newtheorem{corollary}{推论}
-
-
-
+\def\pfindent{\setlength{\parindent}{5.5em}}
+\def\thmindent{\setlength{\parindent}{5em}}
+\def\clindent{\setlength{\parindent}{4em}}
