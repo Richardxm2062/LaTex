@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Wed Aug 24 18:48:00 2022
+# Make data base, printed on Sun Aug 28 11:08:51 2022
 
 # Variables
 
@@ -38,7 +38,7 @@ VSCODE_CWD = /
 # environment
 GSETTINGS_SCHEMA_DIR = /Users/richard/opt/anaconda3/share/glib-2.0/schemas
 # environment
-PATH = /Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home/bin:/opt/homebrew/bin:/usr/local/sbin:/Users/richard/.pyenv/plugins/pyenv-virtualenv/shims:/Applications/Julia-1.5.app/Contents/Resources/julia/bin:/Users/richard/.pyenv/shims:/Users/richard/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/aria2/bin:/Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home/bin:/opt/homebrew/bin:/usr/local/sbin:/Users/richard/.pyenv/plugins/pyenv-virtualenv/shims:/Users/richard/opt/anaconda3/bin:/Users/richard/opt/anaconda3/condabin:/Applications/Julia-1.5.app/Contents/Resources/julia/bin:/Users/richard/.pyenv/shims:/Users/richard/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin
+PATH = /Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home/bin:/opt/homebrew/bin:/usr/local/sbin:/Users/richard/.pyenv/plugins/pyenv-virtualenv/shims:/Users/richard/opt/anaconda3/bin:/Users/richard/opt/anaconda3/condabin:/Applications/Julia-1.5.app/Contents/Resources/julia/bin:/Users/richard/.pyenv/shims:/Users/richard/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/TeX/texbin:/usr/local/aria2/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
@@ -66,7 +66,7 @@ HOME = /Users/richard
 # default
 MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
-VSCODE_CODE_CACHE_PATH = /Users/richard/Library/Application Support/Code/CachedData/6d9b74a70ca9c7733b29f0456fd8195364076dda
+VSCODE_CODE_CACHE_PATH = /Users/richard/Library/Application Support/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LOGNAME = richard
 # environment
@@ -90,9 +90,9 @@ MAKECMDGOALS := all
 # environment
 SHLVL = 1
 # environment
-LOCAL_GIT_DIRECTORY = /Applications/GitHub Desktop.app/Contents/Resources/app/git
-# environment
 JAVA_HOME = /Library/Java/JavaVirtualMachines/jdk-18.0.1.jdk/Contents/Home
+# environment
+LATEXWORKSHOP_DOCKER_LATEX = 
 # default
 MAKE_VERSION := 3.81
 # environment
@@ -114,7 +114,7 @@ TMPDIR = /var/folders/5b/16kmgqk554vct2_tph_lv95h0000gn/T/
 # automatic
 *F = $(notdir $*)
 # environment
-VSCODE_IPC_HOOK = /Users/richard/Library/Application Support/Code/1.70.1-main.sock
+VSCODE_IPC_HOOK = /Users/richard/Library/Application Support/Code/1.70.2-main.sock
 # environment
 MallocNanoZone = 0
 # makefile
@@ -124,7 +124,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = application.com.microsoft.VSCode.46717306.46717312
+XPC_SERVICE_NAME = application.com.microsoft.VSCode.48137868.48137874
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -164,7 +164,7 @@ CONDA_PREFIX = /Users/richard/opt/anaconda3
 # environment
 TERM = xterm-256color
 # environment
-VSCODE_PID = 21758
+VSCODE_PID = 38487
 # environment
 _CE_CONDA = 
 # environment
@@ -219,9 +219,6 @@ makefile:
 #  Implicit rule search has been done.
 #  File does not exist.
 #  File has been updated.
- 
-make: *** No rule to make target `all'.  Stop.
-
 #  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -255,6 +252,8 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Aug 24 18:48:00 2022
+# Finished Make data base on Sun Aug 28 11:08:51 2022
 
  
+make: *** No rule to make target `all'.  Stop.
+

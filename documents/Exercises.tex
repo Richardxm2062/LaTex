@@ -1,6 +1,11 @@
 \input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_article.tex}
 
 \usepackage{latexalpha2}
+%/usr/local/texlive/texmf-local/tex/latex/local/latexalpha2
+%直接使用wolfram代码
+% \wolfram[<format>]{<code>}    \wolframgraphics[<format>]{<code>}{<filename>} 
+%具体使用方法查看 latexalpha2.pdf
+
 
 %以下为前言文件引用的包以及相关用法
 
@@ -66,7 +71,7 @@ itemize environment or enumerate environment %列表
             \begin{proof}
                 \pfindent
                 
-                由于定理\ref*{thm:1.1}，构造 
+                由于定理\ref{thm:1.1}，构造 
                    
                     $$ f(x) = \psi(x)+\psi(-x) $$                          % $$行公式不带编号
                     $$ g(x) = \psi(x)-\psi(-x) $$
@@ -82,7 +87,7 @@ itemize environment or enumerate environment %列表
            \begin{corollary}\label{cl:1}
                 \clindent 
                 
-                设$v(-x) = v(x)$,而且对应于能量本征值E,方程的解无简并,则该能量本征态必有确定的宇称,例如一维 \par
+                设$V(-x) = V(x)$,而且对应于能量本征值E,方程的解无简并,则该能量本征态必有确定的宇称,例如一维 \par
                 谐振子，一维对称方势阱
                 
                 \begin{itemize}
@@ -164,7 +169,87 @@ itemize environment or enumerate environment %列表
         
         
     \subsection{一维分段无限深势阱}
+        此题的特点是$x=0$处的$V(x)|_{x=0}=\infty$,与$\delta(x)$势不一样的是,
+        虽然在此处的势能大小都是为$\infty$,但是前者的$\psi(0)=0$(也因此$\triangle \frac{d\psi}{dx}$=0,连续)而后者并不为$\psi(0)\neq0$,
+        所以$\delta(x)$势通常在此点并不连续。
+
+        当然由于$V(x)$具有偶对称性，波函数同样具有确定的宇称,现假设两个排除0点的波函数解分别为
+        $$\psi_{1}(x)=B\sin(kx) \quad (0<x<a) \quad \psi_{2}(x)=D\sin(kx) \quad (-a<x<0)$$
+        给两种方法通过宇称判断系数关系
+        \begin{itemize}
+            \item 全局判断法   \\
+                若$\psi(x)$在$|x|<a$上为奇宇称,那么恰好为正弦函数$\sin(kx)$(奇函数)的形式 $\Rightarrow$ $B = D$ 
+            \item 定义法    \\
+                由奇宇称的定义$\psi(x)=-\psi(-x) \Rightarrow B\sin(kx)=-D\sin(-kx)=D\sin(kx) \Rightarrow B=D$ 
+        \end{itemize}
         
+        最后需要注意$n$的取值范围,应该是从$n=1,2,3\cdots$不能从0开始因为$ka=0 \Rightarrow k=0$(能量为0)
+        
+        可能在归一化中需要用到的三角函数数学公式
+        $$\sin(x+y)=\sin{x} \cos{y}+\sin{y}\cos{x} \quad \cos(x+y)=\cos{x} \cos{y} - \sin{x}\sin{y}$$ 
+        $$\sin(2x) = 2\sin{x} \cos{x} \quad \cos(2x) = \cos^{2}{x} - \sin^{2}{x} $$
+        $$\sin^{2}{x}=\frac{1-\cos(2x)}{2} \quad \cos^{2}{x}=\frac{1+\cos(2x)}{2} $$
+
+    \subsection{半壁无限深势阱}
+        再次遇到$y=-x \cot{x}$,记忆关键点的方式可以通过极限来记忆
+        $$\lim_{x \to 0}- x \cot{x} = \lim_{x \to 0} -\frac{x}{\sin{x}} + \lim_{x \to 0}\cos{x} = -1 \times 1 = -1  $$
+        $$\lim_{x \to \frac{\pi}{2}}- x \cot{x} = \lim_{x \to \frac{\pi}{2}} -\frac{x}{\sin{x}} + \lim_{x \to \frac{\pi}{2}}\cos{x} = -\frac{\pi}{2} \times 0 = 0  $$
+        
+        最后在此题中可变参量为$a$与$V_{0}$,最好化简为不等式一边仅有可变参量,正如
+        $$V_{0}a^{2}\geq \frac{\pi^{2}\hbar^{2}}{8 \mu} $$
+
+    \subsection{复合势:\texorpdfstring{$\delta(x)$}{}和阶梯势}
+        注意任何含有$\delta(x)$的势场其束缚态能量必然是负数,所以$E<0$,明确这一点再求解,同样$x=0$处波函数不连续,在求一阶微分关系时不要忘记$\delta(x)$前面的的所有系数
+        此题束缚态条件比较特殊,是可解析的等式,不需要两个方程联立作图求解,最后保证一方为根式,另一方包含所有可变参量并要求$>0$即可.同时在最后的
+        归一化过程中需要全空间积分为1(不是对称函数).
+
+    \subsection{复合势:\texorpdfstring{$\delta(x)$}{}和阶梯势}
+        此题直接带入波函数的连续性条件得到的方程组是难以求解的,因此需要特殊技巧
+        \begin{itemize}
+            \item 获得奇宇称的解,先无视$\delta(x)$势,采用无限深方势阱的解,只取在$x=\frac{a}{2}$的有效解
+            \item 获得偶宇称解重点在于$\psi_{2}(a)=0$,所以不妨让$\psi_{2}(x)=A \sin{(x-a)}$,同时在$x=\frac{a}{2}$处连续得到$\psi(x)=-A \sin{(x-a)}$,它是很容易验证在关于$x=\frac{a}{2}$对称的.(设对称轴为$x=b$)
+                $$\psi_{1}(b-x)=\psi_{2}(b+x) \quad \Rightarrow b=\frac{a}{2}$$
+        \end{itemize}
+
+        注意在求第一激发态的时候还没有考虑$a \to 0$,所以对于偶宇称的解的最低能量是在某一个区间,需要把两种宇称解的最低能量进行对比.
+
+    \subsection{复合势:\texorpdfstring{$\delta(x)$}{}和谐振子势}
+        加入$\delta(x)$后需要重新考虑$x=0$的一阶连续情况,也就是$\psi(0)$的值,若$\psi(0)=0$则原来的解仍成立反之不成立,所以带入$x=0$后发现是$H(0)=0$
+        即可,事实上仅有$n=1,3,5\cdots$成立
+
+    \subsection{反比例势:合流超几何函数}\label{subsec:1.8}
+        关键点
+        \begin{itemize}
+            \item 整理微分方程形如 \quad $\frac{d^{2}\psi(x)}{d x^{2}}-k^{2}\psi(x)+\frac{\beta}{x}\psi(x)$
+            \item 带入$\psi(x)=x e^{-kx}F(x)$进一步整理微分方程
+            \item 变量代换$\xi \to 2kx$ 进一步整理微分方程
+            \item 形如\quad $\xi \frac{d^{2}F(\xi)}{d \xi^{2}}+(\gamma-\xi)\frac{dF(\xi)}{d \xi}-\alpha F(\xi)=0$  
+                  $$ E=-|E| \quad \beta=\frac{2\mu a}{\hbar^{2}} \quad \gamma=2 \quad \alpha=1-\frac{\beta}{2k}=1-\frac{\mu a}{k \hbar^{2}}$$ 
+                  $$ \psi(\xi)=A\xi e^{\frac{-\xi}{2}} F(\alpha,\gamma,\xi)   $$
+        \end{itemize}
+        一般不考,记得反比例势能的解和合流超几何方程有关就行了,其解为合流超几何函数,此题和1.9,1.10的差不多
+    
+    \subsection{氢原子势能}
+        见\ref{subsec:1.8}题
+
+    \subsection{反比例势能}
+        见\ref{subsec:1.8}题
+
+    \subsection{已知波函数与V(x)的极限}\label{subsec:1.11}
+        此题具有启发性,当已知波函数时,那么波函数的二阶导数同样已知,因此\sdr 方程的未知数仅有$V(x)$与$E$,可以得到$V(E,x)$方程,在利用
+        额外条件进行求解,此题为$x \to +\infty \quad V \to 0$,可以解得$E$,再求解$V(x)$ 
+
+        求导的时候需要小心,此题的二阶导一共有4项
+    
+    \subsection{已知波函数与V(x)的均值}
+        同题目\ref{subsec:1.11}类似,不过给出另一个已知条件是$\bra{\psi}V\ket{\psi}=0$,记住利用这类已知条件时不要贸然带入波函数进行求解,应该
+        凑题目条件,同时获得一个经验就是能量$E$是与坐标变量无关的,通常是优先求的,其次在得到$\int \psi^{*}E\psi dx$后不要变成$\bar{E}$,能量的平均值和
+        定态能量并不是同一个东西.
+        
+    
+    
+    
+
       
 
     \section{力学量算符}
