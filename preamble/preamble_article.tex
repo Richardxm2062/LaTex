@@ -4,7 +4,7 @@
 \usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
 \usepackage{geometry}                                       %调整页边距等
 \usepackage{indentfirst}                                    %首行缩进
-\usepackage{xcolor}                                         %颜色包:\color{}
+\usepackage[dvipsnames,svgnames]{xcolor}                                         %颜色包:\color{}
 
 
 %图片宏包
@@ -21,7 +21,42 @@
 \usepackage{hyperref}                                       %超链接插入包:\href{url}{name}
 \usepackage{multirow}                                       %插入表格用到的宏包:\begin{tabular}{|c|c|}
 \usepackage{listings}                                       %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
-\usepackage{verbatim}        %使用 comment 环境进行注释
+\usepackage{verbatim}                                       %使用 comment 环境进行注释
+
+
+%文本底纹实现
+\usepackage{lipsum}                                         %该宏包是通过 \lipsum 命令生成一段本文，正式使用时不需要引用该宏包
+\usepackage[strict]{changepage}                             %提供一个 adjustwidth 环境
+\usepackage{framed}                                         %实现方框效果
+\usepackage{newtxtext}
+\usepackage{tcolorbox}                                      %文本底纹包,放在xcolor包后
+                               
+% environment derived from framed.sty: see leftbar environment definition
+\definecolor{formalshade}{rgb}{0.95,0.95,1} % 文本框颜色
+% ------------------******-------------------
+% 注意行末需要把空格注释掉，不然画出来的方框会有空白竖线
+\newenvironment{formal}{%
+\def\FrameCommand{%
+\hspace{0em}%
+{\color{Green}\vrule width 0.3em}%
+\colorbox{greenshade}%
+}%
+\MakeFramed{\advance\hsize-\width\FrameRestore}%
+\noindent\hspace{-2em}% disable indenting first paragraph
+\begin{adjustwidth}{}{2.5em}%
+\vspace{0.11em}\vspace{0.1em}%
+}
+{%
+\vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+% ----
+
+\definecolor{greenshade}{rgb}{0.90,0.99,0.91}               %绿色文本框，竖线颜色设为 Green
+\definecolor{redshade}{rgb}{1.00,0.90,0.90}                 %红色文本框，竖线颜色设为 LightCoral
+\definecolor{brownshade}{rgb}{0.99,0.97,0.93}               %莫兰迪棕色，竖线颜色设为 BurlyWood
+
+
+
 
 %预设
 \geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好,点击pacakge geometry 查看文档
@@ -46,4 +81,4 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \def\pfindent{\setlength{\parindent}{5.5em}}                 %\pfindent
 \def\clindent{\setlength{\parindent}{4em}}                   %clindent
 \def\sdr{Schr\"{o}dinger}                                    %薛定谔名字
-
+\def\intff{\int_{-\infty}^{+\infty}}                           %积分为(-\infty,+\infty)的积分

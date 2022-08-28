@@ -235,17 +235,88 @@ itemize environment or enumerate environment %列表
     \subsection{反比例势能}
         见\ref{subsec:1.8}题
 
-    \subsection{已知波函数与V(x)的极限}\label{subsec:1.11}
+    \subsection{已知波函数与\texorpdfstring{V(x)}{}的极限}\label{subsec:1.11}
         此题具有启发性,当已知波函数时,那么波函数的二阶导数同样已知,因此\sdr 方程的未知数仅有$V(x)$与$E$,可以得到$V(E,x)$方程,在利用
         额外条件进行求解,此题为$x \to +\infty \quad V \to 0$,可以解得$E$,再求解$V(x)$ 
 
         求导的时候需要小心,此题的二阶导一共有4项
     
-    \subsection{已知波函数与V(x)的均值}
+    \subsection{已知波函数与\texorpdfstring{V(x)}{}的均值}
         同题目\ref{subsec:1.11}类似,不过给出另一个已知条件是$\bra{\psi}V\ket{\psi}=0$,记住利用这类已知条件时不要贸然带入波函数进行求解,应该
         凑题目条件,同时获得一个经验就是能量$E$是与坐标变量无关的,通常是优先求的,其次在得到$\int \psi^{*}E\psi dx$后不要变成$\bar{E}$,能量的平均值和
         定态能量并不是同一个东西.
 
+    \subsection{已知能量与势能的关系}
+        求解过程中注意三角函数的周期性  
+        $$  \arctan{-1}=-\frac{\pi}{4}+n\pi \quad (n=1,2,3 \cdots ) $$    
+    
+    \subsection{已知两能量的本征态}
+        此题的关键点
+        \begin{itemize}
+            \item 两个有能量的本征态具有正交性
+                  $$ \int_{-\infty}^{\infty} \psi_{1}^{*}(x) \psi_{2}(x)  = 0 $$
+        \end{itemize}
+
+        但是直接利用以上正交关系来直接求得$b,c$是复杂又难以实现的,我们需要额外的关系来先求得一个参数化简第二个波函数. 
+
+        由于$\psi_{1}(x)$的信息是完全可知的,因此我们需要利用它来获得关于$V(x)$的信息,本题可得到$V(x)$具有偶对称性,因此我们可以化简$\psi_{2}(x)$,
+        只能存在一个偶宇称即$b=0$.
+
+        这个积分可拆分成如下两个积分
+            $$ \intff e^{-\beta x^{2}} dx  \quad + \quad   \intff x^{2} e^{-\beta x^{2}} dx=0 \quad (1)$$   
+        
+        这两个积分相当典型,在后面使用高斯试探函数经常会遇到此类积分,现总结\label{calculus:1}
+        \begin{formal}
+
+        \begin{enumerate}
+            \item 
+                $$ \intff e^{-a (x+b)^{2}} dx = \sqrt{\frac{\pi}{a}} $$
+            \begin{proof}
+                \pfindent 
+
+                $$I=\intff e^{-a x^{2}} dx$$
+                $$I^{2}= \intff e^{-a (x^{2}+y^{2})} dx dy $$
+
+                令$x=r\cos{\theta} \quad y=r\sin{\theta}$
+                $$ I^{2} = \int_{0}^{+\infty} \int_{0}^{2\pi} e^{-a r^{2}} rdrd\theta $$
+                $$ I^{2} = \int_{0}^{+\infty} \pi  e^{-a r^{2}}d(r^{2})= \frac{\pi}{a}  \Rightarrow I = \sqrt{\frac{\pi}{a}} $$
+        
+            \end{proof}
+
+            \item 表格积分法:被积函数的结构为---(多项式)(函数)\quad(本质是分部积分)
+                $$ \int(x^{2}+x) e^{3x} dx \quad \int x(x-a)\sin{2x} \quad \int e^{3x}\sin{2x}dx $$
+                记为$f(x) \quad g(x)$
+
+                第一行:
+                    $$ f(x) \quad f'(x) \quad f''(x) \cdots \quad to \quad 0 $$
+
+                第二行:
+                    $$ g(x) \quad \int g(x) dx \quad \iint g(x) dxdx \cdots $$
+                
+                第二行的项数与第一行保持一致,共计[n,n]
+
+                $+(1,2)-(2,3)+(3,4)-(4,5)\cdots + c$ \quad 
+                
+                注意:(i,j)表示第一行第$i$个元素$\times$第二行的第$j$个元素,每一个乘积前的正负号为[+,-,+,...]交替,同时不要漏掉积分常数$c$,如果
+                第一行的函数无法求导到0,求导直到出现原函数的常数倍也可以.($\int e^{3x}\sin{2x}dx $的积分第一行第三项为原函数的$-\frac{9}{4}$倍)
+            \end{enumerate}   
+        \end{formal}
+                    
+                
+
+
+
+                
+            
+        
+        
+            
+
+            
+        
+        
+        
+        
     
         
     
