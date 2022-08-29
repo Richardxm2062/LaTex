@@ -327,9 +327,74 @@
             A-B&=C-D
         \end{align}
 
-        容易解出$A=C$带入方程$(1)or(2)$会得到$B=D$,$A$与$B$的关系需要一阶波函数在$\varphi=\pi$的连续性关系解出
+        容易解出$A=C$带入方程$(1)or(2)$会得到$B=D$,$A$与$B$的关系需要一阶波函数在$\varphi=\pi$的连续性关系解出,之后我们需要再将复幂指数的解在返回三角函数形式并
+        归一化得到
+        $$ \psi(x) = \sqrt{\frac{1}{\pi}} \sin{m \varphi} $$
         
-       
+        存在一个隐藏的周期性边界条件限制$m$的取值
+        $$ \psi(\varphi) = \psi(\varphi+2\pi) \lra 2m\varphi = 2n\pi \quad (n=1,2,3,4\cdots) \lra m = 1,2,3,4\cdots $$
+        
+        由此我们可以反解出
+        $$ E_{n} = \frac{\hbar^{2} m^{2}}{2\mu R^{2}} \quad (m=1,2,3,4\cdots)$$
+
+        \section{改变哈密顿量求本征值(表象变换)}
+            此题的关键在于表象的变换,由坐标表象转化到动量表象(详见曾$p_{281}-6$)
+            $$ \vu*{x} = i\hbar \pdv{\vu*{p}}$$
+
+            \begin{proof}
+                \pfindent
+
+                $$ \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                $$ \delta(x) = \frac{1}{(2\pi)^{n}} \intff e^{ipx} dp $$
+                $$ \delta(p) = \frac{1}{(2\pi)^{n}} \intff e^{-ipx} dx $$
+
+                n为维数,这里取1进行证明,证明前须知
+                
+                内积$\braket{x}{\psi}$就是波动力学的波函数
+                $$\psi (x)\ {\stackrel {def}{=}}\ \braket{x}{\psi}$$
+                
+                进一步可知动量在坐标表象下即为动量波函数
+                $$ \braket{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$
+                $$ \braket{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$
+
+                算符$\vu*{x}$在坐标表象下的形式为$x$,同理算符$\vu*{p}$在动量表象下为$p$
+                $${\vu*{x}} \ket{x}= x \ket{x} \quad {\vu*{p}} \ket{p} = p \ket{p} $$
+
+                关于$\delta$函数
+                $$ \braket{x'}{x} = \delta(x'-x) $$
+
+                坐标算符在自己坐标表象下的矩阵元
+                $$ x_{x'x''} = \mel{x'}{\vu*{x}}{x''} = x' \braket{x'}{x''} = x' \delta(x'-x'') $$
+
+                \begin{align*}
+                    x_{p'p''} &= \mel{p'}{x}{p''} \\
+                            &= \braket{p'}{x'} \mel{x'}{x}{x''} \braket{x''}{p''}                                                                  \\
+                            &= \frac{1}{(2 \pi \hbar)} \iint e^{\frac{-ip' x'}{\hbar}}  e^{\frac{ip''x''}{\hbar}} x' \delta(x'-x'') dx'dx''          \\
+                            &= \frac{1}{(2 \pi \hbar)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx'                                                   \\
+                            &= \frac{1}{(2 \pi)} \int x' e^{-i(p'-p'')\frac{x}{\hbar}}   d(\frac{x'}{\hbar})
+                \end{align*}
+
+                积分内恰好出现了一个$x'$也就是坐标算符
+                $$ \dv{e^{\frac{-ix(p'-p'')}{\hbar}}}{p'} = -\frac{i}{\hbar} e^{\frac{-ix(p'-p'')}{\hbar}}$$
+                $$ e^{\frac{-ix(p'-p'')}{\hbar}} = i\hbar \dv{}{p'} e^{\frac{-ix(p'-p'')}{\hbar}}$$
+                
+                因此
+                \begin{align*}
+                     \frac{1}{(2 \pi)} \int x‘ e^{\frac{-ix(p'-p'')}{\hbar}}   dx' &=  \frac{1}{(2 \pi)}  i\hbar \dv{}{p'} 2\pi \delta(p'-p'')    \\
+                                                                                  &= i \hbar \dv{}{p'} \delta(p'-p'')                          \\                                   
+                \end{align*}
+
+                有了矩阵元后,考虑算符的一般作用
+                $$ \ket{\varphi} = \vu*{x} \ket{\psi} \lra \braket{p}{\varphi}=\mel{p}{\vu*{x}}{\psi} \lra \varphi_{p} = \int dp' x_{pp'} \psi_{p'}$$
+                $$ \varphi_{p'} =  \int dp'' [x_{p'p''}] \psi_{p''} = \int dp'' [i \hbar \dv{}{p'} \delta(p'-p'')] \psi_{p''} = i\hbar \dv{}{p'} \varphi_{p'} $$
+
+                
+            
+            \end{proof}
+            
+        
+        
+                         
                     
                 
 
