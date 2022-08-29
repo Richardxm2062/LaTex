@@ -1,46 +1,5 @@
 \input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_article.tex}
 
-\usepackage{latexalpha2}
-%/usr/local/texlive/texmf-local/tex/latex/local/latexalpha2
-%直接使用wolfram代码
-% \wolfram[<format>]{<code>}    \wolframgraphics[<format>]{<code>}{<filename>} 
-%具体使用方法查看 latexalpha2.pdf
-
-
-%以下为前言文件引用的包以及相关用法
-
-\begin{comment}
-
-\usepackage[UTF8, heading = false, scheme = plain]{ctex}    %解决中文字体，不改变排版
-\usepackage{geometry}					 %调整页边距等
-\usepackage{indentfirst}			     %首行缩进
-\usepackage{graphicx}					 %插入图片:\includegraphics{myimage.png}
-\usepackage{hyperref}					 %超链接插入包:\href{url}{name}
-\usepackage{multirow}					 %插入表格用到的宏包:\begin{tabular}{|c|c|}
-\usepackage{xcolor} 					 %颜色包:\color{}
-\usepackage{listings}					 %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
-\usepackage{verbatim}					 %使用 comment 环境进行大段备注
-
-
-
-\geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好
-\setlength{\parindent}{2em}    %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
-\hypersetup{hidelinks,colorlinks=true,linkcolor=black,urlcolor=blue}   %对hyperref 包进行预设
-\newtheorem{thm}{定理}[section]     %定义一个新的环境 thm, 命名为定理，以 节 开始编号，数学论文中常用 
-corollary 推论环境
-lemma 引理环境
-proof 证明环境
-solution 解环境
-center environment %居中
-\textbf \emph %加粗和斜体
-thm environment	%定理
-$equation$ (inline) or equation environment or package amsmah %公式
-itemize environment or enumerate environment %列表
-
-\end{comment}
-
-
-
 \title{量子力学习题集}
 \author{马祥芸}
 
@@ -94,7 +53,7 @@ itemize environment or enumerate environment %列表
                     \item 若$E$非简并  \quad 本征函数具有确定宇称(两种宇称) 
                         $$ \psi(-x) = \hat{P}\psi(x) = c\psi \quad c=\pm 1 $$ %\hat{}输入算符的帽子
                     \item 若$E$简并 \quad $\psi(x)$和$\psi(-x)$分别为独立的波函数，它们的线性组合是具有宇称的解
-                        $$ \psi_{\pm}(x) = \frac{1}{\sqrt{2}}[\psi(x) \pm \psi(-x)] $$
+                        $$ \psiii{\pm}{x} = \frac{1}{\sqrt{2}}[\psi(x) \pm \psi(-x)] $$
                 \end{itemize}
             
            \end{corollary}
@@ -174,7 +133,7 @@ itemize environment or enumerate environment %列表
         所以$\delta(x)$势通常在此点并不连续。
 
         当然由于$V(x)$具有偶对称性，波函数同样具有确定的宇称,现假设两个排除0点的波函数解分别为
-        $$\psi_{1}(x)=B\sin(kx) \quad (0<x<a) \quad \psi_{2}(x)=D\sin(kx) \quad (-a<x<0)$$
+        $$\psiii{1}{x}=B\sin(kx) \quad (0<x<a) \quad \psiii{2}{x}=D\sin(kx) \quad (-a<x<0)$$
         给两种方法通过宇称判断系数关系
         \begin{itemize}
             \item 全局判断法   \\
@@ -207,8 +166,8 @@ itemize environment or enumerate environment %列表
         此题直接带入波函数的连续性条件得到的方程组是难以求解的,因此需要特殊技巧
         \begin{itemize}
             \item 获得奇宇称的解,先无视$\delta(x)$势,采用无限深方势阱的解,只取在$x=\frac{a}{2}$的有效解
-            \item 获得偶宇称解重点在于$\psi_{2}(a)=0$,所以不妨让$\psi_{2}(x)=A \sin{(x-a)}$,同时在$x=\frac{a}{2}$处连续得到$\psi(x)=-A \sin{(x-a)}$,它是很容易验证在关于$x=\frac{a}{2}$对称的.(设对称轴为$x=b$)
-                $$\psi_{1}(b-x)=\psi_{2}(b+x) \quad \Rightarrow b=\frac{a}{2}$$
+            \item 获得偶宇称解重点在于$\psiii{2}{a}=0$,所以不妨让$\psiii{2}{x}=A \sin{(x-a)}$,同时在$x=\frac{a}{2}$处连续得到$\psi(x)=-A \sin{(x-a)}$,它是很容易验证在关于$x=\frac{a}{2}$对称的.(设对称轴为$x=b$)
+                $$\psiii{1}{b-x}=\psiii{2}{b+x} \quad \Rightarrow b=\frac{a}{2}$$
         \end{itemize}
 
         注意在求第一激发态的时候还没有考虑$a \to 0$,所以对于偶宇称的解的最低能量是在某一个区间,需要把两种宇称解的最低能量进行对比.
@@ -248,25 +207,26 @@ itemize environment or enumerate environment %列表
 
     \subsection{已知能量与势能的关系}
         求解过程中注意三角函数的周期性  
-        $$  \arctan{-1}=-\frac{\pi}{4}+n\pi \quad (n=1,2,3 \cdots ) $$    
+        $$  \arctan{(-1)}=-\frac{\pi}{4}+n\pi \quad (n=1,2,3 \cdots ) $$    
     
     \subsection{已知两能量的本征态}
         此题的关键点
         \begin{itemize}
             \item 两个有能量的本征态具有正交性
-                  $$ \int_{-\infty}^{\infty} \psi_{1}^{*}(x) \psi_{2}(x)  = 0 $$
+                  $$ \int_{-\infty}^{\infty} \psiiii{1}{*}{x} \psiii{2}{x}  = 0 $$
         \end{itemize}
 
         但是直接利用以上正交关系来直接求得$b,c$是复杂又难以实现的,我们需要额外的关系来先求得一个参数化简第二个波函数. 
 
-        由于$\psi_{1}(x)$的信息是完全可知的,因此我们需要利用它来获得关于$V(x)$的信息,本题可得到$V(x)$具有偶对称性,因此我们可以化简$\psi_{2}(x)$,
+        由于$\psiii{1}{x}$的信息是完全可知的,因此我们需要利用它来获得关于$V(x)$的信息,本题可得到$V(x)$具有偶对称性,因此我们可以化简$\psiii{2}{x}$,
         只能存在一个偶宇称即$b=0$.
 
         这个积分可拆分成如下两个积分
-            $$ \intff e^{-\beta x^{2}} dx  \quad + \quad   \intff x^{2} e^{-\beta x^{2}} dx=0 \quad (1)$$   
+            $$ \intff c e^{-\beta x^{2}} dx  \quad + \quad   \intff x^{2} e^{-\beta x^{2}} dx=0 \quad (1)$$   
         
-        \begin{formal}
-        这两个积分相当典型,在后面使用高斯试探函数经常会遇到此类积分,现总结\label{calculus:1}
+        
+            \begin{formal}
+        这两个积分相当典型,在后面使用高斯试探函数经常会遇到此类积分,现总结
         
 
         \begin{enumerate}
@@ -280,28 +240,96 @@ itemize environment or enumerate environment %列表
 
                 令$x=r\cos{\theta} \quad y=r\sin{\theta}$
                 $$ I^{2} = \int_{0}^{+\infty} \int_{0}^{2\pi} e^{-a r^{2}} rdrd\theta $$
-                $$ I^{2} = \int_{0}^{+\infty} \pi  e^{-a r^{2}}d(r^{2})= \frac{\pi}{a}  \Rightarrow I = \sqrt{\frac{\pi}{a}} $$
-        
+               
+                \begin{align*}
+                    I^{2} &= \int_{0}^{+\infty} \pi  e^{-a r^{2}}d(r^{2})   \\
+                          &= \frac{\pi}{a}  \lra I = \sqrt{\frac{\pi}{a}} 
+                \end{align*}
+            
             \end{proof}
 
-            \item 表格积分法:被积函数的结构为---(多项式)(函数)\quad(本质是分部积分)
+            \item 
+                $$ \intff x^{2} e^{-a x^{2}} dxdx = \frac{1}{2a} \sqrt{\frac{\pi}{a}} $$
+
+                特别的当$n=1,3,5,7\cdots$
+                $$ \intff x^{n} e^{-a x^{2}} dxdx = 0 $$
+
+                \begin{proof}
+                    \pfindent
+                    $$ \frac{d(e^{-a x^{2}})}{dt} = -2a x e^{-a x^{2}} $$
+                    
+                    \begin{align*}
+                        I &= -\frac{1}{2a} \intff x d(e^{-a x^{2}})                                         \\
+                          &= -\frac{1}{2a} (\eval{x e^{-a x^{2}}}_{-\infty}^{+\infty} - \intff e^{-a x^{2}}dx )
+                    \end{align*}
+
+                    洛必达法则
+                    $$ \lim_{x \to \pm \infty} x e^{-x^{2}} = \eval{\frac{1}{2x e^{x^{2}}}}_{x \to \pm \infty} = 0^{+} \quad and \quad 0^{-} $$ 
+                    $$ I = \frac{1}{2a} \sqrt{\frac{\pi}{a}}$$
+
+                \end{proof}
+
+            \item 表格积分法(处理复杂分部积分函数):被积函数的结构为---(多项式)(函数)\quad(本质是分部积分)
                 $$ \int(x^{2}+x) e^{3x} dx \quad \int x(x-a)\sin{2x} \quad \int e^{3x}\sin{2x}dx $$
                 记为$f(x) \quad g(x)$
 
-                第一行:
-                    $$ f(x) \quad f'(x) \quad f''(x) \cdots \quad to \quad 0 $$
+              
+                \begin{center}
 
-                第二行:
-                    $$ g(x) \quad \int g(x) dx \quad \iint g(x) dxdx \cdots $$
+                    \begin{tabular}{|c|c|c|c|c|}
+                        
+                        \hline
+                        $f(x)$ & $f'(x)$        & $f''(x)$          & $\cdots$ & 0 \\
+                        \hline
+                        $g(x)$ & $\int g(x) dx$ & $\iint g(x) dxdx$ & $\cdots$ & $\iiint \dots$ \\
+                        \hline
+                        
+                    \end{tabular}
+                    
+                \end{center}
                 
                 第二行的项数与第一行保持一致,共计[n,n]
 
                 $+(1,2)-(2,3)+(3,4)-(4,5)\cdots + c$ \quad 
                 
-                注意:(i,j)表示第一行第$i$个元素$\times$第二行的第$j$个元素,每一个乘积前的正负号为[+,-,+,...]交替,同时不要漏掉积分常数$c$,如果
+                注意:(i,i+1)表示第一行第$i$个元素$\times$第二行的第$(i+1)$个元素,每一个乘积前的正负号为[+,-,+,...]交替,同时不要漏掉积分常数$c$,如果
                 第一行的函数无法求导到0,求导直到出现原函数的常数倍也可以.($\int e^{3x}\sin{2x}dx $的积分第一行第三项为原函数的$-\frac{9}{4}$倍)
             \end{enumerate}   
         \end{formal}
+
+        回到原积分$I_{1}+I_{2}=0$,第一个积分值很容易知道为$c \sqrt{\frac{\pi}{\beta}}$,第二个积分值为$\frac{1}{2\beta} \sqrt{\frac{\pi}{\beta}}$,求得$ c = -\frac{1}{2\beta}$
+
+        方程(9)带入波函数求解复杂,需要细心,其中有一部需要分解因式(具有启发性,二阶导为原函数的一个多项式倍)
+        \begin{align*}
+            \frac{\psiiii{2}{''}{x}}{\psiii{2}{x}} & = \frac{\beta (2\beta^{2} x^{4} -11\beta x^{2} +5)}{2\beta x^{2}-1} \\
+                                        & = \frac{\beta (2\beta x^{2} - 1) (\beta x^{2}-5)}{2\beta x^{2}-1}   \\
+                                        & = \beta(\beta x^{2}-5) 
+        \end{align*}
+        
+        \subsection{圆圈运动}
+
+        此题的$x$是以圆环的外周长为度量的,需要变换波函数的变量便于求解$x=R\varphi$,因此$\frac{d}{dx^{2}}=\frac{1}{R^{2}d\varphi^{2}}$
+
+        此时$V(x)=a\delta(x-L/2) \lra V(\varphi) = a \delta[R(\varphi-\pi)]$
+        值得注意的一个$\delta(x)$的缩放性质
+            $$ \intff \delta(Rx)dx = \intff \frac{1}{R} \delta(Rx) d(Rx) = 1 \lra \delta(Rx) = \frac{1}{R}\delta(x)$$
+
+        所以我们得到新的势函数$V(\varphi) = \frac{a}{R} \delta(\varphi-\pi) $,在求解过程中不使用三角函数解,使用复幂指数的解更合适(涉及角度),\quad $\psi(x) = Ae^{-ik\varphi} + Be^{ik\varphi}$
+
+        连续性条件发生变化,发散点为$\varphi = \pi$,实际上第三个条件和第一个条件给出的结论是一样的,而第二个条件往往是被忽略的
+        $$ \psi_{1}(0) = \psi_{2}(2\pi) \quad \psi_{1}'(0) = \psi_{2}'(2\pi)\quad \psi_{1}(\pi) = \psi_{2}(\pi) $$
+        
+        由前两个条件可以得到如下两个方程组
+        \begin{align}
+            A+B&=C+D\\
+            A-B&=C-D
+        \end{align}
+
+        容易解出$A=C$带入方程$(1)or(2)$会得到$B=D$,$A$与$B$的关系需要一阶波函数在$\varphi=\pi$的连续性关系解出
+        
+       
+        
+        
                     
                 
 
