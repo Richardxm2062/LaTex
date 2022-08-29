@@ -7,7 +7,7 @@
     package iidef:
         指定学校名      \thecourseinstitute{}      
         指定课程名      \thecoursename{} 
-	指定学期。      \theterm{}
+	指定学期        \theterm{}
         作业名         \hwname{}
         生成作业标题    \courseheader           放在document环境内 不需要再maketile
         名字           \name                   放在document环境内

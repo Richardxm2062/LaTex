@@ -7,6 +7,7 @@
 \usepackage[dvipsnames,svgnames]{xcolor}                    %颜色包:\color{}
 
 
+
 %图片宏包
 \usepackage{graphicx}                                       %插入图片:\includegraphics{myimage.png}
 \usepackage{float}
@@ -89,7 +90,7 @@
 \hypersetup{hidelinks,colorlinks=true,
 linkcolor=black,urlcolor=blue}                              %对hyperref 包进行预设
 
-\newenvironment{solution}{\proof[\indent \bf 解]}{
+\newenvironment{slt}{\proof[\indent \bf 解 ]}{
 \renewcommand{\qedsymbol}{}\endproof}                       %提供解环境
 \newtheorem{thm}{定理}[section]                              %定义一个新的环境 thm, 命名为定理,以 节 开始编号
 \newtheorem{lemma}{引理}[section]                            %定义新环境 lemma,命名为引理,以 节 开始编号
@@ -110,5 +111,35 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \def\psiiii#1#2#3{\psi_{#1}^{#2} (#3)}                       %常用的\psi下标、上标和括号
 
 
+%作业包(需要的时候再解除注释)
+%\usepackage{iidef}
+%建议使用自己的slt解环境
+\begin{comment}
+
+    package iidef:
+        指定学校名      \thecourseinstitute{}      
+        指定课程名      \thecoursename{} 
+	    指定学期        \theterm{}
+        作业名         \hwname{}
+        生成作业标题    \courseheader           放在document环境内 不需要再maketile
+        名字           \name                   放在document环境内
+        自动编号环境    \begin{enumerate}       
+        题号           \item               自动编号 
+        证明           \begin{proof}           证明环境由amsthm包提供
+        求解           \begin{solution}       
+        方程           \begin{equation}        
+        方程编号        \labe{eq:[number]}      为方程设置编号  
+        引用房产        \eqref{eq:[number]}     引用方程
+        行内方程        $...$
+        多行公式        \begin{align}           
+                            ... & = ... \\ 
+                                & = ...
+                       \begin{array}{lcl}      
+                            ... & = & ... \\ 
+                            ... & = & ...
+        方程组          \begin{cases}
+                            ... & \mbox{if} x \mbox{is even} \\ 带假设
+
+\end{comment}
 
 
