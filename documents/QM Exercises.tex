@@ -227,7 +227,7 @@
             $$ \intff c e^{-\beta x^{2}} dx  \quad + \quad   \intff x^{2} e^{-\beta x^{2}} dx=0 \quad (1)$$   
         
         
-            \begin{formal}
+        \begin{formal}
         这两个积分相当典型,在后面使用高斯试探函数经常会遇到此类积分,现总结
         
 
@@ -351,7 +351,7 @@
                 n为维数,这里取1进行证明,证明前须知
                 
                 内积$\braket{x}{\psi}$就是波动力学的波函数
-                $$\psi (x)\ {\stackrel {def}{=}}\ \braket{x}{\psi}$$
+                $$\psi (x) \xlongequal{def} \braket{x}{\psi}$$
                 
                 进一步可知动量在坐标表象下即为动量波函数
                 $$ \braket{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$
@@ -380,7 +380,7 @@
                 
                 因此
                 \begin{align*}
-                     \frac{1}{(2 \pi)} \int x‘ e^{\frac{-ix(p'-p'')}{\hbar}}   dx' &=  \frac{1}{(2 \pi)}  i\hbar \dv{}{p'} 2\pi \delta(p'-p'')    \\
+                     \frac{1}{(2 \pi)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx' &=  \frac{1}{(2 \pi)}  i\hbar \dv{}{p'} 2\pi \delta(p'-p'')    \\
                                                                                   &= i \hbar \dv{}{p'} \delta(p'-p'')                          \\                                   
                 \end{align*}
 
@@ -393,7 +393,86 @@
             \end{proof}
 
 
-        \subsection{we}
+        \subsection{期望值问题}
+            此题涉及到两种绘景的选择:薛定谔绘景和海森堡景
+            
+            \begin{formal}
+
+                \begin{itemize}
+                    \item 
+                    \textbf{薛定谔绘景} 
+
+                    此绘景下,负责时间演化的算符是一种幺正算符($ UU^{*} = U^{*}U = I_{n} \quad U^{-1} = U^{*} $),态向量$\ket{\psi(0)}_{s}$,经过时t,演化到$\ket{\psi(t)}_{s}$,演化方程表示为
+    
+                    $$ \ket{\psi(t)}_{s} = U(t,0) \ket{\psi(0)}_{s} $$
+    
+                    $U(t,0)$是时间从0流易到t的时间演化算符(或者写为时间$t_{0}$),是幺正算符,假设系统哈密顿量$H$不含时间,则时间演化算符为
+    
+                    $$ U(t,0) = e^{\frac{-iHt}{\hbar}} $$
+    
+                    而且时间演化算符与哈密顿量对易,注意指数函数$e^{\frac{-iHt}{\hbar}}$必须通过泰勒级数进行计算
+
+                    \item   
+                    \textbf{海森堡绘景} 
+
+                    态向量$\ket{\psi(t)}_{H}$,算符$A_{H}(t)$的定义分别为
+                    $$ \ket{\psi(t)}_{H} \xlongequal{def} \ket{\psi(0)}_{H} = \ket{\psi(0)}_{s}$$
+                    $$ A_{H}(t) \xlongequal{def} U^{\dagger}(t,0)A_{s}U(t,0) $$
+
+                    时间演化算符对时间的偏导数为
+                    $$ \pdv{U(t,0)}{t} = \frac{1}{i\hbar} H U(t,0) $$
+                    $$ \pdv{U^{\dagger}(t,0)}{t} = - \frac{1}{i\hbar} U^{\dagger}(t,0) H$$
+
+                    所以算符$A_{H}(t)$对时间的导数为
+                    $$ \dv{A_{H}(t)}{t} = \frac{1}{i \hbar} [U^{\dagger} A_{s} U,U_{\dagger} H U]$$
+
+                    不含时间的哈密顿量在两种绘景下完全一样
+                    $$ H_{H} = U^{\dagger} H_{s} U = H_{s} =H $$
+
+                    将算符的定义纳入考虑,得到海森堡运动方程
+                    $$ \dv{A_{H}(t)}{t} = \frac{1}{i\hbar} [A_{H}(t),H] $$
+                    $$ \dv{<A_{H}(t)>}{t} = \frac{1}{i\hbar} \overline{[A_{H}(t),H]} $$
+                \end{itemize}
+
+                宁外在解题过程中需要用到一个特殊的对易关系
+                $$ [\vu*{x} , F(\vu*{p})] = i\hbar F'(\vu*{p}) \llra [\vu*{x} , \vu*{p}^{n}] = i\hbar n \vu*{p}^{n-1} $$
+                
+
+
+                
+            \end{formal}
+            
+
+        \subsection{转子演化问题}
+            自由转子和自由粒子的解的形式相似
+            $$ \psi = A e^{-imx} + Be^{imx} $$
+            
+            通常两个传播方向会将其合并
+            $$ \psi_{m} = A e^{imx} $$ 
+
+            但是自由转子具有周期性边界条件$ \psi(x) = \psi(x+2\pi) $因此使得$m$的取值只有整数$ m = 0,\pm{1},\pm{2},\pm{3}\cdots $,也正因为是分立指标,所以
+            和自由粒子有所不同,可以简单的写成求和.
+            
+            波函数由多个波函数线性
+            组合而成
+            $$ \psi(\varphi,t) = \sum_{m} c_{m} \psiii{m}{\varphi} U(t,0 ) $$
+
+            所以题目要求我们求出处于新的能量基态概率$\abs{c_{0}}^{2}$,因此我们先要求出$c_{m}$,事实上它是由初始条件决定的(初始波函数)
+
+            同样的在我们已知了初始波函数与初始能量,初始波函数仍然可以用$\psiii{m}{\varphi}$展开($t=0,U(0,0)=1$)
+            $$ \psi(\varphi,0) = \sum_{m} c_{m} \psi_{m}(\varphi) $$
+            $$ \psiiii{n}{*}{\varphi} \psi(\varphi,0) = \sum_{m} c_{m} \psiiii{n}{*}{\varphi} \psiii{m}{\varphi} $$
+
+            对其进行积分,只留下了$c_{m}$项进行积分
+            $$ \int \psiiii{m}{*}{\varphi} \psi(\varphi,0) d\varphi = \int c_{m} \psiiii{m}{*}{\varphi} \psiii{m}{\varphi} d\varphi $$
+            $$ c_{m} =  \int_{0}^{\varphi_0} \psiiii{m}{*}{\varphi} \psi(\varphi,0) d\varphi$$
+            
+            令$m=0$
+            $$ c_{0} = \int_{0}^{\varphi_0} \sin{\frac{\pi \varphi}{\varphi_{0}}} d\varphi  = \frac{2\varphi_{0}}{\pi \sqrt{\phi \varphi_{0}}} $$
+            $$ \abs{c_{0}}^{2} = \frac{4 \varphi_{0}}{\pi^{3}}  $$
+
+            时间演化算符并不影响粒子处于某个态的概率,因此当移除壁垒后概率仍旧以移除前的波函数作为初始状态(初始条件),这样将初始波函数展开(移除后的波函数可解),一些特定的系数可以求解($m\neq0$无法求解)
+
 
             
             
