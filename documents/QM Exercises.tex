@@ -345,6 +345,7 @@
                 \pfindent
 
                 $$ \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                $$ \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
                 $$ \delta(x) = \frac{1}{(2\pi)^{n}} \intff e^{ipx} dp $$
                 $$ \delta(p) = \frac{1}{(2\pi)^{n}} \intff e^{-ipx} dx $$
 
@@ -538,6 +539,30 @@
             第三问的积分中并不是所有的相因子可以抵消,仔细计算,带入深势阱的波函时记得带入归一化系数($\sqrt{\frac{2}{a}}$)
             
 
+        \subsection{无限深势阱的叠加态粒子2}
+            记得归一化波函数$\psi(x,t)$以求出$A$
+            第二问的积分依旧难算,需要多算
+
+        \subsection{已知波函数的平均值求未知波函数平均值}
+            求动量的平均值时时间因子无法抵消
+        
+        \subsection{表象问题}
+
+            \begin{formal}
+
+                表象问题的公式总结:
+
+                $$ 
+                
+                \braket{x}{p} = \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                $$ \braket{p}{x} = \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
+                $$ \int dx' \ket{x'} \bra{x'} = I $$ 
+                $$ \int dp' \ket{p'} \bra{p'} = I $$ 
+                $$ \psi(p) = \braket{p}{\psi} = \int dx' \braket{p}{x'} \braket{x'}{\psi}  = \intff \psi(x) e^{\frac{-ipx}{i\hbar}} dx $$
+                $$ \psi(x) = \braket{x}{\psi} = \int dp' \braket{x}{p'} \braket{p'}{\psi} = \psi(x) = \intff \psi(p) e^{\frac{ipx}{i\hbar}}  dp $$
+            \end{formal}
+                
+        
 
 
 
