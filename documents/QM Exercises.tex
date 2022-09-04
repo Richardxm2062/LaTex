@@ -271,7 +271,7 @@
 
                 \end{proof}
 
-            \item 表格积分法(处理复杂分部积分函数):被积函数的结构为---(多项式)(函数)\quad(本质是分部积分)
+            \item 表格分部积分法(处理复杂分部积分函数):被积函数的结构为---(多项式)(函数)\quad(本质是分部积分)
                 $$ \int(x^{2}+x) e^{3x} dx \quad \int x(x-a)\sin{2x} \quad \int e^{3x}\sin{2x}dx $$
                 记为$f(x) \quad g(x)$
 
@@ -295,7 +295,8 @@
                 $+(1,2)-(2,3)+(3,4)-(4,5)\cdots + c$ \quad 
                 
                 注意:(i,i+1)表示第一行第$i$个元素$\times$第二行的第$(i+1)$个元素,每一个乘积前的正负号为[+,-,+,...]交替,同时不要漏掉积分常数$c$,如果
-                第一行的函数无法求导到0,求导直到出现原函数的常数倍也可以.($\int e^{3x}\sin{2x}dx $的积分第一行第三项为原函数的$-\frac{9}{4}$倍)
+                第一行的函数无法求导到0,求导直到出现原函数的常数倍也可以.($\int e^{3x}\sin{2x}dx $的积分第一行第三项与第二行第三项积的积分为原函数的$-\frac{9}{4}$倍),
+                减去一个$A I$(A为常数,前一个例子中为$\frac{-9}{4}$),移项即可
             \end{enumerate}   
         \end{formal}
 
@@ -540,11 +541,19 @@
             
 
         \subsection{无限深势阱的叠加态粒子2}
-            记得归一化波函数$\psi(x,t)$以求出$A$
+            第一问记得归一化波函数$\psi(x,t)$以求出$A$
+            
             第二问的积分依旧难算,需要多算
 
+            第三问不确定度的表达式为
+            $$ \triangle{p} = \sqrt{<\vu*{p}^{2}> - <\vu*{p}>^{2} } $$
+
+            记忆技巧: 平方拔 减 拔平方
+
+            其中$\vu*{p}^{2} = 2\mu<E>$,即计算动量平方的期望需要联系上能量不用再带入计算
+
         \subsection{已知波函数的平均值求未知波函数平均值}
-            求动量的平均值时时间因子无法抵消
+            求动量的平均值时间因子无法抵消
         
         \subsection{表象问题}
 
@@ -552,9 +561,7 @@
 
                 表象问题的公式总结:
 
-                $$ 
-                
-                \braket{x}{p} = \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                $$ \braket{x}{p} = \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
                 $$ \braket{p}{x} = \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
                 $$ \int dx' \ket{x'} \bra{x'} = I $$ 
                 $$ \int dp' \ket{p'} \bra{p'} = I $$ 
@@ -562,6 +569,14 @@
                 $$ \psi(x) = \braket{x}{\psi} = \int dp' \braket{x}{p'} \braket{p'}{\psi} = \psi(x) = \intff \psi(p) e^{\frac{ipx}{i\hbar}}  dp $$
             \end{formal}
                 
+
+        \subsection{动量波函数}
+            积分可以化简为
+            $$ Q \int_{0}^{n \pi} \sin{u} e^{-ku} du $$
+            $$ Q = \frac{a}{n\pi} \sqrt{\frac{1}{\pi \hbar a}} \quad u = \frac{n \pi \hbar}{a} \frac{x}{\hbar}  = \frac{n \pi}{a} x $$
+            
+            使用表格分部积分法即可,概率密度是实数,所以只取欧拉公式的实数部分
+            $$ Re[e^{i x}] = Re[\cos{x}+i\sin{x}] = \cos{x} $$
         
 
 
