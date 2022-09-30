@@ -11,6 +11,24 @@
     %\thecourseinstitute{马祥芸}    %作业包页眉右边
 
     \section{薛定谔方程与一维定态问题}
+
+        \begin{formal}
+            $$ \dv[2]{y}{x} + p\dv{y}{x} + qy = 0 $$
+            
+            特征根方程
+            $$ r^{2} + pr + q = 0 $$
+
+            \begin{enumerate}
+                \item $r_{1} \neq r_{2}$且为实根
+                $$ y = Ae^{r_{1}x} + Be^{r_{2}x} $$
+                \item $r_{1} = r_{2}$且为实根
+                $$ y = (C_{1}+C_{2}x)e^{r_{1}x} $$
+                \item $r_{1}=\alpha + i \beta,r_{2} = \alpha - i \beta $为共轭复根(通常$\alpha$都是0)
+                $$ y = e^{\alpha x} (C_{1}\cos{\beta x} + C_{2}\sin{\beta x}) \quad or \quad y = C_{1}e^{i\beta x} + C_{2}e^{-i\beta x}$$
+                
+            \end{enumerate}
+        \end{formal}
+
         \subsection{一维有限势场}
         \begin{thm}\label{thm:1.1}                                                %添加\lable{书签名}进行标记，使用\pageref{书签名}添加标记位置的页码 \ref{书签名}引用定理编号
             势函数具有偶对称$V(x)=V(-x)$,$\psi(x)$和$\psi(-x)$均是波函数的解
@@ -116,13 +134,22 @@
         
         \subsection{一维 \texorpdfstring{$\delta$}{}势}   %使用\texorpdfstring{}{}来包括tex公式或者string需要两个参数或者仅用一个括号并用.连接
         
-        先不考虑$x\neq0$的局部区域,丢掉$\delta(x)$势阱,需要用到一阶微分变化值的关系    
+        先不考虑$x\neq0$的局部区域,丢掉$\delta(x)$势阱,需要用到  
+        \begin{formal}
+            
+            \indent 一阶微分变化值的关系  
+
+            $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$     %\int_{}^{}   \hbar 
+
+            积分性质
+
+            $$\int_{-\varepsilon}^{+\varepsilon} \delta(x) \psi(x) dx =\psi(0) $$
+
+        \end{formal}
         
-        $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$     %\int_{}^{}   \hbar 
         
-        注意不要丢了$\delta(x)$前面的参数，需要用到其积分性质
+        注意不要丢了$\delta(x)$前面的参数
         
-        $$\int_{-\varepsilon}^{+\varepsilon} \delta(x) \psi(x) dx =\psi(0) $$
         
         在归一化中，由于在$x\neq 0$其他的区域的波函数具有对称性，对其中一边积分时其值为$\frac{1}{2}$
         
@@ -165,9 +192,9 @@
         归一化过程中需要全空间积分为1(不是对称函数).
 
     \subsection{复合势:\texorpdfstring{$\delta(x)$}{}和阶梯势}
-        此题直接带入波函数的连续性条件得到的方程组是难以求解的,因此需要特殊技巧
+        此题直接带入波函数的连续性条件得到的方程组是难以求解的,因此需要特殊技巧(两部分解分别满足连续性和一阶微分连续性)
         \begin{itemize}
-            \item 获得奇宇称的解,先无视$\delta(x)$势,采用无限深方势阱的解,只取在$x=\frac{a}{2}$的有效解
+            \item 获得奇宇称的解,满足一阶微分连续性,无视$\delta(x)$势,采用无限深方势阱的解,只取在$x=\frac{a}{2}$的有效解(此处为0的解)
             \item 获得偶宇称解重点在于$\psiii{2}{a}=0$,所以不妨让$\psiii{2}{x}=A \sin{(x-a)}$,同时在$x=\frac{a}{2}$处连续得到$\psi(x)=-A \sin{(x-a)}$,它是很容易验证在关于$x=\frac{a}{2}$对称的.(设对称轴为$x=b$)
                 $$\psiii{1}{b-x}=\psiii{2}{b+x} \quad \Rightarrow b=\frac{a}{2}$$
         \end{itemize}
@@ -251,10 +278,10 @@
             \end{proof}
 
             \item 
-                $$ \intff x^{2} e^{-a x^{2}} dxdx = \frac{1}{2a} \sqrt{\frac{\pi}{a}} $$
+                $$ \intff x^{2} e^{-a x^{2}} dx = \frac{1}{2a} \sqrt{\frac{\pi}{a}} $$
 
                 特别的当$n=1,3,5,7\cdots$
-                $$ \intff x^{n} e^{-a x^{2}} dxdx = 0 $$
+                $$ \intff x^{n} e^{-a x^{2}} dx = 0 $$
 
                 \begin{proof}
                     \pfindent
@@ -315,7 +342,9 @@
 
         此时$V(x)=a\delta(x-L/2) \lra V(\varphi) = a \delta[R(\varphi-\pi)]$
         值得注意的一个$\delta(x)$的缩放性质
+        \begin{formal}
             $$ \intff \delta(Rx)dx = \intff \frac{1}{R} \delta(Rx) d(Rx) = 1 \lra \delta(Rx) = \frac{1}{R}\delta(x)$$
+        \end{formal}
 
         所以我们得到新的势函数$V(\varphi) = \frac{a}{R} \delta(\varphi-\pi) $,在求解过程中不使用三角函数解,使用复幂指数的解更合适(涉及角度),\quad $\psi(x) = Ae^{-ik\varphi} + Be^{ik\varphi}$
 
@@ -340,62 +369,66 @@
 
         \subsection{改变哈密顿量求本征值(表象变换)}
             此题的关键在于表象的变换,由坐标表象转化到动量表象(详见曾书$P_{151}$和$P_{281-6}$)
-            $$ \vu*{x} = i\hbar \pdv{\vu*{p}}$$
-
-            \begin{proof}
-                \pfindent
-
-                $$ \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
-                $$ \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
-                $$ \delta(x) = \frac{1}{(2\pi)^{n}} \intff e^{ipx} dp $$
-                $$ \delta(p) = \frac{1}{(2\pi)^{n}} \intff e^{-ipx} dx $$
-
-                n为维数,这里取1进行证明,证明前须知
-                
-                内积$\braket{x}{\psi}$就是波动力学的波函数
-                $$\psi (x) \xlongequal{def} \braket{x}{\psi}$$
-                
-                进一步可知动量在坐标表象下即为动量波函数
-                $$ \braket{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$
-                $$ \braket{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$
-
-                算符$\vu*{x}$在坐标表象下的形式为$x$,同理算符$\vu*{p}$在动量表象下为$p$
-                $${\vu*{x}} \ket{x}= x \ket{x} \quad {\vu*{p}} \ket{p} = p \ket{p} $$
-
-                关于$\delta$函数
-                $$ \braket{x'}{x} = \delta(x'-x) $$
-
-                坐标算符在自己坐标表象下的矩阵元
-                $$ x_{x'x''} = \mel{x'}{\vu*{x}}{x''} = x' \braket{x'}{x''} = x' \delta(x'-x'') $$
-
-                \begin{align*}
-                    x_{p'p''} &= \mel{p'}{x}{p''} \\
-                            &= \braket{p'}{x'} \mel{x'}{x}{x''} \braket{x''}{p''}                                                                  \\
-                            &= \frac{1}{(2 \pi \hbar)} \iint e^{\frac{-ip' x'}{\hbar}}  e^{\frac{ip''x''}{\hbar}} x' \delta(x'-x'') dx'dx''          \\
-                            &= \frac{1}{(2 \pi \hbar)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx'                                                   \\
-                            &= \frac{1}{(2 \pi)} \int x' e^{-i(p'-p'')\frac{x}{\hbar}}   d(\frac{x'}{\hbar})
-                \end{align*}
-
-                积分内恰好出现了一个$x'$也就是坐标算符
-                $$ \dv{e^{\frac{-ix(p'-p'')}{\hbar}}}{p'} = -\frac{i}{\hbar} e^{\frac{-ix(p'-p'')}{\hbar}}$$
-                $$ e^{\frac{-ix(p'-p'')}{\hbar}} = i\hbar \dv{}{p'} e^{\frac{-ix(p'-p'')}{\hbar}}$$
-                
-                因此
-                \begin{align*}
-                     \frac{1}{(2 \pi)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx' &=  \frac{1}{(2 \pi)}  i\hbar \dv{}{p'} 2\pi \delta(p'-p'')    \\
-                                                                                  &= i \hbar \dv{}{p'} \delta(p'-p'')                          \\                                   
-                \end{align*}
-
-                有了矩阵元后,考虑算符的一般作用
-                $$ \ket{\varphi} = \vu*{x} \ket{\psi} \lra \braket{p}{\varphi}=\mel{p}{\vu*{x}}{\psi} \lra \varphi_{p} = \int dp' x_{pp'} \psi_{p'}$$
-                $$ \varphi_{p'} =  \int dp'' [x_{p'p''}] \psi_{p''} = \int dp'' [i \hbar \dv{}{p'} \delta(p'-p'')] \psi_{p''} = i\hbar \dv{}{p'} \psi_{p'} $$
-
-                
             
-            \end{proof}
+            \begin{formal}
+                $$ \vu*{x} = i\hbar \pdv{\vu*{p}}$$
+
+                \begin{proof}
+                    \pfindent
+    
+                    $$ \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                    $$ \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
+                    $$ \delta(x) = \frac{1}{(2\pi)^{n}} \intff e^{ipx} dp $$
+                    $$ \delta(p) = \frac{1}{(2\pi)^{n}} \intff e^{-ipx} dx $$
+    
+                    n为维数,这里取1进行证明,证明前须知
+                    
+                    内积$\braket{x}{\psi}$就是波动力学的波函数
+                    $$\psi (x) \xlongequal{def} \braket{x}{\psi}$$
+                    
+                    进一步可知动量在坐标表象下即为动量波函数
+                    $$ \braket{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$
+                    $$ \braket{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$
+    
+                    算符$\vu*{x}$在坐标表象下的形式为$x$,同理算符$\vu*{p}$在动量表象下为$p$
+                    $${\vu*{x}} \ket{x}= x \ket{x} \quad {\vu*{p}} \ket{p} = p \ket{p} $$
+    
+                    关于$\delta$函数
+                    $$ \braket{x'}{x} = \delta(x'-x) $$
+    
+                    坐标算符在自己坐标表象下的矩阵元
+                    $$ x_{x'x''} = \mel{x'}{\vu*{x}}{x''} = x' \braket{x'}{x''} = x' \delta(x'-x'') $$
+    
+                    \begin{align*}
+                        x_{p'p''} &= \mel{p'}{x}{p''} \\
+                                &= \braket{p'}{x'} \mel{x'}{x}{x''} \braket{x''}{p''}                                                                  \\
+                                &= \frac{1}{(2 \pi \hbar)} \iint e^{\frac{-ip' x'}{\hbar}}  e^{\frac{ip''x''}{\hbar}} x' \delta(x'-x'') dx'dx''          \\
+                                &= \frac{1}{(2 \pi \hbar)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx'                                                   \\
+                                &= \frac{1}{(2 \pi)} \int x' e^{-i(p'-p'')\frac{x}{\hbar}}   d(\frac{x'}{\hbar})
+                    \end{align*}
+    
+                    积分内恰好出现了一个$x'$也就是坐标算符
+                    $$ \dv{e^{\frac{-ix(p'-p'')}{\hbar}}}{p'} = -\frac{i}{\hbar} e^{\frac{-ix(p'-p'')}{\hbar}}$$
+                    $$ e^{\frac{-ix(p'-p'')}{\hbar}} = i\hbar \dv{}{p'} e^{\frac{-ix(p'-p'')}{\hbar}}$$
+                    
+                    因此
+                    \begin{align*}
+                         \frac{1}{(2 \pi)} \int x' e^{\frac{-ix(p'-p'')}{\hbar}}   dx' &=  \frac{1}{(2 \pi)}  i\hbar \dv{}{p'} 2\pi \delta(p'-p'')    \\
+                                                                                      &= i \hbar \dv{}{p'} \delta(p'-p'')                          \\                                   
+                    \end{align*}
+    
+                    有了矩阵元后,考虑算符的一般作用
+                    $$ \ket{\varphi} = \vu*{x} \ket{\psi} \lra \braket{p}{\varphi}=\mel{p}{\vu*{x}}{\psi} \lra \varphi_{p} = \int dp' x_{pp'} \psi_{p'}$$
+                    $$ \varphi_{p'} =  \int dp'' [x_{p'p''}] \psi_{p''} = \int dp'' [i \hbar \dv{}{p'} \delta(p'-p'')] \psi_{p''} = i\hbar \dv{}{p'} \psi_{p'} $$
+    
+                    
+                
+                \end{proof}
+            \end{formal}
+            
 
 
-        \subsection{期望值问题}
+        \subsection{期望值问题:海森堡绘景}
             此题涉及到两种绘景的选择:薛定谔绘景和海森堡景
             
             \begin{formal}
@@ -438,6 +471,7 @@
 
                 宁外在解题过程中需要用到一个特殊的对易关系
                 $$ [\vu*{x} , F(\vu*{p})] = i\hbar F'(\vu*{p}) \llra [\vu*{x} , \vu*{p}^{n}] = i\hbar n \vu*{p}^{n-1} $$
+                $$ [\vu*{p} , F(\vu*{x})] = -i\hbar F'(\vu*{x}) \llra [\vu*{p} , \vu*{x}^{n}] = -i\hbar n \vu*{x}^{n-1} $$
                 
 
 
@@ -565,8 +599,8 @@
                 $$ \braket{p}{x} = \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
                 $$ \int dx' \ket{x'} \bra{x'} = I $$ 
                 $$ \int dp' \ket{p'} \bra{p'} = I $$ 
-                $$ \psi(p) = \braket{p}{\psi} = \int dx' \braket{p}{x'} \braket{x'}{\psi}  = \intff \psi(x) e^{\frac{-ipx}{i\hbar}} dx $$
-                $$ \psi(x) = \braket{x}{\psi} = \int dp' \braket{x}{p'} \braket{p'}{\psi} = \psi(x) = \intff \psi(p) e^{\frac{ipx}{i\hbar}}  dp $$
+                $$ \psi(p) = \braket{p}{\psi} = \int dx' \braket{p}{x'} \braket{x'}{\psi} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} \intff \psi(x) e^{\frac{-ipx}{i\hbar}} dx $$
+                $$ \psi(x) = \braket{x}{\psi} = \int dp' \braket{x}{p'} \braket{p'}{\psi} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} \intff \psi(p) e^{\frac{ipx}{i\hbar}}  dp $$
             \end{formal}
                 
 
@@ -575,8 +609,8 @@
             $$ Q \int_{0}^{n \pi} \sin{u} e^{-ku} du $$
             $$ Q = \frac{a}{n\pi} \sqrt{\frac{1}{\pi \hbar a}} \quad u = \frac{n \pi \hbar}{a} \frac{x}{\hbar}  = \frac{n \pi}{a} x $$
             
-            使用表格分部积分法即可,概率密度是实数,所以只取欧拉公式的实数部分
-            $$ Re[e^{i x}] = Re[\cos{x}+i\sin{x}] = \cos{x} $$
+            使用表格分部积分法即可,记得平方的时候,要取复共轭
+           
 
 
         \subsection{深势阱的壁崩溃问题与动量波函数}
@@ -650,7 +684,7 @@
         \subsection{\texorpdfstring{$\delta$}{}势d的透射与反射问题}
             第一小问的一般表达式就是指通解(舍弃掉$x>0$部分向左传播的波)
 
-            第三小问,透射率$T$与反射率$R$
+            第三小问,透射率$T$与反射率$R$,参数带虚数指标$i$时,要取复共轭来计算  
 
             $$ T = \frac{\abs{F}^{2}}{\abs{A}^{2}} \quad R = \frac{\abs{B}^{2}}{\abs{A}^{2}} $$
 
@@ -667,33 +701,940 @@
             第二小问由于$x>0$的部分是势垒,只需要考虑波函数有界,舍去$e^{\beta x}$,其他正常算,$T$和$R$此时也满足波数一样时的等式即
             $$ T + R = 1  $$
             
-            但是透射参数$T \neq \abs{F}^{2}$(解的形式不一样),所以需要先计算反射系数$R$,参数带虚数指标$i$时,要取复共轭来计算  
+            但是透射参数$T \neq \abs{F}^{2}$(解的形式不一样),由于$\psi_{2}$是实函数,所以其透射系数必为0
             
             
         \subsection{阶跃势的透射与反射问题2}
             此题中$ E = 1000ev \quad V = 750ev $,初始个数$ N_{0} = 1800 $,透射个数 $ N = N_{0} T $
 
+        \subsection{矩形势垒的透射与反射问题}
+            计算量较大,在处理$ \alpha \to 0 $时用到无穷小代换$ \sin{\alpha} = \alpha $
 
+        \subsection{势阱的透射与散射问题}
+            类似解法,同样实函数的透射系数为0
+        
+        \subsection{复合势:台阶势与\texorpdfstring{$\delta$}{}势的透射与散射问题}
+            类似解法,解法类似,仅仅是波函数的一阶导数在0点跃进
+
+        
+        \subsection{粒子吸收模型:虚势}
+            虚势场描述粒子的吸收,只是一个实用的模型,不是量子力学的理论,因为粒子在虚势场的哈密顿量不是厄米算符,它同量子力学的基本原理不符合
+
+            这个虚势场模型描述为下
+
+            $$ V(x) =
+            \begin{cases}
+            0, & \mbox{if} \quad x \mbox{ < 0} \\
+            -iV , & \mbox{if} \quad x \mbox{ > 0}
+            \end{cases}  $$
+
+            前期解法基本一致,后面需要根据$ V << E$ 将 $ k $ 用$ k_{0} $表示,带入$A$,$B$取近似值.
+
+            吸收系数的定义,单位路程上流密度的减少$ -\frac{dj}{dx} $,相对值$ \frac{1}{j} $
+            $$ M = \abs{ - \frac{1}{j} \frac{dj}{dx}} $$
+
+        \subsection{非原点的\texorpdfstring{$\delta$}{}势}
+
+            遇到指数方程不要急,此题和三角函数方程组解法很类似
+            \begin{align*}
+                \frac{e^{kx} + e^{-kx}}{e^{kx} - e^{-kx}} &= 1 - \frac{2e^{-kx}}{e^{kx} - e^{-kx}} \\
+                                                          &= 1 - \frac{2}{e^{2kx} - 1}
+            \end{align*}
             
-        
-        
-        
-        
-    
-        
-    
-    
-    
+            将超越方程构造成过原点的直线和某一指数函数的交点问题,最后满足通过原点的直线的斜率小于另一侧指数函数的斜率$1$
 
-      
+        \subsection{无限深势阱的叠加态粒子3}
+            算归一化系数别去积分,而是两个态的概率为1就行
+
+            动量平均值的计算量依旧大,通常将能量差值设为
+
+            $$ \frac{E_{2} - E_{1}}{\hbar} = w $$    
+        
+            最后再带入具体的
+
+            一般的这类相似的题都有
+            $$ \int \psi_{1}^{*} \vu*{p} \psi_{1} = 0 \quad \int \psi_{2}^{*} \vu*{p} \psi_{2} = 0 $$
+
+        \subsection{海森堡绘景}
+            这类题记得需要算两次微分,第一次得到的是一个微分方程组,再让方程对时间$t$求微分,并联立两个方程求解
+        
+            初始条件$ \vu*{x}(0) = x \quad \vu*{p}(0) = p $
+
+        \subsection{海森堡绘景2}
+            \begin{thm}\label{thm:1.3}
+                \thmindent
+
+                维里定理:动能平均值是势能的平均值的$\frac{v}{2}$倍,其中$v$表示势能函数是关于$x$的$v$次方程
+                $$ \bar{T} = \frac{v}{2} \bar{V} $$ 
+
+            \end{thm}
+
+            第一小问在本题中$ v = -2 $,因此$ E = T + V = 0 $,不满足在该势场下$E<0$的条件
+
+            在一维谐振子中 $ v = 2 $因此有结论$ \bar{T} = \bar{V} $
+
+            第二小问对算符求时间的倒数时,如果含有时间项需要加上一个对时间的偏微分
+            $$ \dv{\vu*{Q}(t)}{x} = \pdv{\vu*{Q}(t)}{t} + \frac{1}{i \hbar } [\vu*{Q}(t),\vu*{H}]$$
+
+        \subsection{量子化}
+            \begin{formal}
+                量子化:
+
+                量子化的一个含义是,在经典力学中取连续值的力学量,到量子力学中变成取分立值的现象,其原因是在经典力学中的力学量$F(x_{i},p_{i})$
+                到了量子力学中变成了厄米算符$\vu*{F}(\vu*{x}_{i},\vu*{p}_{i})$,他们满足一些对易关系(略)
+
+                正是这些对易关系是的一些由$\vu*{x}_{i}$与$\vu*{p}_{i}$组成的力学量算符的本征值取分立值.
+
+                根据经典力学的哈密顿正则运动方程,带入对易关系,就得到海森堡运动方程,,这些对易关系又叫做正则量子化条件
+
+            \end{formal}
+    
 
     \section{力学量算符}
+        \begin{formal}
+            总结算符容易忘记的知识点   
+            
+            $$ \comm{x_{i}}{\vu*{p}_{j}} = i \hbar \delta_{ij} \quad \comm{\vu*{L}_{i}}{\vu*{L}_{j}} = i\hbar \vu*{L}_{k} \varepsilon_{ijk}  
+            \quad \comm{\vu*{L^{2}}}{\vu*{L}_{i}} = 0 \quad \comm{x}{f(\vu*{p})} = i \hbar \pdv{f(\vu*{p})}{\vu*{p}}
+            $$
 
+            $$  \comm{\vu*{L}_{i}}{\vu*{x}_{j}} = i \hbar \vu*{x}_{k} \quad \comm{\vu*{L}_{i}}{\vu*{p}_{j}} = i \hbar \vu*{p}_{k}
+            $$
+
+            $$\vu*{L}_{\pm} = \vu*{L}_{x} \pm  i \vu*{L}_{y} \quad \comm{\vu*{L}_{z}}{\vu*{{L}}_{\pm}} = \pm \hbar \vu*{L}_{\pm} \quad \comm{\vu*{L}^{2}}{\vu*{{L}}_{\pm}} = 0  $$
+
+            $$ e^{i \alpha \vu*{A}}  =  \cos{\alpha} + i \sin{\alpha}\vu*{A} $$
+
+            如果一个算符写在了幂指数上例如$e^{\lambda \vu*{A}}$,那么它和别的算符的对易关系可以直接看作算符$\vu*{A}$来使用,比如
+            $$ \comm{\vu*{L}^{2}}{\vu*{L}_{x}} = 0 \quad \comm{\vu*{L^{2}}}{e^{\lambda \vu*{L}_{x}}} = 0 $$
+        
+            $$ F(\vu*{A}) = \sum_{n=0}^{\infty} \frac{ F^{(n)}(0) }{n!} \vu*{A}^{n} \qquad F^{(n)}(0) = \eval{\dv[n]{F(\vu*{A})}{\vu*{A}} }_{\vu*{A}=0}  $$
+            $$ \triangle{A} \triangle{B} \geq \frac{1}{2} \abs{\overline{\comm{A}{B}}} $$
+            $$ \triangle{A} = \sqrt{<A^{2}> - <A>^{2}} $$
+            $$ \dv{\vu*{F}(t)}{x} = \pdv{\vu*{F}(t)}{t} + \frac{1}{i \hbar } [\vu*{F}(t),\vu*{H}] $$
+
+            力学量不含时间且与$\vu*{H}$对易时,此力学量为守恒量
+
+            力学量完全集:
+            
+            \indent 它们是一组线性无关的相互对易的力学量,它们的共同本征函数全体集合可以用来表示粒子的运动状态.在力学量完全集中,力学量的个数为粒子运动
+            的维数.例如对于在三维中心力场中运动的粒子,力学量完全集可以是$(x,y,z)$或$(\vu*{p}_{x} , \vu*{p_{y}} , \vu*{p}_{z})$ 或者$ (\vu*{L}^{2} , \vu*{L}_{z} , \vu*{H}) $ 如果考虑自旋,还应增加力学量$\vu*{S_{z}}$
+
+            $ F- H $ 定理:
+
+            假设粒子的束缚定态能量为$E_{n}$,相应的归一化波函数为$\psi_{n}$,$\nabla$为哈密顿算符$\vu*{H}$中的任一参数,便有
+            $$ \pdv{E_{n}}{\lambda} = \overline{\qty(\pdv{\vu*{H}}{\lambda})_{n}} $$
+
+            一维度谐振子的升降算符
+            $$ \ua = \frac{1}{ \sqrt{2m \hbar w}} ( -i\vu*{p} + mwx ) \quad \da = \frac{1}{ \sqrt{2m \hbar w}} ( +i\vu*{p} + mwx ) $$
+            $$ \comm{a_{-}}{a_{+}} = 1 \quad \ua \ket{n} = \sqrt{n+1} \ket{n+1} \quad \da \ket{n} = \sqrt{n} \ket{n-1} $$
+            $\da$ 与$\ua$可以构成厄米算符$\vu*{N}=\da \ua$,且$\vu*{N}$的本征值为$n=0,1,2,3\cdots$,所以哈密顿量又可以写为
+            $$ \vu*{H} = \hbar w (\da \ua - \frac{1}{2}) \llra \vu*{H} = (\vu*{N} + \frac{1}{2})\hbar w $$
+        \end{formal}
+
+        \subsection{空间反演算符和动量算符的厄米证明}
+            换元时记得变积分上下限,负号可以收进去,同时改变积分上下限
+        \subsection{球坐标的动量算符}
+            一些运算规则
+            $$ \nabla \vdot (\va{r} \frac{\psi}{r})  =  (\nabla \vdot \va{r}) \frac{\psi}{r} + \va{r} \vdot \nabla(\frac{\psi}{r}) $$
+            $$ \nabla (\frac{\psi}{r}) = (\nabla \frac{1}{r})\psi + \frac{1}{r} \nabla \psi $$
+            
+            其中$ \nabla \vdot \va{r} = 3 \quad \nabla \dfrac{1}{r} = - \dfrac{\va{r}}{r^{3}} $
+
+            在球坐标中
+            $$ \nabla =  \pdv{r} \vb{e_{r}} +  \frac{1}{r} \pdv{\theta} \vb{e_{\theta}} + \ \frac{1}{r \sin{\theta}} \pdv{\varphi} \vb{e_{\varphi}} \quad \va{r} = r \vb{e_{r}}  $$         
+    
+        \subsection{算符函数问题}
+            结论需要背住(总结部分已经有了)
+        \subsection{算符欧拉公式}
+            结论需要背住(总结部分已经有了)
+            \begin{formal}
+                两个三角函数的泰勒级数
+                $$ \cos{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n)!} x^{2n} = \wolfram{Series[Cos[x],{x,0,5}]} $$
+                $$ \sin{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1} = \wolfram{Series[Sin[x],{x,0,5}]} $$
+            \end{formal}
+            
+        
+        \subsection{算符的久期方程问题}
+            要求证明某态也为某算符本征矢时,直接算符作用到态上根据条件化简到久期方程的形式,本征值是会变化的
+        \subsection{对易关系求解问题}
+            第一小问当已知哈密顿量时,$\vu*{p}$是可以用$\comm{x}{\vu*{H}}$表示出来的,带入后再把对易子拆开这样就能利用哈密顿量的本征值方程,注意$ \bra{n} \vu*{H} = \bra{n} E_{n} $
+
+            求系数的时候注意最好更改能量的减法为$E_{n} - E_{m}$
+            
+            第二小问与第三小问需要用到单位算符
+            $$ \sum_{n} \ket{n} \bra{n} = 1 $$
+
+            第三小问化简后发现里面包含$xp$,因此将能量项提个负号再凑一个$px$
+
+        \subsection{能量表象的算符证明}
+            所谓能量表象即,能量本征方程形式
+                $$ \vu*{H} \ket{n} = E_{n} \ket{n} $$
+
+            方程中$E_{n}$为$n$个能量本征值,其本征态为$\ket{n}$
+
+            所以将能量系数乘到算符里并作用在态上,就得到$\vu*{H}$
+
+            分别放在第一个矩阵元和第二个矩阵元就可以得到两种形式
+        \subsection{能量表象的算符证明}
+            通常一个算符重复出现在一个内积里,则用单位算符隔开,如果还重复算符之间包含哈密顿算符,一般插入在哈密顿算符后面保证能用能量本征方程
+            
+            例如下面几个情况
+            
+
+            $\vu*{F}\vu*{{F^{\dagger}}}\vu*{H}$插入在算符之间; $\vu*{F}\vu*{H} \vu*{F^{\dagger}}$ 插入在哈密顿算符后面;特别的$\vu*{H} \vu*{F} \vu*{F^{\dagger}}$,可以直接等价$ \bra{k} \vu*{H} = \bra{k} E_{k}$并提出能量
+        
+        \subsection{角动量本征函数和本征值}
+            $\vu*{L^{2}}$的本征函数是球谐函数$Y_{lm}(\theta,\varphi)$,本征值是$l(l+1)\hbar^{2}$,算符$\vu*{L_{z}}$的本征值是$m\hbar$
+            
+            $l$为角量子数取值范围是$0,1,2,3,4\cdots$,$m$是磁量子数,取值范围是$0,\pm1,\pm2,\pm3\cdots$(简并度为$(2l+1)$)
+
+            做此题不需要把升降算符展开,直接算出对易关系就行了,算对易关系用对易算子的运算法则,建议记住$\vu*{L_{z}}$与升降算符的对易式子
+
+            $$\vu*{L}_{\pm} = \vu*{L}_{x} \pm  i \vu*{L}_{y} \quad \comm{\vu*{L}_{z}}{\vu*{{L}}_{\pm}} = \pm \hbar \vu*{L}_{\pm} $$
+
+            做第二小问的时候可以先把本征值假设出来,通过取符共轭做内积的方式消去本征值旁边的波函数
+
+        \subsection{算符等式}
+            \begin{formal}
+                证明目标非常像一个泰勒展开
+
+                Baker-Hausdorff算符等式
+                $$ e^{\vu*{A}} \vu*{B} e^{\vu*{-A}} = \vu*{B} + \comm{\vu*{A}}{B} + \frac{1}{2!} \comm{\vu*{A}}{\comm{\vu*{A}}{\vu*{B}}} + \frac{1}{3!} \comm{\vu*{A}}{\comm{\vu*{A}}{\comm{\vu*{A}}{\vu*{B}}}} \cdots $$
+
+                其证明过程是一个常见的方法就是加入参数$\lambda$ 
+
+                $$ F(\lambda) = e^{\lambda \vu*{A}} \vu*{B} e^{-\lambda \vu*{A}} $$
+
+                同一个算符与其一个算符函数的位置可以互相交换一下(因此$-\vu*{A}$可以换到最后面去)
+            \end{formal}
+
+        \subsection{算符等式2}
+            第一小问回顾对易子的公式
+            $$ \comm{\vu*{A}}{\vu*{B}\vu*{C}} = \vu*{B} \comm{\vu*{A}}{\vu*{C}} + \comm{\vu*{A}}{\vu*{B}}\vu*{C} $$
+        
+            然后利用题目条件的已知对易关系即可
+
+            第二小问构造算符函数
+            $$ F(\lambda) = e^{\vu*{A} \lambda} e^{\vu*{B} \lambda} $$
+
+            之后使用Baker-Hausdorff算符等式时,根据题目的对易关系,有非常多项为0,因此再积分即可
+        
+        \subsection{角动量算符的证明题}
+            Baker-Hausdorff算符等式经典用法
+
+        \subsection{算符等式3}
+            需要背住幂指数函数的展开式子
+            \begin{formal}
+                $$ e^{x} = \sum_{n=0}^{\infty} \frac{1}{n!} x^{n} = \wolfram{Series[Exp[x],{x,0,5}]} $$
+            \end{formal}
+        
+        \subsection{角动量算符的本征值问题}
+            要求背诵角动量升降算符的形式与本征值
+            \begin{formal}
+                角动量升降算符,它们都是厄米算符,可以选择作用在左边或者右边
+
+                $$ \vu*{L}_{\pm} = \vu*{L}_{x} \pm  i \vu*{L}_{y} \quad \comm{\vu*{L}_{z}}{\vu*{{L}}_{\pm}} = \pm \hbar \vu*{L}_{\pm} $$
+                $$ \vu*{L}_{x}  = \frac{1}{2} (\vu*{L}_{+} + \vu*{L}_{-}) \quad \vu*{L}_{y} = \frac{1}{2i} (\vu*{L}_{+} - \vu*{L}_{-}) \quad \vu*{L}^{2} = \vu*{L}_{-} \vu*{L}_{+} + \vu*{L}_{z}^{2} + \hbar \vu*{L}_{z} $$
+                $$ \vu*{L}_{\pm} Y_{lm}(\theta,\varphi) = \sqrt{l(l+1) - m(m \pm 1)}  \hbar Y_{lm \pm 1}(\theta,\varphi) $$
+                $$ \ev{\vu*{L}_{x}}{lm} = 0 \quad \ev{\vu*{L}_{y}}{lm} = 0  $$
+            \end{formal}
+
+            在求$ \overline{\vu*{L}_{y}^{2}} $时,将其中一个$\vu*{L}_{y}$作用在复共轭波函数上,提出系数时变为$- \frac{1}{2i}$,因此最前面的系数为$\frac{1}{4}$
+        
+        \subsection{角动量升降算符问题}
+            同题目2.9(1)
+        
+        \subsection{未知算符和角动量的对易关系}
+            这类题通常给出一个未知算符和已知算符的对易关系,由证明式子可知,在经过$\vu*{V}$算符作用后整体升了一个态变成$\ket{j+1 ,j+1}$,换句话说,如果经过算符$\vu*{L}^{2}$与算符$\vu*{L}_{z}$作用后
+            能给出所有的$j$都升了$1$那么意味着算符$\vu*{V}$确实让态升了,得证
+
+            在证明第二个等式的时候需要把$\vu*{L}^{2}$算符用升降算符和$\vu*{L}_{z}$去替代,同时由于$m=l$,所以升降算符的本征值有很多项为0
+        
+        \subsection{角动量算符的本征值问题2}
+            第三小问注意$ l = m $, 因此$\vu*{L}_{+} \psi_{kll} = 0 $
+        \subsection{连续谱问题}
+            其本征函数构成正交完备系,因此任何函数都可以是他们的组合包括势函数$V(x)$,待求解的方程之中唯一未知的就是$V(x)$,所以需要将$V(x)$使用完备基表示
+            
+            同时由于$V(x)$仅包含$x$,因此需要将$\omega$进行积分
+
+            左乘$u^{*}(x,\omega')$其中第二个变量是$\omega'$的原因是为了放到积分号里面(并不对$\omega'$进行积分).再进行全空间积分,得到$\delta$函数挑选出$C(\omega)(\omega-\omega_{0})$
+
+        \subsection{算符的泰勒级数应用}
+            使用幂级数展开$e^{\frac{-ia\vu*{p}_{x}}{\hbar}}$并带入算符$\vu*{p}_{x} = - i \hbar \dv{x}$,最后得到$\psi(x-a)$在$0$点的泰勒展开得证
+
+            第二小问直接去转置共轭就可以了,不用再展开了
+            \begin{formal}
+                幺正算符
+
+                $$  \vu*{U}^{\dagger} = \vu*{U}^{-1} = (\vu*{U}^{T})^{*} \llra \vu*{U}^{\dagger} \vu*{U} = \vu*{U} \vu*{U}^{\dagger}  = \vu*{I} $$
+            \end{formal}
+
+        \subsection{谐振子的均值问题}
+            多个方法都要会
+            \begin{formal}
+
+                求解$\vu*{x}$和$\vu*{p}$的平均值
+                \begin{itemize}
+                    \item   谐振子的波函数的对称性(要么为奇函数要么为偶函数)
+                    \item   递推方式 
+                    $$  x \psi_{n} = \frac{1}{\alpha}(\sqrt{\frac{n}{2}}\psi_{n-1} + \sqrt{\frac{n+1}{2}} \psi_{n+1})  \quad \dv{\psi_{n}}{x} = \alpha (\sqrt{\frac{n}{2}}\psi_{n-1} - \sqrt{\frac{n+1}{2}} \psi_{n+1}) $$
+                    \item   对易方式:将$\vu*{x}$使用$\comm{\vu*{p}}{\vu*{H}}$的对易关系来表示并带入,将哈密顿量分别左作用和右作用
+                \end{itemize}
+
+                求解$\vu*{x}^{2}$与$\vu*{p}^{2}$的平均值
+                \begin{itemize}
+                    \item 使用维里定理
+                    \item 使用$F-H$定理
+                    $$ \pdv{E_{n}}{\omega}  = \overline{\qty(\pdv{\vu*{H}}{\omega})_{n}} $$
+                \end{itemize}
+
+            \end{formal}
+
+
+        \subsection{则不准关系与演化问题}
+            太难算了,跳过
+        \subsection{动能概率分布问题}
+            当动能为$T = \frac{\vu*{p}^{2}}{2 \mu}$,则对于$p=\pm p_{0}$时都对应同一个动能,因此动能的概率分布为动量的概率分布的两倍
+            $$ F(T)dT = 2 \abs{\psi(p)}^{2} dp $$
+
+            $F(T)$本身就是概率分布函数了,不需要再平方.求动能的平均值时,由于$T$是厄米的,所以直接$\int_{0}^{+\infty} F(T) T dT $,注意积分区间是$[0,+\infty]$,
+            使用高斯积分公式时值为原来的一半.把剩下的系数等价换成$\omega$更符合能量的表示形式
+
+        \subsection{谐振子的递推公式问题}
+            注意$\dv{\psi_{n}}{x}$求导的时候有两项
+
+            第三小问将能量表示为$E - \overline{\vu*{H}} $,并用不确定度表示出来,使用均值不等式,带入测不准关系就可以得到关于能量的不等式.
+
+            第四小问使用维里定理和$F-H$定理秒做.
+
+        \subsection{束缚定态下的新态平均值问题}
+            \begin{formal}
+                
+                若粒子处于束缚定态,则必有
+                
+                $$ <\vu*{p}> = <\vu*{F}> = 0 \quad F = -\pdv{V(x)}{x} $$
+
+                证明方法见习题2.38(去算$\comm{x}{\vu*{H}} \quad \comm{\vu*{p}}{\vu*{H}}$)
+            \end{formal}
+
+        \subsection{谐振子演化平均值问题}
+            需要利用谐振子波函数的宇称$(-1)^{n}$,同时被积函数为奇函数的直接去掉,再利用谐振子波函数的递推公式即可.
+
+
+        \subsection{一维无限深方势阱定态能量}
+            直接用能量的表达式就可以了.
+        \subsection{正定算符}
+            第一小问证明算符的正定性看是否是模方
+
+            第二小问厄米算符左作用形成新的态,右作用形成一个态变成内积,所以正定
+
+            \begin{formal}
+                迹的定义
+
+                $$ tr(\vu*{A}) = \sum_{n} \mel{n}{\vu*{A}}{n} $$
+            \end{formal}
+        \subsection{密度矩阵}
+
+        \begin{formal}
+            密度算符
+            $$ \vu*{\rho} = \ket{\psi} \bra{\psi} \quad \vu*{\rho} =  \vu*{\rho}^{2} \quad \lambda = 0,1$$
+        \end{formal}
+            第一小问两个内积(或者矩阵元等)都是积分或者说是一个数,是可交换的
+            
+            第二小问取的态需使用$\phi$作为符号,以免直接内积为1,同时需要将密度算符二次作用,这是一个常见的方法.
+
+            第三小问直接对密度算符求偏导
+
+            $$ \pdv{\vu*{\rho}}{t} = \pdv{(\ket{\psi} \bra{\psi})}{t} $$
+
+            题目条件的符厄米共轭方程
+            $$ -i\hbar \pdv{\bra{\psi}}{t} = \bra{\psi} \vu*{H}  $$
+
+            注意$\bra{\psi}$和$\vu*{H}$的位置要调换
+        \subsection{能量表象下可观测量的本征值}
+            此题仅有两个能量本征态$\ket{1} \quad \ket{2}$,所以任何态都会是它们的叠加
+
+            在第三小问求本征值时,可以在此能量表象下求,因此可以看作$\ket{1} = \mqty(1 \\ 0) \quad \ket{2} = \mqty(0 \\ 1)$,所以算符$\vu*{R}$在此表象下的四个矩阵元可以算出
+
+        \subsection{两套本征态的问题}
+            第一小问记住,测量谁就用谁的本征态去展开此时的态,得到本征值的贡献并求和
+
+            第二小问总结量子力学中的测量原理
+            \begin{formal}
+                
+                量子力学测量问题
+
+                在此题中初态为$\ket{\psi_{\lambda}}$经过测量$\vu*{A}$后,波函数坍缩到某$\ket{\phi_{n}}$上,但是这个态仅仅是体系受到测量仪器的作用
+                而产生的一个暂态,是体系一个新的初态而已,体系要按照它原来的规律随时间演化也就是$\ket{\psi(t)}$
+            \end{formal}
+
+        \subsection{叉乘的计算}
+            \begin{formal}
+                计算叉乘使用行列式$ \vu*{p} \cross \vu*{L} $
+
+                $$ \mqty| \va{i} & \va{j} & \va{k} \\ \vu*{p}_{x} & \vu*{p}_{y} & \vu*{p}_{z} \\ \vu*{L}_{x} & \vu*{L}_{y} & \vu*{L}_{z} | $$
+            \end{formal}
+            
+
+        \subsection{角动量算符的升降算符}
+            第二小问需要明确要证明什么,平均值在共同本征态上与磁量子数无关即$ \ev{\vu*{F}}{jm}  = \ev{\vu*{F}}{jm+1}$
+
+            需要用到一个重要的等式
+            $$ \vu*{J}_{+} \ket{jm} = \sqrt{j(j+1)-m(m+1)} \hbar \ket{jm+1} $$
+
+            它的厄米共轭形式非常有用
+
+            $$ \bra{jm} \vu*{J}_{-} = \sqrt{j(j+1)-m(m+1)} \hbar \bra{jm+1} $$
+
+            这样$\vu*{J}_{-} \vu*{J}_{+}$不改变磁量子数的值,而算符$\vu*{J}_{-}$左作用和算符$\vu*{J}_{+}$右作用都改变磁量子数的值 
+
+            同时该算符和升降算符都对易,即$ \vu*{J}_{-} \vu*{F} \vu*{J}_{+} = \vu*{F} \vu*{J}_{-} \vu*{J}_{+} $
+
+        \subsection{力学量的对时间的二阶微分}
+            直接使用海森堡运动方程更简单
+
+        \subsection{位能平均值的证明题}
+            需要用到题目2.6的结论,没做跳过
+
+        \subsection{不确定关系与小孔}
+            争议题
+        \subsection{期望的展开}
+            之前都是展开初态波函数,其厄米共轭也存在,因此可以用波函数展开某期望的形式.
+
+            需要利用题目条件$ E_{1} \leq E_{2} \leq E_{3} \cdots $进行缩放
+
+            第二小问基态为$\ket{0}$第一激发态为$\ket{1}$,第二激发态为$\ket{2}$,所以任一波函数的展开到第二激发态即可
+
+            $$ \ket{\psi} = \braket{0}{\psi} \ket{0} + \braket{1}{\psi} \ket{1} + c_{2} \ket{2} $$
+
+            其中因为要构造第二激发态所以$c_{2} = \braket{2}{\psi} = \braket{2}{2} = 1$
+
+            $$   \ket{2} = \ket{\psi} - \braket{0}{\psi} \ket{0} - \braket{1}{\psi} \ket{1} $$
+            
+            求第二激发态等能量上限的计算有疑问
+        
+        \subsection{角动量算符的平均值}
+            显然$\vu*{L}_{x}$与$\vu*{L}_{y}$都可以使用升降算符表示,在本征态下的平均值均为0(右作用磁量子数加一导致正交)
+
+            第二小问使用简单的结论即$\vu*{L}_{x}^{2}$与$\vu*{L}_{y}^{2}$的平均值一样(对称性)
+
+            $$ <\vu*{L}_{x}^{2}>  = <\vu*{L}_{y}^{2}> = < \frac{1}{2} (\vu*{L}^{2} - \vu*{L}_{z}^{2}) > $$
+
+            同时和算符$\vu*{L}_{z}$的交叉相均为0,仅有$\vu*{L}_{x} \vu*{L}_{y}$和$\vu*{L}_{y} \vu*{L}_{x}$(使用升降算符计,计算量非常大)
+
+        \subsection{束缚态的动量和力学量算符的平均值}
+            主要是计算$\comm{x}{\vu*{H}}$表示$\vu*{p}$
+
+            计算$\comm{\vu*{p}}{\vu*{H}}$,其中势函数式关于$x$的,其对易关系不是0而是$\comm{\vu*{p}}{V(x)} = \pdv{V(x)}{x} \comm{\vu*{p}}{x} = -i\hbar \pdv{V(x)}{x}$
+
+        \subsection{反对易关系}
+            简单题
+        \subsection{力学量的测量问题}
+            此题是一类问题需要掌握.
+            \begin{formal}
+                测量谁就用谁的本征态作展开(如果没有则先计算本征态),同时每次测量波函数都会坍缩到这个本征态上
+            \end{formal}
+
+            注意$\ket{\psi}$虽然测出来是本征值,但是不是本征态,要先假设本征态
+
+
+        \subsection{力学量测量问题2}
+            注意假设$\chi_{1}$和$\chi_{2}$是正交的,因此$\phi_{1}$展开系数的平方和为1是归一化的,而$\phi_{2}$展开系数的平方和不为1要先归一化
+
+        \subsection{波函数的正交归一的方法}
+            建议看方法2更有物理意义($P_{99}$)
+
+        \subsection{能量表象的概率计算}
+            前3问简单,注意在第三问算出中微子要么处于$\ket{e}$要么处于$\ket{\mu}$
+
+            因此第四问再次回到$\ket{e}$,无非就是处于$\ket{\mu}$的概率为0(或者处于$\ket{e}$的概率为1),使用第三问的计算结果即可
+
+        \subsection{谐振子的升降算符的证明问题}
+            这些证明关系可以看看就行了,第二小问主要是计算$\comm{\vu*{a}_{-}}{\vu*{N}}$与$\comm{\vu*{a}_{+}}{\vu*{N}}$
+
+            $$ \vu*{N} = \vu*{a}_{+} \vu*{a}_{-} \quad \vu*{H} = (\vu*{N} + \frac{1}{2}) \hbar \omega $$
+        \subsection{谐振子的升降算符的证明问题2}
+            一个重要的式子
+
+            $$ \sum_{n=0}^{\infty} c_{n} \sqrt{n} \ket{n-1} = \alpha \sum_{n=0}^{\infty} c_{n} \ket{n} $$
+
+            求和公式不是随便提出系数,这个公式说明的是相同态下的系数一样即
+            $$ c_{n} \sqrt{n}  = \alpha c_{n-1} \quad  \llra \quad c_{n+1} \sqrt{n+1} = \alpha c_{n} $$
+
+            得到系数的递推关系,并利用归一化条件求出$c_{0}$
+
+        \subsection{谐振子升降算符的本征态}
+            只做前两问即可,记得算符$\vu*{a}$作用上去时,提出求和项中的基态$\ket{0}$
+        
+        \subsection{谐振子升降算符的本征态2}
+            第一小问和第二小问均是使用升降算符去表示哈密顿量、坐标算符、动量算符,由于正好处于相干态,所以算平均值是在这个态下计算
+        
+        \subsection{算符的对易关系证明}
+            注意证明算符的对易关系需要一个任意的态,而不是题目给的某个本征态,对这个任意态用本征态做展开就行了
+        
+
+        
 
     \section{表象}
+            \begin{formal}
+                知识要点(1.27的总结)
+                $$ \braket{x}{p} = \psiii{p}{x} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{ipx}{\hbar}} $$ 
+                $$ \braket{p}{x} = \psiii{x}{p} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} e^{\frac{-ipx}{\hbar}} $$ 
+                $$ \int dx' \ket{x'} \bra{x'} = I $$ 
+                $$ \int dp' \ket{p'} \bra{p'} = I $$ 
+                $$ \psi(p) = \braket{p}{\psi} = \int dx' \braket{p}{x'} \braket{x'}{\psi} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} \intff \psi(x) e^{\frac{-ipx}{i\hbar}} dx $$
+                $$ \psi(x) = \braket{x}{\psi} = \int dp' \braket{x}{p'} \braket{p'}{\psi} = \frac{1}{(2 \pi \hbar)^{\frac{n}{2}}} \intff \psi(p) e^{\frac{ipx}{i\hbar}}  dp $$
+                $$ \delta(x) = \frac{1}{(2\pi)^{n}} \intff e^{ipx} dp $$
+                $$ \delta(p) = \frac{1}{(2\pi)^{n}} \intff e^{-ipx} dx $$
+
+                一维动量波函数满足的定态方程
+                $$ \frac{p^{2}}{2\mu} \varphi(p) + \intff V_{pp'} \varphi(p') dp' = E\varphi(p) $$
+                $$ V_{pp'} = \frac{1}{2\pi \hbar} \intff e^{-i(p-p')x/\hbar} V(x)dx $$
+                
+                如果$V(\va{r})$可以表示成$\va{r}(x,y,z)$的正幂次级数,定态方程变为
+                $$ \big[\frac{p^{2}}{2\mu}+V(r=i\hbar \nabla_{p})\big]\varphi(p) = E\varphi(p) $$
+
+                
+
+                矩阵元
+                $$ \vu*{F}_{nm} = \mel{n}{\vu*{F}}{m} = \int u^{*}_{m} \vu*{F} u_{n} d\tau  $$
+
+                表象变换
+                $$ \psi' = S^{\dagger} \psi \quad \vu*{F}' = S^{\dagger} \vu*{F} S $$
+
+                其中$S$矩阵可以在$\vu*{Q}$表象中求出$\vu*{Q}'$的所有本征态矢
+
+
+
+            \end{formal}
+        
+        \subsection{动量表象下的定态能量和波函数}
+            此求解过程典型,对$p$求导的时候$p'$对其的导数为$0$,本质上它们不是同一个$p$
+            
+            $$ \dv{\varphi(p)}{p} = - \frac{d(p^{2}+2\mu \abs{E})}{p^{2}+2\mu \abs{E}} $$
+            $$ \ln{\varphi(p)}+\ln{(p^{2}+2\mu \abs{E})} = c                           $$
+            $$ \varphi(p) = \frac{A}{p^{2}+2\mu \abs{E}}                               $$
+
+            \begin{formal}
+                
+                两个需要学会的积分
+                \begin{itemize}
+                    \item 积分1
+                        $$\int \frac{1}{x^{2}+1} dx  = \arctan{x} \lra \int \frac{1}{x^{2}+k^{2}} dx = \frac{1}{k} \arctan{\frac{x}{k}} $$
+                    \item 积分2
+                        $$ \intff \frac{1}{(x^{2}+b^{2})^{2}} dx = \frac{1}{2} b^{-3} \pi $$
+    
+                    \begin{proof}
+                        \pfindent
+                        $$ x = b\tan{\theta} \quad dx = b \frac{1}{\cos{\theta}^{2}} d\theta \quad 1+\tan{\theta}^{2} = \frac{1}{\cos{\theta}^{2}} $$
+
+                        积分区间变为$ (-\frac{\pi}{2},\frac{\pi}{2}) $,通过以上换元即可求得结果
+                    \end{proof}
+
+                \end{itemize}
+            \end{formal}
+            
+        \subsection{p表象下的测不准关系验证}
+            没有技巧都是积分,$\intff \frac{x^{2}}{(x^{2}+b^{2})^{2}} dx $同样适用上面的换元        
+
+        \subsection{谐振子的p表象计算}
+            $ x = i\hbar \pdv{p}$,证明见题目1.16
+            最后将方程化成类似于坐标表象下的薛定谔方程,解的形式类似
+
+        \subsection{均匀力场问题}
+            $$ f(x) = -F = - \pdv{V(x)}{x} \lra V(x) = F x \lra V(p) = Fi\hbar \dv{p}$$
+
+        \subsection{概率密度对时间的导数}
+            这类题不涉及能量,因此能量写为$i\hbar \pdv{t}$,取符共轭去计算概率密度对时间的导数
+
+        \subsection{自由粒子两种表象下的均值计算}
+            主要在于第二小问,自由粒子的动量守恒,动量的平均值不随时间变化,平均位移等于平均速度$\frac{p_{0}}{\mu}$乘以时间$t$,或者带入海森堡运动方程中进行计算
+        
+        \subsection{中子反中子的波函数计算}
+            这道题计算的关键在于要求出$t$时刻的波函数,而整个体系的哈密顿量为$\vu*{H} = \vu*{H}_{0} + \vu*{H}'$,取$\vu*{H}_{0}$为表象,其两个简并态作为基底即可
+
+            需要注意求出能量本征值后,需要计算此时哈密顿量的本征态(并不是$\ket{n}$,$\ket{\bar{n}}$)
+
+            需要在矩阵表达式中带入能量 
+            
+            $$ \mqty(-\alpha & \alpha \\ \alpha & -\alpha) \mqty(c_{1} \\ c_{2}) = 0 $$
+
+            并且有额外归一化要求$ \abs{c_{1}}^{2} + \abs{c_{2}}^{2} = 1 $,然后将获得的本征态用$\ket{n}$,$\ket{\bar{n}}$展开
+            
+            求出两个本征态后,任意时刻的波函数用它们展开,记得带系数(由初始条件决定,此题的初始条件为中子态).
+
+            然后带入能量与此时的本征态先化简再转化成$\ket{n}$,$\ket{\bar{n}}$的展开
+
+        \subsection{矩阵形式的力学量测量问题}
+            第二小问,初态题目已经给了,需要测量力学量$\vu*{A}$所以需要用它的本征态作展开,第一步就是求解它的本征值与本征态
+
+            经过计算$t=0$时刻只能测得本征值$a$而它是简并的,所以处于这两个态其中之一或者它们的线性组合
+
+            第三小问注意$t$时刻的波函数的时间因子只能是哈密顿量的能量,不能是其他力学量的本征值,化简后再计算每个力学量的期望值
+        \subsection{表象的本征值对应的矩阵}
+            \begin{formal}
+                在自身表象下所有的本征值,其算符的矩阵表示是对角化的
+                $$ \vu*{A} = \mqty (\lambda_{1} & 0 & 0 \\ 0 & \lambda_{2} & 0 \\ 0 & 0 & \lambda_{3}) $$
+            \end{formal}
+        
+            再讲算符$\vu*{B}$的矩阵参数设出来,并根据题目已知条件进行求解(反对易关系以及厄米性以及平方为1)
+
+            注意这个过程似乎和$\vu*{A}$表象没有任何关系,但实际上在利用反对易关系的时候就涉及到了$\vu*{A}$自身表象的矩阵形式,因而$\vu*{B}$的矩阵是在此表象下求得的
+
+            第二小问由于其在$\vu*{A}$表象下$\vu*{B}$的矩阵形式已经获得,因此直接解它的本征值方程即可
+
+            第三小问回顾表象变换
+            $$ \psi' = S^{\dagger} \psi \quad \vu*{F}' = S^{\dagger} \vu*{F} S $$
+            \begin{formal}
+                
+                求解幺正变换矩阵的方法
+                \begin{itemize}
+                    \item 已知变换前后的两组基矢$S_{kb} = \braket{\psi_{k}}{\phi_{b}} $
+                    $$\mqty(a_{1}' \\ a_{2}' \\ a_{3}') = \mqty(S_{11} & S_{12} & S_{13} \\ S_{21} & S_{22} & S_{23} \\ S_{31} & S_{32} & S_{3})  \mqty(a_{1} \\ a_{2} \\ a_{3}) $$ 
+                    \item 已知力学量$\vu*{B}$在$\vu*{A}$表象下矩阵表示,直接求解本征态失,并起来可构成幺正变换矩阵$S$
+                \end{itemize}
+            \end{formal}
+
+        \subsection{角动量表象}
+            第一小问$\vu*{L}_{z}$在自身表象下是对角化的,其他角动量根据矩阵元的计算方法进行计算,需要用到升降算符
+
+            计算如$(\vu*{L}_{x})_{12}$与$(\vu*{L}_{x})_{21}$时,只需要计算一边,再去复共轭即可(它们是厄米算符)
+
+        \subsection{角动量表象本征值本征态}
+            方法简答,略
+
+        \subsection{角动量表象下的测量问题}
+            题目给的$2\hbar^{2}$得出$l=1$的结论
+
+            完整的做题过程需要在这三个基底下$Y_{1-1},Y_{10},Y_{11}$写出$\vu*{L}_{y}$的矩阵表示,并求出本征值和本征态(前两个题已经算过)
+
+            再由于这个量子体系必然处于这三个基底中的一个态上,则测量的概率是$\abs{\braket{\varphi_{0}^{\dagger}}{\psi}}^{2}$其中$\psi$为这三个中的一个,分别计算
+            
+        \subsection{直角坐标系波函数转化计算角动量}
+            题目给出的是直角坐标系下的波函数,需要将其改写成球坐标系下的形式,并利用球谐函数表示它
+
+            \begin{formal}
+                涉及的知识点(背住)
+
+                三个典型球谐函数
+                $$ Y_{11} = -\sqrt{\frac{3}{8\pi}} \sin{\theta} e^{i\varphi} \quad Y_{10} = \sqrt{\frac{3}{4\pi}}\cos{\theta} \quad Y_{1-1} = \sqrt{\frac{3}{8\pi}} \sin{\theta} e^{-i\varphi}  $$
+
+                l=1,的$(\vu*{L}^{2},\vu*{L}_{z})$表象下
+
+                $$ 
+                \vu*{L}_{x} = \frac{\hbar}{\sqrt{2}} \mqty(0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0) \quad 
+                \vu*{L}_{y} = \frac{\hbar}{\sqrt{2}} \mqty(0 & -i & 0 \\ i & 0 & -i \\ 0 & i & 0) \quad 
+                \vu*{L}_{z} = \hbar \mqty(1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1)
+                $$
+
+                它们三个的本征值都是$\hbar,0,-\hbar$,本征态自行计算
+
+            \end{formal}
+
+        \subsection{角动量表象纠缠态问题1}
+            第三小问需要将给出的$\psi$用矩阵形式表达,并写出$\vu*{L}_{x}$的本征值和本征态,再做计算
+
+
+        \subsection{角动量表象纠缠态问题2}
+            没看懂这道题,略
+
+        \subsection{角动量表象j=3/2}
+            需要将4个球谐函数作为基底,此表象下$\vu*{j}^{2}$和$\vu*{J}_{z}$的矩阵可以根据对角化直接写出
+
+        \subsection{角动量表象下的本征值和本征态问题}
+            无论在什么表象下三个角动量分量算符的本征值取值都是$m\hbar$,所以此题最大的本征值为$\frac{3}{2}\hbar$
+        
+        \subsection{共同本征态问题}
+            第二小问能量$E=E_{0}$是非简并的,能量$E=-E_{0}$是简并的.容易验证$\ket{1}$是本征态,单独的$\ket{2},\ket{3}$不是,而它们的线性组合仍旧是本征值$-E_{0}$的本征态,
+            所以存在合适的系数使得这个混合态是$\vu*{A}$D的本征态
+        
+        \subsection{角动量表象下哈密顿量的表示}
+            要背住三个分量在$l=1$,动量表象下的矩阵表示,带入哈密顿量即可.(换元简化形式)
+
+        \subsection{动量表象下的哈密顿量}
+            需要知道$r = i\hbar \nabla_{p} = i\hbar (\pdv{p_{x}} + \pdv{p_{y}} + \pdv{p_{z}} )$
+            
+            得到$ V(\vu*{r} = i\hbar \nabla_{p})$ 后需要转化回原来的坐标表象下(凑$(i\hbar)^{2}$)
+
+            nabla算子作用后记得带各方的单位向量,转回向量$\va{r}$
 
 
     \section{三维定态问题}
+            \begin{formal}
+                知识点总结
+                
+                \begin{enumerate}
+                    \item 在中心力场$V(r)$中,定态波函数$\psi(r)$可以表示为
+                    $$ \psi(r) = R(r) Y_{lm}(\theta,\varphi) = \frac{u(r)}{r}Y_{lm}(\theta,\varphi) $$
+
+                    归一化形式变为
+                    $$ \int_{0}^{\infty} \abs{\psi(r)}^{2} 4\pi r^{2} dr = 4 \pi \int_{0}^{\infty}\abs{u(r)}^{2} dr = 1 $$
+                    
+                    其中$R(r)$满足的方程为
+                    $$ \dv[2]{R(r)}{r} + \frac{2}{r} \dv{R(r)}{r} + \left\{ \frac{2\mu}{\hbar^{2}}[E-V(r)] - \frac{l(l+1)}{r^{2}} \right\}   R(r)  = 0 $$
+
+                    $u(r)$满足方程与边界条件
+                    $$ \dv[2]{u(r)}{r} + \left\{   \frac{2\mu}{\hbar^{2}}[E-V(r)] - \frac{l(l+1)}{r^{2}} \right\} u(r) = 0 \quad u(0) = 0 $$
+
+                    \item 带有电荷$q$的粒子在电磁场中的哈密顿量算符为
+                    $$ \vu*{H} = \frac{1}{2\mu} [\vu*{p} - \frac{q}{c} A(r,t) ]^{2} + q \Phi(r,t) $$
+
+                    其中$\vu*{p} = -i\hbar \nabla$,$A(r,t)$与$\Phi(r,t)$分别是电磁场的矢势和标势.
+
+                    电磁场的矢势(矢势的取法有无穷多种)
+                    $$ \va{B} = \nabla \times \va{A}  \lra  \va{A'} = \va{A} + \nabla \varphi $$
+                    
+                    电磁场的标势
+
+                    $$ \va{E} = -\nabla \varphi - \pdv{\va{A}}{t} $$
+                    
+                    波函数为$\psi$的粒子在电磁场中的概率流密度为
+
+                    $$ \vb{J} = \frac{1}{2\mu} \big[ \psi^{*}(\vu*{p} - \frac{q}{c} \vb{A} )\psi + \psi(\vu*{p} - \frac{q}{c} \vb{A} )^{*} \psi^{*} \big] $$
+                    $$ \vb{J} = \frac{1}{2} [\psi^{*} \vu*{v} \psi + \psi \vu*{v} \psi^{*}] $$                 
+                    $$ \vu*{v} = \frac{1}{\mu} (\vu*{p} - \frac{q}{c} \vb{A}) $$
+                    这里的$\vu*{v}$是粒子的速度算符
+
+                    对比非电磁场下的概率流密度
+                    $$ j_{x} = -\frac{i\hbar}{2\mu} (\psi^{*} \pdv{}{x} \psi - \psi \pdv{}{x} \psi^{*} ) $$
+
+                    \item 在三维无限深方势阱
+                    $$
+                    V(x,y,z) =
+                    \begin{cases}
+                    0, & 0<x<a,0<y<b,0<z<c  \\
+                    \infty, & \mbox{其他}
+                    \end{cases}
+                    $$
+                    中,定态能量和定态波函数为
+                    $$ E_{n_{1}n_{2}n_{3}} = \frac{\pi^{2}\hbar^{2}}{2\mu} \big(\frac{n_{1}^{2}}{a^{2}} + \frac{n_{2}^{2}}{b^{2}} + \frac{n_{3}^{2}}{c^{2}} \big)$$
+                    $$ \psi_{n_{1}n_{2}n_{3}}(x,y,z) = 
+                    \begin{cases}
+                        \sqrt{\frac{8}{abc}} \sin{\frac{n_{1}\pi x}{a}} \sin{\frac{n_{2}\pi y}{b}} \sin{\frac{n_{3}\pi z}{c}}, & \mbox{阱内}\\
+                        0, & \mbox{阱外}
+                    \end{cases}
+                    $$
+
+                    \item 在三维各向异性谐振子势场
+                    $$ V(x,y,z) = \frac{1}{2} \mu ( \omega_{1}^{2} x^{2} + \omega_{2}^{2} y^{2} + \omega_{3}^{2} z^{2}) $$
+                    中,定态能量和定态波函数为
+                    $$ E_{n_{1}n_{2}n_{3}} = (n_{1} + \frac{1}{2})\hbar \omega_{1} + (n_{2} + \frac{1}{2})\hbar \omega_{2} + (n_{3} + \frac{1}{2})\hbar \omega_{3} $$
+                    
+                    $$ 
+                    \psi_{n_{1}n_{2}n_{3}}(x,y,z) = N_{n_{1}}N_{n_{2}}N_{n_{3}} exp[ -\frac{1}{2}(\alpha_{1}^{2}x^{2} + \alpha_{2}^{2}y^{2} + \alpha_{3}^{2}z^{2}) ] \times 
+                    H_{n_{1}}(\alpha_{1}x)H_{n_{2}}(\alpha_{2}y)H_{n_{3}}(\alpha_{3}z) 
+                    $$
+                    
+                    $$ \alpha_{i} = \sqrt{\frac{\mu \omega_{i}}{\hbar}} \quad N_{n_{i}} = \sqrt{\frac{\alpha_{i}}{\sqrt{\pi 2^{n_{i}}n_{i}!}}}  \quad n_{i} = 0,1,3,4\cdots \quad i=0,1,3,4\cdots $$
+
+                    \item 在类氢离子势场$V(r) = -\frac{Ze^{2}}{r}$中,定态能量和定态波函数为
+                    $$ E_{n} = - \frac{Z^{2} e^{2}}{2a n^{2}} $$
+                    $$ \psi_{nlm}(r) = R_{nl}(r) Y_{lm}(\theta,\varphi) $$
+                    $$ R_{nl}(r) = N_{nl} e^{-\frac{Zr}{na}} (\frac{2Zr}{na})^{l} F(l+1-n,2l+2,\frac{2Zr}{na}) $$
+                    $$ N_{nl} = \frac{2Z^{3/2}}{a^{3/2}n^{2}(2l+1)!} \sqrt{\frac{(n+l)!}{(n-l-1)!}}  $$
+                    其中$a$是波尔半径,$F(l+1-n,2l+2,\frac{2Zr}{na})$是个合流超几何函数
+
+                    主量子数$n$(电子层),角量子数$l$(角动量轨道),磁量子数$m$(磁矩方向)
+                    $$ n = 1,2,3,4\cdots \quad l = 0,1,2,3\cdots n-1 \quad m = 0,\pm1,\pm2,\pm3,\cdots,\pm l $$
+
+                    电子层的代号($KLMNOP$),亚层轨道代号($spdf$),当说$s$波时即$l=0$
+                \end{enumerate}
+            \end{formal}
+
+        \subsection{三维方势阱}
+            由题目条件束缚态$E<0$,$\quad s$波$\lra l = 0$
+
+        \subsection{\texorpdfstring{$\delta$}{}势阱}
+            存在束缚态即至少存在一个态为束缚态,那么必然是$l=0$的基态
+
+            同样是指数式的超越方程,构造成过原点的直线和指数函数,同1.43题
+
+        \subsection{无限深势阱}
+            当波函数在某个非0常数时需要取得0时,可以直接假设波函数的形式为$u(r) = A \sin{k(r-a)}$
+
+            方法和习题1.6的偶宇称解有点儿类似
+
+            注意积分过程中$\sin{2k(b-a)} = 0$
+
+        \subsection{已经势场条件求能量和势能}
+            此题不用按照书上的求法,直接让$\psi(r)r = u(r) $带入$u(r)$满足的定态方程就可以了
+
+        \subsection{柱坐标系的矢势问题}
+            \begin{formal}
+                需要补充以下知识点
+
+                $$ \va{B} = \nabla \times \va{A} $$
+
+                $$ 
+                \mqty|\va{i} & \va{j} & \va{k} \\ \pdv{x} & \pdv{y} & \pdv{z} \\ A_{x} & A_{y} & A_{z}|  = 
+                (\pdv{y}A_{z} - \pdv{z}A_{y}) \va{i} + (\pdv{z}A_{x} - \pdv{x}A_{z}) \va{j} + (\pdv{x}A_{y} - \pdv{y}A_{x})\va{k} 
+                $$
+
+                当磁场为$z$轴方向时,即$\va{B} = B \va{k}$
+
+                $$ \pdv{x}A_{y} - \pdv{y}A_{x} = 0 $$
+
+                于是我们可以得到至少两种常见取法
+                \begin{itemize}
+                    \item $$ \va{A} = (-By,0,0) $$
+                    \item $$ \va{A} = (-\frac{B}{2}y,\frac{B}{2}x,0) $$
+                \end{itemize}
+
+                通常无其他限制取第一种,如果被限制在了$xy$平面,比如涉及到柱坐标系,那么使用第二种
+
+                角动量的三个分量,以及$\vu*{L}_{z}$与$\varphi$角的关系
+
+                $$ \vu*{L}_{x} = y p_{z} - z p_{y} \quad \vu*{L}_{y} = z p_{x} - x p_{z} \quad \vu*{L}_{z} = x p_{y} - y p_{x} \quad $$
+
+                柱坐标系下
+                $$ \vu*{L}_{z} = -i\hbar \pdv{\varphi} \quad \vu*{L}_{z}^{2} = -\hbar^{2} \pdv[2]{\varphi} $$
+
+                此时$\vu*{L}_{z} = -i\hbar \pdv{\varphi}$的本征函数为(曾书$P_{137}$)
+
+                $$ \psi_{m}(\varphi) = \frac{1}{\sqrt{2\pi}} e^{im\varphi} $$
+
+            \end{formal}
+
+        \subsection{磁场下的电荷定态能量和波函数}
+
+            取磁矢势能$\va{A} = (-By,0,0)$
+            $$ \vu*{H} = \frac{1}{2\mu} [(\vu*{p}_{x}^{2} + \frac{qB}{c} y)^{2} + \vu*{p}_{y}^{2} + \vu*{p}_{z}^{2} ] $$
+
+            这里一共有四个量$\vu*{p}_{x} \quad \vu*{p}_{y} \quad \vu*{p}_{z} \quad y $
+
+            分别与哈密顿量计算对易子,显然只有$\vu*{p}_{x} \quad \vu*{p}_{z}$是对易的
+
+            它们本征函数的形式是
+            $$ \frac{1}{2\pi \hbar} e^{ip_{x}x/\hbar} \quad \frac{1}{2\pi \hbar} e^{ip_{z}z / \hbar} $$
+
+            剩下的部分是关于变量$y$的函数,因此波函数可以表示为(常数归化到$\varphi(y)$里面了)
+            $$ \psi(x,y,z) = e^{i(p_{x}x+p_{z}z)/\hbar} \varphi(y) $$
+
+            带入哈密顿量的本征方程,指数项都消掉了,所以得到的是关于$y$的方程,其他变量都可以看作常数,得到一个类似谐振子的方程
+            
+            算出$E'$与$\varphi(y)$后记得带回去算出$\psi(x,y,z)$与$E$
+
+
+        \subsection{电磁场下的电荷定态能量和波函数}
+            方法和上题类似,只是凑平方更加复杂.得到饿依旧是谐振子的解
+
+        \subsection{磁场和势场下的运动}
+            \begin{formal}
+                对易子的一个重要计算
+                    $$ \comm{A}{(B+C)} = \comm{A}{B} + \comm{A}{C} $$
+            \end{formal}
+        
+            需要知道的是,矢势$\va{A}_{x} \quad \va{A}_{y} \quad \va{A}_{z}$它们都是坐标$(x,y,z)$的函数,求对易的时候直接用公式
+            $$ \comm{\vu*{p}_{x}}{A_{y}}  =  \comm{\vu*{p}_{x}}{x} \pdv{x} A_{y} =  - i \hbar \pdv{x} A_{y} $$
+
+            虽然$A_{y}$是$(x,y,z)$的函数,但是$y,z$和$\vu*{p}_{x}$都是对易的,所以用这个公式没有问题,或者用试探函数法解出来的效果一样
+
+            第二小问$\comm{P}{A} = -i\hbar \nabla \vdot A = 0$(这是三维情况下的对易公式)
+
+            第三小问的一个知识点
+
+            \begin{formal}
+                薛定谔方程是正则量子化得到的,动量是不随时间变化的
+            \end{formal}
+
+            所以此问应该用动量表象,分离变量
+
+        \subsection{类氢原子核电荷数突变}
+            跳过
+
+        \subsection{氢原子基态波函数的演化问题}
+            自由电子的波函数
+            $$ \psi_{p} = \frac{1}{(2\pi \hbar)^{\frac{3}{2 }}} e^{ip \vdot r/\hbar} $$
+            动量表象下$p~p+dp$内的概率为
+            $$ \abs{\varphi(p)}^{2} 4\pi p^{2} dp $$
+
+            跳过此题
+
+        \subsection{钢球势阱}
+            第三小问主要在于积分区间的问题,因为初态波函数在$R-2R$上没有定义,所以那部分的积分是没有的,假如积分区间写为$0-2R$会发现计算出来是0
+
+            同理,如果是计算半径缩小一半的情况,积分区间就变为$0-\frac{R}{2}$
+
+        \subsection{能量与作用力和压强}
+            \begin{formal}
+                \begin{itemize}
+                    \item 能量与作用力
+                    \begin{enumerate}
+                        \item 粒子对外做功$ F dR $等于能量的减少量$ - dE \lra F = - \dv{E}{R}$
+                        \item 能量$ E = \frac{p^{2}}{2\mu} \lra dE = \frac{p}{\mu} dp = v dp $,
+                        作用力$ F = \dv{p}{t}  \quad v dt = dR \lra F = \abs{\dv{E}{R}}$
+                    \end{enumerate}
+                    \item 能量与压强 
+                    
+                    在球壳形式下$ P = \dfrac{F}{4\pi R^{2}} $
+                \end{itemize}
+            \end{formal}
+
+        \subsection{中心势场下的维里定理的证明}
+
+            \begin{formal}
+                证明维里定理,主要是借助算符$ \va{r} \vdot \vu*{p} $不随时间变化,带入海森堡方程
+                $$ 0 = \dv{t} \overline{(\va{r} \vdot \vu*{p})} =  \frac{1}{i\hbar} \overline{\comm{\va{r} \vdot \vu*{p}}{\frac{p^{2}}{2\mu}+V(r)}} $$
+            \end{formal}
+
+            自己要会计算右边的对易,需要注意点乘也是可以展开的
+
+            $$ 
+            \comm{\va{r} \vdot \vu*{p} }{\frac{p^{2}}{2\mu}} = \va{r} \vdot \comm{\vu*{p}}{\frac{p^{2}}{2\mu}} + 
+            \comm{\va{r}}{\frac{p^{2}}{2\mu}} \vdot \vu*{p} = \frac{i\hbar}{\mu}\vu*{p}^{2} 
+            $$
+
+            第二小问可以忽略涉及场论
+
+        \subsection{类氢原子下计算\texorpdfstring{$\frac{1}{r}$}{}的平均值}
+            维里定理$ E_{n} = <T> +  <V>  $
+
+            又或者使用$F-H$定理对$e^{2}$求导(通用方法)
+
+        \subsection{类氢原子下计算\texorpdfstring{$\frac{1}{r^{2}}$}{}的平均值}
+            在利用$F-H$定理时,通常要把波动方程写成左边有效哈密顿量,右边能量
+            $u(r)$满足的方程可以改写为以下形式(类氢原子)
+            $$ 
+            \qty[ -\frac{\hbar^{2}}{2\mu} \dv[2]{r} - \frac{Ze^{2}}{r} + 
+            \frac{l(l+1)\hbar^{2}}{2\mu r^{2}} ] u_{nl}(r) = E_{n} u_{nl}(r)  \llra  \vu*{H}_{eff} u_{nl}(r) = E_{n} u_{nl}(r)
+            $$
+
+            \begin{formal}
+                类氢原子的能级与一般中心势(例如球方势阱)能级不同的特点,即能级只依赖与径向量子数$n_{r}$($n_{r} = 0,1,2,3\cdots$),角量子数$l$的一种特殊组合,即只依赖于主量子数$n = n_{r} + l + 1$
+            \end{formal}
+
+            因此此题对$l$求导时,需要将能量$E_{n}$的主量子数,写成$n_{r}+l+1$
+
+            \begin{formal}
+                类氢原子的玻尔半径
+                $$ a = \dfrac{\hbar^{2}}{\mu e^{2}} $$
+            \end{formal}
+
+            因此如果打算选择其他参数,则需要把玻尔半径展开,所以$l$的求导更合适
+
+        \subsection{径向角动量}
+            第一小问正如题目2.2那样,最好作用在一个任意的态上,nabla算子需要带入球坐标系下的表示
+
+            \begin{formal}
+                一个nabla算子的误区
+
+                计算原则
+                $$ \nabla \vdot (\varphi \va{f}) = (\nabla \vdot \varphi)\va{f} + \varphi(\nabla \vdot \va{f}) $$
+
+                由此容易得出错误结果
+                $$ \nabla \vdot (\frac{\va{r}}{r}) = \frac{2}{r} $$
+
+                在量子力学中算符通常需要作用在某一个态上,所以此时并不是单纯的点乘$\frac{\va{r}}{r}$,而是点乘$\frac{\va{r}}{r}\psi$
+                $$ 
+                \nabla \vdot (\frac{\va{r}}{r} \psi) = \frac{\va{r}}{r} \vdot \nabla \psi +  (\nabla \vdot \frac{\va{r}}{r}) \psi \lra 
+                = \frac{\va{r}}{r} \vdot \nabla + \frac{2}{r}
+                $$
+            \end{formal}
+
+            第二小问需要知道拉普拉斯的球坐标系下的表示形式,以及角动量平方在球坐标系下的表示.(跳过)
+
+            后面几问都很复杂跳过
 
     \section{近似方法}
 
