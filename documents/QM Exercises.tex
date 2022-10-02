@@ -37,7 +37,7 @@
                 $$\sin(x+y)=\sin{x} \cos{y}+\sin{y}\cos{x} \quad \cos(x+y)=\cos{x} \cos{y} - \sin{x}\sin{y}$$ 
                 $$\sin(2x) = 2\sin{x} \cos{x} \quad \cos(2x) = \cos^{2}{x} - \sin^{2}{x} $$
                 $$\sin^{2}{x}=\frac{1-\cos(2x)}{2} \quad \cos^{2}{x}=\frac{1+\cos(2x)}{2} $$
-                $$ 1 + \tan{x}^{2} = \frac{1}{\cos{x}^{2}} \quad \dv{\tan{x}}{x} = \frac{1}{\cos{x}^{2}} $$
+                $$ 1 + \tan^{2}{x} = \frac{1}{\cos^{2}{x}} \quad \dv{\tan{x}}{x} = \frac{1}{\cos^{2}{x}} $$
 
                 两个常见积分
 
@@ -1332,7 +1332,7 @@
     
                     \begin{proof}
                         \pfindent
-                        $$ x = b\tan{\theta} \quad dx = b \frac{1}{\cos{\theta}^{2}} d\theta \quad 1+\tan{\theta}^{2} = \frac{1}{\cos{\theta}^{2}} $$
+                        $$ x = b\tan{\theta} \quad dx = b \frac{1}{\cos{\theta}^{2}} d\theta \quad 1+\tan^{2}{\theta} = \frac{1}{\cos^{2}{\theta}} $$
 
                         积分区间变为$ (-\frac{\pi}{2},\frac{\pi}{2}) $,通过以上换元即可求得结果
                     \end{proof}
@@ -1482,7 +1482,8 @@
                     $u(r)$满足方程与边界条件
                     $$ \dv[2]{u(r)}{r} + \left\{   \frac{2\mu}{\hbar^{2}}[E-V(r)] - \frac{l(l+1)}{r^{2}} \right\} u(r) = 0 \quad u(0) = 0 $$
 
-                    \item 带有电荷$q$的粒子在电磁场中的哈密顿量算符为
+                    \item 带有电荷$q$的粒子在电磁场中的哈密顿量算符为(朗道量子化
+                    是指均匀磁场中带电粒子的回旋轨道发生的量子化。这些带电粒子能量在一系列分立的数值中取值，形成朗道能级。朗道能级是简并的，每一能级上电子的电子数量与外加磁场的强度成正比)
                     $$ \vu*{H} = \frac{1}{2\mu} [\vu*{p} - \frac{q}{c} A(r,t) ]^{2} + q \Phi(r,t) $$
 
                     其中$\vu*{p} = -i\hbar \nabla$,$A(r,t)$与$\Phi(r,t)$分别是电磁场的矢势和标势.
@@ -1862,8 +1863,110 @@
 
         \subsection{维里定理一般形式的应用}
             维里定理告诉我们,知道势场就知道动能的平均值(和某些平均值相关),且隐含条件动能的平均值时显然大于0的
+
+        \subsection{已知能量求解势能和作用程}
+            求解到$ \cot{\alpha a} = - \dfrac{\beta}{\alpha} $,很显然有$ \alpha^{2} + \beta^{2} = \dfrac{2\mu V_{0}}{\hbar^{2}}  $
             
+            所以需要这个关系消去不包含能量的$\beta$,$ \quad \sin^{2}{x} = \dfrac{1}{1 + \cot^{2}{x}} $
+
+            算到最后一步的时候,$ \dfrac{E+V_{0}}{V_{0}} = 1 - \dfrac{\abs{E}}{V_{0}} $(计算的时候的能量仍旧是负值,结合能是正数)
+
+        \subsection{连续势求解束缚定态能量}
+            包含合流超几何方程,跳过
+            
+            但是具有启发性,当势函数是复杂的连续函数时,可以进行换元转化成可以求解的方程形式
+            
+        \subsection{中心力场转化为氢原子定态方程}
+        $$ V_{r} = \frac{A}{r^{2}} - \frac{B}{r} $$
+        如上形式的中心力场可以转化为氢原子的定态方程(有一项为$\frac{l(l+1)}{r^{2}}$可以合并半径的平方项)
+
+        得到新的$l'$与$e^{2}$后需要把原来解的主量子数$ n = n_{r} + l + 1$中的$l$替换掉,也要替换掉玻尔半径的$ a = \frac{\hbar^{2}}{\mu e^{2}} $中的$e^{2}$
+
+        再次回顾类氢原子的相关公式
+
+        $$ V_{r} = - \dfrac{Ze^{2}}{r}  \quad  E_{n} = - \dfrac{Z^{2}e^{2} }{2an^{2}} $$
+
+
+
+
     \section{近似方法}
+
+        \begin{formal}
+            知识点总结  
+            \begin{enumerate}
+                \item 定态非简并微扰理论
+                \begin{itemize}
+                    \item 一级能量修正$ \pe{n}{1} = \ev{\vu*{H'}}{\pp{n}{0}} \quad $
+                    一级波函数修正$ \pp{n}{1} = \sum\limits_{m \neq n} \dfrac{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}{\pe{n}{0} - \pe{m}{0} } \pp{m}{0} $
+                    
+                    \item 二级能量修正$ \pe{n}{2} = \sum\limits_{m \neq n} \dfrac{\abs{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}^{2}}{\pe{n}{0} - \pe{m}{0}} \quad $
+                \end{itemize}
+
+                \item 定态简并微扰理论
+                
+                体系的哈密顿量$\vu*{H} = \vu*{H}_{0} + \vu*{H}'$.已知$\vu*{H}_{0}$的本征能量与本征函数为$\pe{n}{0}$与$\pp{m}{0}$,$m=1,2,3,\cdots$,设$m=n$的某一定态能量$\pe{n}{0}$是
+                k度简并的,与它相应的k个波函数记为$\varphi_{i},i=1,2,3,\cdots$.该定态的零级近似波函数为
+                $$ \pp{n}{0} = \sum\limits_{i=1}^{k} c_{i} \varphi_{i} $$           
+                
+                系数${c_{i}}$满足方程
+                $$ 
+                \mqty(H_{11}'-\pe{n}{1} & H_{12}' & \cdots & H_{1k}' \\ H_{21}' & H_{12}'- \pe{n}{1} & \cdots & H_{2k}' \\ \vdots & \vdots & \ddots & \vdots \\ H_{k1}' & H_{k2}' & \cdots & H_{kk}'- \pe{n}{1} ) 
+                \mqty(c_{1} \\ c_{2} \\ \vdots \\ c_{k}) = 0 
+                $$
+
+                $$ H_{ij}' = \int \varphi_{i}^{*} \vu*{H}' \varphi_{j} d\tau $$
+                
+                久期方程
+                $$
+                \mqty| H_{11}'-\pe{n}{1} & H_{12}' & \cdots & H_{1k}' \\ H_{21}' & H_{12}'- \pe{n}{1} & \cdots & H_{2k}' \\ \vdots & \vdots & \ddots & \vdots \\ H_{k1}' & H_{k2}' & \cdots & H_{kk}'- \pe{n}{1}| = 0
+                $$
+
+                解的一级修正能量$ \pe{n}{1} = \pe{n1}{1} , \pe{n2}{1} , \pe{nk}{1} $,将$ \pe{n}{1} = \pe{n\alpha}{1} (\alpha = 1,2,\cdots,k)$带入方程$c_{j}$满足的方程,求出系数${c_{i}(\alpha)}$,得到零级近似波函数
+                $$ \pp{n}{0} = \sum\limits_{i=1}^{k}c_{i}(\alpha)\varphi_{i} \quad \alpha = 1,2,3.\cdots,k $$
+
+                相应的一级近似能量为
+                $$ E_{n\alpha} = \pe{n}{0} + \pe{n\alpha}{1} $$
+
+                如果$\pe{n}{1}$有重根,即$E_{n\alpha}$中某个能态仍是简并的,则与该态相应的零级近似波函数不能确定,如果微扰矩阵$H'$是对角矩阵,则对角元素就是一级修正能量
+
+                $$ \pe{i}{1} = H_{ii}' = \int \varphi_{i}^{*} \vu*{H} \varphi_{i} d\tau $$
+
+
+                如果对角短阵的对角元素$H_{ii}'$取单—值(取值不同于其他对角元素),则相应的$\varphi_{i}$就是零级近似波函数.如果所有对角元素互不相等,则$\varphi_{1},\varphi_{2},\cdots,\varphi_{k}$都是零级近似波
+                函数.这时简并态微扰问题可用非简并微扰论处理
+
+                \item 已知粒子的哈密顿算符$\vu*{H}$及归一化试探波函数$\psi(\va{r},\alpha)$,其中$\alpha$为待定参数,计算
+                $$ E_{\alpha} = \int \psi^{*}(\va{r},\alpha) \vu*{H} \psi(\va{r},\alpha) d\tau  $$
+
+                由$ \pdv{E_{\alpha}}{\alpha} = 0 $,求出$\alpha$,代入$E_{\alpha}$得到基态的近似能量,再将$\alpha$代入试探波函数$\psi(\va{r},\alpha)$,得到基态的近似波函数
+
+                \item 设$t<0$时粒子处于$\vu*{H}_{0}$的定态$\varphi_{k}$(能量为$E_{k}$),$t \geq 0$时粒子收到微扰$\vu*{H}'(t)$的作用,$t>0$时粒子跃迁到$\vu*{H_{0}}$的另一定态$\varphi_{m}$(能量为$E_{m}$)概率为
+                $$ W_{k \rightarrow m}(t) = \dfrac{1}{\hbar^{2}} \abs{ \int_{0}^{t} H_{mk}'(t) e^{i\omega_{mk}t} dt }^{2} $$
+                $$ H_{mk}'(t) = \int \varphi_{m}^{*}(\va{r}) \vu*{H}(t) \varphi_{k}(\va{r}) d\tau \qquad \omega_{mk} = \dfrac{E_{m}-E_{k}}{\hbar} $$
+
+                \item 黄金规则公式
+                $$ w = \frac{2\pi}{\hbar}  \abs{H_{mk}'(E)}^{2} \rho(E) $$
+
+                这是在常微扰$\vu*{H}'$(不显含t)作用下体系由能量连续的$\psi_{k}$态到$\psi_{m}$态的跃迁速
+
+                其中
+                $$ H_{mk}'(E) = \int \psi_{m}^{*} \vu*{H}' \psi_{k} d\tau $$
+
+                $\rho(E)$是能态密度——单位能量间隔的状态数
+
+                \item 强度为$I(\omega)$的连续光照射原子发生由$\psi_{k}$态到$\psi_{m}$态的跃迁速率(电偶极近似)
+                $$ w_{k \rightarrow m} = \frac{4\pi^{2}e^{2}}{3\hbar^{2}} I(\abs{\omega_{mk}}) \abs{r_{mk}}^{2} \quad \omega_{mk} = \dfrac{E_{m}-E_{k}}{\hbar} $$
+                $$ \abs{r_{mk}}^{2} \equiv \abs{x_{mk}}^{2} + \abs{y_{mk}}^{2} + \abs{z_{mk}}^{2} $$
+                $$ \abs{x_{mk}} = \int \psi_{m}^{*}x\psi_{k} d\tau  \quad \abs{y_{mk}} = \int \psi_{m}^{*}y\psi_{k} d\tau \quad \abs{z_{mk}} = \int \psi_{m}^{*}z\psi_{k} d\tau $$
+                
+                电偶极跃迁选择定则:$ \quad \triangle = \pm 1 \quad \triangle m = 0,\pm 1 $
+
+                \item 原子的自发跃迁速率为
+                $$ A_{k \rightarrow m} = \frac{4e^{2}\omega_{km}^{3}}{3\hbar c^{3}} \abs{r_{mk}}^{2} $$
+    
+
+            \end{enumerate}
+        \end{formal}
 
     \section{自旋}
 
