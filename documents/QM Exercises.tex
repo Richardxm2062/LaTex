@@ -430,10 +430,12 @@
         $$ \psi(x) = \sqrt{\frac{1}{\pi}} \sin{m \varphi} $$
         
         存在一个隐藏的周期性边界条件限制$m$的取值
-        $$ \psi(\varphi) = \psi(\varphi+2\pi) \lra 2m\varphi = 2n\pi \quad (n=1,2,3,4\cdots) \lra m = 1,2,3,4\cdots $$
+        $$ \psi(\varphi) = \psi(\varphi+2\pi) \lra m\varphi = m(\varphi+2n\pi) = m \varphi + 2nm\varphi  \lra m = 0,1,2,3,4\cdots $$
         
         由此我们可以反解出
         $$ E_{m} = \frac{\hbar^{2} m^{2}}{2\mu R^{2}} \quad (m=1,2,3,4\cdots)$$
+
+        $ m = 0 \quad \psi(\varphi) = 0 $所以舍去$m=0$
 
         \subsection{改变哈密顿量求本征值(表象变换)}
             此题的关键在于表象的变换,由坐标表象转化到动量表象(详见曾书$P_{151}$和$P_{281-6}$)
@@ -583,7 +585,7 @@
             
             实际上和上一题有异曲同工之秒,总是拿目标基态和初始基态做内积就行了
             此题的不同点在于求平均能量,需要用到粒子现在处的态(波函数),突然变化的势场会改变处于当前态的概率,但波函数还来不及变化,使用初始波函数即可
-            3
+            
             但哈密顿量$H$(系数变了)发生了变化,不含时所以求解$t=0$时刻的能量平均值即可,
             需要带入新的哈密顿量,积分过程中和原积分进行比较(动能没变,势能变化)
             
@@ -1853,6 +1855,9 @@
             第三小问更像是数学题,存在一个定值$a$使得$V(a) = < V >$,$r<a$时显然成立,接下来求这个积分的上限(这个积分值也是关于$V(r)$单增的),所以考虑积分到无穷处
 
             $$ \int_{0}^{+\infty} R(r)^{2}r^{2}dr = 1 $$
+
+        \subsection{氢原子波函数问题}
+            简单题跳过
         
         \subsection{磁场下力学量的对易关系}
             $$ \comm{\vu*{p}_{i}}{\vu*{p}_{j}} = 0 $$
@@ -1886,8 +1891,53 @@
 
         $$ V_{r} = - \dfrac{Ze^{2}}{r}  \quad  E_{n} = - \dfrac{Z^{2}e^{2} }{2an^{2}} $$
 
+        \subsection{幂指数势场}
+            涉及贝塞尔函数,跳过此题
+        
+        \subsection{氢原子波函数问题2}
+            第一问求解可以用标准方法,不过注意积分区间为$r^{2}\sin{\theta}d\theta d\varphi$(不包含角度时积分区间为$4pir^{2}dr$),且球谐函数部分归一化,只需要管径向部分.
 
+            最好还是使用维里定理$n=2$
 
+            第二小问很简单,$<\vu*{L}_{x}^{2}> = <\vu*{L}_{y}^{2}> = \dfrac{1}{2} < \vu*{L}^{2} - \vu*{L}_{z}^{2} > $
+
+            再利用这些算符的厄米性,$\vu*{{L}_{z}}$直接作用在共轭态上
+        
+        \subsection{电场下的粒子运动}
+            注意电场仅为$x$方向,电势$\Phi = - E_{0} x $,哈密顿量记得带上势场
+        
+        \subsection{三维谐振子和电场}
+            最后一问关于守恒问题,需要验证和哈密顿量对易.先将新坐标系的$yz$方向的角动量表示成原坐标下的形式
+            $$ \vu*{L}_{y'}' = -i\hbar (z' \pdv{x'} - x' \pdv{z'} ) = \vu*{L}_{y} + \dfrac{qE_{0}}{\mu \omega^{2}} \vu*{p}_{z} $$
+            $$ \vu*{L}_{z'}' = -i\hbar (x' \pdv{y'} - y' \pdv{x'} ) = \vu*{L}_{z} + \dfrac{qE_{0}}{\mu \omega^{2}} \vu*{p}_{y} $$
+
+            计算它们与原坐标系下的哈密顿量的对易式
+
+            例如第二个
+            $$ 
+            \comm{\vu*{L}_{y}}{-qE_{0}x} = i\hbar q E_{0}z \quad + 
+            \quad \comm{\frac{qE_{0}}{\mu \omega^{2}}}{ \frac{1}{2} \mu \omega^{2}z} \vu*{p}_{z} = -i \hbar q E_{0} z \quad  = \quad 0
+            $$
+
+        \subsection{二维平面两体问题}
+            \begin{formal}
+                普物知识
+                $$ E_{k} = \frac{1}{2} I \omega^{2} \quad L = I \omega \quad E_{k} = \frac{L^{2}}{2I} $$
+
+                二维平面角动量通常只剩下$z$方向上的,而它的定义和极角有关
+                $$ \vu*{L}_{z} = -i \hbar \dv{\varphi}   $$ 
+            \end{formal}
+
+            第二小问是指,把两个偏导分别换成$\lambda,\theta$,再分离变量法$ \Psi(\lambda,\theta) = \psi(\lambda)\varphi(\theta)  $
+
+            第三小问是自由转子的解(题目1.18(2)),两个共轭复指数合并成了一个
+            
+            包括周期性条件后其取值$\gamma = 0,\pm1,\pm2,\cdots$
+
+            第四小问给出的条件$q^{2}$极大,因此在极大的势能下两个同种电荷将排斥到接近对立面,距离$2R$,$\theta = \alpha - \lambda = \pi$
+
+        \subsection{涉及圆柱坐标}
+            涉及圆柱坐标,跳过此题
 
     \section{近似方法}
 
@@ -1935,6 +1985,11 @@
                 如果对角短阵的对角元素$H_{ii}'$取单—值(取值不同于其他对角元素),则相应的$\varphi_{i}$就是零级近似波函数.如果所有对角元素互不相等,则$\varphi_{1},\varphi_{2},\cdots,\varphi_{k}$都是零级近似波
                 函数.这时简并态微扰问题可用非简并微扰论处理
 
+                \item 变分原理
+                
+                $$ E_{gs} \leq  \ev{\psi}{\vu*{H}} $$
+                常见试探波函数-高斯函数$ \psi(x) = A e^{-b x^{2}} \quad A =(\frac{2b}{\pi})^{\frac{1}{4}} $
+                
                 \item 已知粒子的哈密顿算符$\vu*{H}$及归一化试探波函数$\psi(\va{r},\alpha)$,其中$\alpha$为待定参数,计算
                 $$ E_{\alpha} = \int \psi^{*}(\va{r},\alpha) \vu*{H} \psi(\va{r},\alpha) d\tau  $$
 
@@ -1963,7 +2018,36 @@
 
                 \item 原子的自发跃迁速率为
                 $$ A_{k \rightarrow m} = \frac{4e^{2}\omega_{km}^{3}}{3\hbar c^{3}} \abs{r_{mk}}^{2} $$
-    
+
+                \item 精细结构:相对论修正和自旋-轨道耦合
+
+                    此精细结构破环了$l$简并度,但是保留了对$j$的简并度(格里菲斯$P_{179}$)
+                    \begin{itemize}
+                        \item 相对论修正($m$为静质量)
+                        $$ T = \gamma m c^{2} - m c^{2} \quad p = \gamma m v \lra (T + mc^{2})^{2} = p^{2}c^{2} + m^{2}c^{4} $$
+                        $\frac{p}{mc}$作为小量进行泰勒展开,取第一级作为哈密顿量的相对论修正(作为微扰)
+
+                        \item 自旋-轨道耦合($\vu*{L}\vu*{S}$不再守恒,即不再与$\vu*{H}$对易,但是哈密顿量与$\vu*{J}^{2}$对易)
+                        $$ H = \va{\mu} \vdot \va{B} $$
+                        质子磁场(质子作环形运动)
+                        $$ 
+                        B = \frac{\mu_{0}I}{2r} \quad I = \frac{e}{T} \quad \va{L} = rmv = \frac{2\pi mr^{2}}{T} \quad 
+                        B = \frac{1}{4\pi \varepsilon_{0}} \frac{e}{mc^{2}r^{3}}\va{L} \quad (c = \frac{1}{\sqrt{\varepsilon_{0} \mu_{0}}})
+                        $$
+                        电子磁偶极矩$ \va{\mu_{e}} = -\frac{e}{m} \va{S} $(为经典结果的两倍)
+
+                        考虑托马斯旋进(非静止系,存在加速度),增加一个因子$1/2$
+                        $$ H_{so}' = \mqty(\dfrac{e^{2}}{8\pi \varepsilon_{0}}) \frac{1}{m^{2}c^{2}r^{3}} \va{S} \vdot \va{L} $$
+                        
+                    \end{itemize}  
+
+                \item 塞曼效应
+                    \begin{itemize}
+                        \item 弱塞曼效应$ B_{ext}  \gg B_{int}$
+                        \item 强塞曼效应$ B_{ext}  \gg B_{int}$
+                    \end{itemize}
+                
+                \item WKB近似(格里菲斯$P_{206}$) 
 
             \end{enumerate}
         \end{formal}
