@@ -1079,6 +1079,9 @@
             \begin{formal}
 
                 求解$\vu*{x}$和$\vu*{p}$的平均值
+
+                在谐振子中,无论是一维还是三维均有(需要记住)
+                $$ <x_{k}> = 0 \quad <p_{k}> = 0 $$
                 \begin{itemize}
                     \item   谐振子的波函数的对称性(要么为奇函数要么为偶函数)
                     \item   递推方式 
@@ -1946,10 +1949,17 @@
             \begin{enumerate}
                 \item 定态非简并微扰理论
                 \begin{itemize}
-                    \item 一级能量修正$ \pe{n}{1} = \ev{\vu*{H'}}{\pp{n}{0}} \quad $
-                    一级波函数修正$ \pp{n}{1} = \sum\limits_{m \neq n} \dfrac{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}{\pe{n}{0} - \pe{m}{0} } \pp{m}{0} $
+                    \item 一级能量修正$ \pe{n}{1} = \ev{\vu*{H'}}{\pp{n}{0}} = \vu*{H}'_{nn} \quad $
                     
-                    \item 二级能量修正$ \pe{n}{2} = \sum\limits_{m \neq n} \dfrac{\abs{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}^{2}}{\pe{n}{0} - \pe{m}{0}} \quad $
+                    一级波函数修正$ 
+                    \pp{n}{1} = \sum\limits_{m \neq n} \dfrac{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}{\pe{n}{0} - \pe{m}{0} } \pp{m}{0} =  
+                    \sum\limits_{m \neq n} \dfrac{\vu*{H}'_{mn}}{\pe{n}{0} - \pe{m}{0} } \pp{m}{0}
+                    $
+                    
+                    \item 二级能量修正$ 
+                    \pe{n}{2} = \sum\limits_{m \neq n} \dfrac{\abs{\mel{\pp{m}{0}}{\vu*{H'}}{\pp{n}{0}}}^{2}}{\pe{n}{0} - \pe{m}{0}} = 
+                    \pe{n}{2} = \sum\limits_{m \neq n} \dfrac{\abs{\vu*{H}'_{mn}}^{2}}{\pe{n}{0} - \pe{m}{0}}
+                    $
                 \end{itemize}
 
                 \item 定态简并微扰理论
@@ -2010,14 +2020,14 @@
                 $\rho(E)$是能态密度——单位能量间隔的状态数
 
                 \item 强度为$I(\omega)$的连续光照射原子发生由$\psi_{k}$态到$\psi_{m}$态的跃迁速率(电偶极近似)
-                $$ w_{k \rightarrow m} = \frac{4\pi^{2}e^{2}}{3\hbar^{2}} I(\abs{\omega_{mk}}) \abs{r_{mk}}^{2} \quad \omega_{mk} = \dfrac{E_{m}-E_{k}}{\hbar} $$
-                $$ \abs{r_{mk}}^{2} \equiv \abs{x_{mk}}^{2} + \abs{y_{mk}}^{2} + \abs{z_{mk}}^{2} $$
+                $$ w_{k \rightarrow m} = \frac{4\pi^{2}e^{2}}{3\hbar^{2}} I(\abs{\omega_{mk}}) \abs{\vb{r}_{mk}}^{2} \quad \omega_{mk} = \dfrac{E_{m}-E_{k}}{\hbar} $$
+                $$ \abs{\vb{r}_{mk}}^{2} \equiv \abs{x_{mk}}^{2} + \abs{y_{mk}}^{2} + \abs{z_{mk}}^{2} $$
                 $$ \abs{x_{mk}} = \int \psi_{m}^{*}x\psi_{k} d\tau  \quad \abs{y_{mk}} = \int \psi_{m}^{*}y\psi_{k} d\tau \quad \abs{z_{mk}} = \int \psi_{m}^{*}z\psi_{k} d\tau $$
                 
                 电偶极跃迁选择定则:$ \quad \triangle = \pm 1 \quad \triangle m = 0,\pm 1 $
 
                 \item 原子的自发跃迁速率为
-                $$ A_{k \rightarrow m} = \frac{4e^{2}\omega_{km}^{3}}{3\hbar c^{3}} \abs{r_{mk}}^{2} $$
+                $$ A_{k \rightarrow m} = \frac{4e^{2}\omega_{km}^{3}}{3\hbar c^{3}} \abs{\vb{r}_{mk}}^{2} $$
 
                 \item 精细结构:相对论修正和自旋-轨道耦合
 
@@ -2052,6 +2062,77 @@
             \end{enumerate}
         \end{formal}
 
+        \subsection{电偶极矩在静电场中}
+            \begin{formal}
+                电荷$q$在空间$\vb{r}$处的电偶极矩位$\vb{D} = q \vb{r}$
+
+                在静电场中的势能(哈密顿量微扰)$ \vu*{H'} = - \vb{D} \vdot \vb{E} $
+
+                电势能 $ \vu*{H}' = W = q \Phi  $
+            \end{formal}
+
+            注意此题并没有说明全是正电荷或者负电荷,因此才有计算电偶极矩这个说法
+
+            另一种获得微扰哈密顿量的方法是$ \vb{E} = - \nabla \vdot \Phi $,此电势乘以电荷$ \vu*{H}' = q \Phi  $
+
+            极化率即为电偶极矩和电场强度的比值
+
+        \subsection{矩阵中的微扰解法}
+            注意每个分立的能量如$E_1 = \pe{0}{1} + H_{11}' + \cdots$此时并不包含$H_{22}'$
+
+        \subsection{矩阵中的微扰解法2}
+            注意在$H_{0}$的$H$矩阵已经给出,在此表象下$H_{0}$的矩阵就是对角矩阵,剩下的部分为微扰哈密顿矩阵
+
+        \subsection{氢原子库伦势修正的微扰法}
+            此题可以跳过(需要知道氢原子的基态波函数),但是这道题的意思是
+
+            给出了现在修正后的势能,因此现在的修正势能减去标准的库伦,就是微扰势能(微扰哈密顿量)
+        
+        \subsection{无限深方势阱的微扰算法}
+            这里直接计算了$H'_{m1}$,同时将积分内部整理成
+            $$ \int_{0}{^a} \sin{\frac{m \pi }{a} x} \sin{\frac{2\pi}{a}x} dx $$
+            
+            巧妙用了正交规则,同时如果$m=2$积分结果为$ \frac{a}{2} $(并不是1)
+
+        \subsection{谐振子的类谐振子微扰计算}
+            简单题(只计算到近似值)
+
+        \subsection{谐振子与级数微扰}
+            简单题
+
+        \subsection{微扰表象下的矩阵计算}
+            直接求解$\vu*{H}_{0}$的本征值和本征态就行了(不用想太多)
+
+        \subsection{一维深势阱的势垒微扰}
+            简单,仅回顾一下归一化常数的计算方法
+            $$ \frac{1}{2} L A^{2} = 1  \quad L = 6 a \quad A = \sqrt{\frac{1}{3a}} $$
+        
+        \subsection{对易式微扰}
+            当加入微扰后,基态能量和基态波函数都发生了变化,因此算符$\vu*{B}$在新的基态波函数下的期望,需要先求出修正后的基态波函数
+            
+            推荐将修正后的基态波函数命名为$\ket{\psi}$
+
+            计算新的期望时,左右两边各有两项,打开括号分配计算就可以了,记得将$\mel{m}{A}{0}$取共轭为$\mel{0}{A}{m}$(这跟它是否是厄米算符无,必须交换)
+            
+            仅仅需要计算到$\lambda$的一级近似(舍去平方项)
+
+            需要注意的是,无论是波函数修正还是能量修正都有一个$m \neq n$在这里为$m \neq 0$,因此用完备性公式替换$\sum\limits_{m\neq0}\ket{m}\bra{m}$
+            需要排除掉$\ket{0}\bra{0}$得到如下
+            
+            $$ \sum\limits_{m\neq0}^{\infty}\ket{m}\bra{m} = 1 - \ket{0} \bra{0} $$
+
+            第二小问,需要用到上一问求解$\vu*{B}$的期望的结果,换句话说我们需要在新条件下求出$\vu*{C}$.此时$\vu*{B} = x_{k}$
+            
+            已知$ H' = \lambda x_{3} = i \lambda \comm{\vu*{A}}{\vu*{H}_{0}} 
+            \lra 2 \hbar \comm{\vu*{A}}{\vu*{H}_{{0}}} = - 2 i \hbar x_{3}$(凑成对易子常用公式)
+
+            显然我们可以知道
+            $$ \vu*{A} = \dfrac{1}{2\hbar} \dfrac{1}{\frac{1}{2}\mu \omega^{2} } \vu*{p}_{3} = \dfrac{1}{\hbar \mu \omega^{2}} \vu*{p}_{3} $$
+
+            得到$\vu*{A}$后轻易可以得到$\vu*{C}$
+
+            精确解通过构造新的谐振子哈密顿量即可,且新的$<x'_{k}> = 0$
+        
     \section{自旋}
 
         \begin{formal}
