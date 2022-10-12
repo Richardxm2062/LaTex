@@ -2241,11 +2241,30 @@
             $$ \varphi_{1} = \varphi_{0}(x)\varphi_{1}(y) \quad \varphi_{2} = \varphi_{1}(x) \varphi_{0}(y) $$
 
 
+        \subsection{三维谐振子交叉项微扰计算}
+            注意细节
+            $$ x\psi_{100} = \frac{1}{\alpha} (\frac{1}{\sqrt{2}} \psiii{0}{x} + \psiii{2}{x} \psiii{0}{y,z}) $$
+            $$ y\psi_{010} = \frac{1}{\alpha} (\frac{1}{\sqrt{2}} \psiii{0}{y} + \psiii{2}{y} \psiii{0}{x,z}) $$
+
+            相乘的时候记住是三维的,分开乘积.
 
 
+        \subsection{类氢原子受微扰计算}
+            微扰$ H' = f(r)xy $记得把$x,y$用球坐标系表示出来
+
+            主要看$\varphi$角的积分,$\sin{2\varphi}$与$e^{\pm i \varphi}$的积分为$0$,所以包含角标$2$的项均为0
+
+            同时对角线上的项显然为0,仅有非0项$H'_{13} = (H'_{31})^{*} $(对角位置上共轭值),题目并未要求给出具体值,可以先假设.
+
+            求能级劈裂后的每个能量的波函数就是求$c_{i}$,把$E^{1}$三个值分别带入矩阵求一组$c_{i}$,带入非修正波函数的定义
 
 
+        \subsection{第一象限立方势能含交叉项的微扰计算}
+            题目有问题,按立方势在第一象限计算就可以了
 
+            $ x \sin^{2}{\dfrac{\pi x }{a}} $ 使用表格积分计算
+
+            $ x \sin{\dfrac{\pi x }{a}} \sin{\dfrac{2 \pi x }{a}} $ 同样也是可以表格积分(先降次,第一次积分凑成sin,第二次积分凑cos)
 
 
 
