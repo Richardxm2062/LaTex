@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  29 JUN 2023 18:27
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  29 JUN 2023 18:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/richard/Documents/Code/GitHub/LaTex/templates/article/article
-(/Users/richard/Documents/Code/GitHub/LaTex/templates/article/article.tex
+**article
+(./article.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -558,12 +558,12 @@ Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: 97C25F02F3C901422332A2CE37CBF74A;373.
  ) 
 Here is how much of TeX's memory you used:
- 15613 strings out of 476179
- 328756 string characters out of 5809544
+ 15612 strings out of 476179
+ 328575 string characters out of 5809544
  675402 words of memory out of 5000000
  36152 multiletter control sequences out of 15000+600000
  474173 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,434b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,6n,97p,373b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on article.pdf (2 pages).
