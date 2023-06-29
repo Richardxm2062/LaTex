@@ -1,0 +1,117 @@
+{
+  
+  "latex-workshop.latex.recipes": [
+       {
+         "name": "xelatex",
+         "tools": [
+           "xelatex"
+         ]
+       },
+       {
+         "name": "xe*2",
+         "tools": [
+           "xelatex",
+           "xelatex"
+         ]
+       },
+       {
+         "name": "xelatex -> bibtex -> xelatex*2",
+         "tools": [
+           "xelatex",
+           "bibtex",
+           "xelatex",
+           "xelatex"
+         ]
+       }
+     ],
+     "latex-workshop.latex.tools": [
+       {
+         "name": "latexmk",
+         "command": "latexmk",
+         "args": [
+           "-synctex=1",
+           "-interaction=nonstopmode",
+           "-file-line-error",
+           "-pdf",
+           "-shell-escape",
+           "%DOC%"
+         ]
+       },
+       {
+         "name": "xelatex",
+         "command": "xelatex",
+         "args": [
+           "-synctex=1",
+           "-interaction=nonstopmode",
+           "-file-line-error",
+           "-shell-escape",
+           "%DOC%"
+         ]
+       },
+       {
+         "name": "bibtex",
+         "command": "bibtex",
+         "args": [
+          "%DOCFILE%",
+
+
+         ]
+       }
+     ],
+     
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+      "*.aux",
+      "*.bbl",
+      "*.blg",
+      "*.idx",
+      "*.ind",
+      "*.lof",
+      "*.lot",
+      "*.out",
+      "*.toc",
+      "*.acn",
+      "*.acr",
+      "*.alg",
+      "*.glg",
+      "*.glo",
+      "*.bib",
+      "*.thm",
+      "*.tmp",
+      "*.mw",
+      "*.xml",
+      "*.out",
+      "*.gls",
+      "*.fls",
+      "*.log",
+      "*.fdb_latexmk",
+      "*.snm",
+      "*.synctex(busy)",
+      "*.synctex.gz(busy)",
+      "*.nav",
+      "*.vrb"
+    ],
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.latex.clean.enabled": true,
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "editor.minimap.enabled": false,
+    "editor.largeFileOptimizations": false,
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace,Hack Nerd Font,Songti SC light",
+    "workbench.editorAssociations": {
+      "*.ipynb": "jupyter-notebook",
+      "*.pdf": "latex-workshop-pdf-hook"
+    },
+    "terminal.integrated.commandsToSkipShell": [
+      "language-julia.interrupt"
+    ],
+    "julia.enableTelemetry": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+    "terminal.integrated.inheritEnv": false,
+    "git.autofetch": true,
+    "julia.symbolCacheDownload": true
+ 
+}
