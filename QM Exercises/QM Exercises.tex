@@ -27,7 +27,7 @@
                 $$ y = e^{\alpha x} (C_{1}\cos{\beta x} + C_{2}\sin{\beta x}) \quad or \quad y = C_{1}e^{i\beta x} + C_{2}e^{-i\beta x}$$
 
                 一阶微分变化值的关系
-                $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{2\mu}{\hbar^2}V(x)\psi(x)dx $$    
+                $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$    
 
                 $\delta$函数性质
 
@@ -207,7 +207,7 @@
             
             \indent 一阶微分变化值的关系  
 
-            $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{2\mu}{\hbar^2}V(x)\psi(x)dx $$     %\int_{}^{}   \hbar 
+            $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$     %\int_{}^{}   \hbar 
 
             积分性质
 
@@ -248,8 +248,8 @@
 
     \subsection{半壁无限深势阱}
         再次遇到$y=-x \cot{x}$,记忆关键点的方式可以通过极限来记忆
-        $$\lim_{x \to 0}- x \cot{x} = \lim_{x \to 0} -\frac{x}{\sin{x}} \times \lim_{x \to 0}\cos{x} = -1 \times 1 = -1  $$
-        $$\lim_{x \to \frac{\pi}{2}}- x \cot{x} = \lim_{x \to \frac{\pi}{2}} -\frac{x}{\sin{x}} \times \lim_{x \to \frac{\pi}{2}}\cos{x} = -\frac{\pi}{2} \times 0 = 0  $$
+        $$\lim_{x \to 0}- x \cot{x} = \lim_{x \to 0} -\frac{x}{\sin{x}} + \lim_{x \to 0}\cos{x} = -1 \times 1 = -1  $$
+        $$\lim_{x \to \frac{\pi}{2}}- x \cot{x} = \lim_{x \to \frac{\pi}{2}} -\frac{x}{\sin{x}} + \lim_{x \to \frac{\pi}{2}}\cos{x} = -\frac{\pi}{2} \times 0 = 0  $$
         
         最后在此题中可变参量为$a$与$V_{0}$,最好化简为不等式一边仅有可变参量,正如
         $$V_{0}a^{2}\geq \frac{\pi^{2}\hbar^{2}}{8 \mu} $$
@@ -855,7 +855,7 @@
 
                 正是这些对易关系是的一些由$\vu*{x}_{i}$与$\vu*{p}_{i}$组成的力学量算符的本征值取分立值.
 
-                根据经典力学的哈密顿正则运动方程,带入对易关系,就得到海森堡运动方程,这些对易关系又叫做正则量子化条件
+                根据经典力学的哈密顿正则运动方程,带入对易关系,就得到海森堡运动方程,,这些对易关系又叫做正则量子化条件
 
             \end{formal}
     
@@ -1517,7 +1517,9 @@
                     $$ \vu*{v} = \frac{1}{\mu} (\vu*{p} - \frac{q}{c} \vb{A}) $$
                     这里的$\vu*{v}$是粒子的速度算符
 
-        
+                    对比非电磁场下的概率流密度
+                    $$ j_{x} = -\frac{i\hbar}{2\mu} (\psi^{*} \pdv{}{x} \psi - \psi \pdv{}{x} \psi^{*} ) $$
+
                     \item 在三维无限深方势阱
                     $$
                     V(x,y,z) =
@@ -2624,7 +2626,7 @@
             \item $ s = 1 $的自旋分量$ \vu*{S}_{x} , \vu*{S}_{y} , \vu*{S}_{z} $在$\vu*{S}_{z}$表象中的矩阵表示
                   $$
                   \vu*{S}_{x} = \frac{\hbar}{\sqrt{2}} \mqty(0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0) \quad 
-                  \vu*{S}_{y} = \frac{\hbar}{\sqrt{2}} \mqty(0 & -i & 0 \\ i & 0 & -i \\ 0 & i & 0) \quad
+                  \vu*{S}_{y} = \frac{\hbar}{\sqrt{2}} \mqty(0 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 0) \quad
                   \vu*{S}_{z} = \hbar \mqty(1 & 0 & 0 \\ 0 & 0 & 0 \\ 0 & 0 & -1) 
                   $$
 
