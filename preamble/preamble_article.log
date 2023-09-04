@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  4 SEP 2023 11:00
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  4 SEP 2023 11:53
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **/Users/richard/Documents/Code/GitHub/macos/LaTex/preamble/preamble_article
@@ -703,27 +703,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box72
 \tcb@temp=\box73
 \tcb@temp=\box74
-) (/usr/local/texlive/texmf-local/tex/latex/local/latexalpha2/latexalpha2.sty
-Package: latexalpha2 2019/03/05 v1.1 latexalpha2
- (/usr/local/texlive/2022/texmf-dist/tex/latex/morewrites/morewrites.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/morewrites/primargs.sty
-Package: primargs 2018/12/29 Parsing arguments of primitives
 )
-Package: morewrites 2018/12/29 Always room for a new write
-\g__morewrites_later_int=\count359
-\l__morewrites_user_int=\count360
-\g__morewrites_iow=\write4
-\g__morewrites_ior=\read4
-\g__morewrites_group_level_int=\count361
-\g__morewrites_shipout_box=\box75
-\l__morewrites_collect_next_int=\count362
-\g__morewrites_alloc_write_int=\count363
-) (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifxetex.sty
-Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-))
 Package hyperref Info: Option `colorlinks' set `true' on input line 92.
-\c@thm=\count364
-\c@lemma=\count365
-\c@corollary=\count366
+\c@thm=\count359
+\c@lemma=\count360
+\c@corollary=\count361
 )
 ! Emergency stop.
 <*> ...itHub/macos/LaTex/preamble/preamble_article
@@ -732,10 +716,10 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 92.
 
  
 Here is how much of TeX's memory you used:
- 29498 strings out of 476179
- 614066 string characters out of 5809544
- 1019391 words of memory out of 5000000
- 49787 multiletter control sequences out of 15000+600000
+ 29224 strings out of 476179
+ 607069 string characters out of 5809544
+ 1016276 words of memory out of 5000000
+ 49526 multiletter control sequences out of 15000+600000
  471333 words of font info for 40 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,0n,97p,492b,263s stack positions out of 10000i,1000n,20000p,200000b,200000s
