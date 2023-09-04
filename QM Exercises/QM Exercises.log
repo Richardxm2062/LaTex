@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.4)  4 SEP 2023 18:01
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.4)  4 SEP 2023 17:43
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/Github/LaTex/gzwl/gaoyi
-(d:/Github/LaTex/gzwl/gaoyi.tex
+**"d:/Github/LaTex/QM Exercises/QM Exercises"
+(d:/Github/LaTex/QM Exercises/QM Exercises.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -722,31 +722,11 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 \tcb@temp=\box75
 \tcb@temp=\box76
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 92.
+Package hyperref Info: Option `colorlinks' set `true' on input line 91.
 \c@thm=\count359
 \c@lemma=\count360
 \c@corollary=\count361
-) (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
-Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks46
-\MT@tempbox=\box77
-\MT@count=\count362
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
-LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks47
-LaTeX Info: Redefining \rightprotrusion on input line 1078.
-LaTeX Info: Redefining \textls on input line 1368.
-\MT@outer@kern=\dimen311
-LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count363
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def
-File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
-LaTeX Info: Redefining \lsstyle on input line 238.
-)
-Package microtype Info: Loading configuration file microtype.cfg.
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
-File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
-)) (f:/texlive/2023/texmf-dist/tex/latex/newtx/TeXGyreTermesX.fontspec)
+) (f:/texlive/2023/texmf-dist/tex/latex/newtx/TeXGyreTermesX.fontspec)
 Requested font "[TeXGyreTermesX-Regular.otf]/OT" at 9.99997pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 Requested font "[TeXGyreTermesX-Regular.otf]/OT" at 10.00003pt
@@ -807,88 +787,88 @@ Package fontspec Info: Font family 'TeXGyreTermesX(0)' created for font
 (fontspec)             <->s*[1]"[TeXGyreTermesX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
+(Font)              scaled to size 10.0pt on input line 7.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
- (./gaoyi.aux)
-\openout1 = `gaoyi.aux'.
+ (./QM Exercises.aux)
+\openout1 = `"QM Exercises.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 11.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 11.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 11.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 11.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 11.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 11.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 11.
-LaTeX Font Info:    Redeclaring math accent \check on input line 11.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 11.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 11.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 11.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 11.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 11.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 7.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 7.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 7.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 7.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 7.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 7.
+LaTeX Font Info:    Redeclaring math accent \check on input line 7.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 7.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 7.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 11.
+(Font)              `operators' in the math version `normal' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 11.
+(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 11.
+(Font)              `operators' in the math version `bold' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/m/n on input line 11.
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 11.
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermesX(0)/m/it on input line 11.
+(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermesX(0)/m/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/b/n on input line 11.
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 11.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 11.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/b/n on input line 11.
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TeXGyreTermesX(0)/b/it on input line 11.
+(Font)                  OT1/cmr/bx/it --> TU/TeXGyreTermesX(0)/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 11.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 11.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -926,48 +906,33 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen312
-\caption@adjustwidth@linewidth=\dimen313
+\caption@adjustwidth@hsize=\dimen311
+\caption@adjustwidth@linewidth=\dimen312
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 11.
-(./gaoyi.out) (./gaoyi.out)
+Package hyperref Info: Link coloring ON on input line 7.
+(./QM Exercises.out) (./QM Exercises.out)
 \@outlinefile=\write4
-\openout4 = `gaoyi.out'.
+\openout4 = `"QM Exercises.out"'.
 
-\c@lstlisting=\count364
-LaTeX Info: Redefining \microtypecontext on input line 11.
-Package microtype Info: Applying patch `item' on input line 11.
-Package microtype Info: Applying patch `toc' on input line 11.
-Package microtype Info: Applying patch `eqnum' on input line 11.
-Package microtype Info: Applying patch `footnote' on input line 11.
-Package microtype Info: Applying patch `verbatim' on input line 11.
-Package microtype Info: Character protrusion enabled (level 2).
-Package microtype Info: Using default protrusion set `alltext'.
-Package microtype Info: No adjustment of tracking.
-Package microtype Info: No adjustment of spacing.
-Package microtype Info: No adjustment of kerning.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `TeXGyreTermesX' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
+\c@lstlisting=\count362
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 14.
+(Font)              scaled to size 17.28pt on input line 9.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 17.28pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 Requested font "SimSun/OT:script=hani;language=dflt;" at 17.28pt
  -> C:/WINDOWS/fonts/simsun.ttc
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 14.
+(Font)              scaled to size 12.0pt on input line 9.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 12.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 14.
+(Font)              scaled to size 8.0pt on input line 9.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 8.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 14.
+(Font)              scaled to size 6.0pt on input line 9.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 6.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 Requested font "cmmi12" at 12.0pt
@@ -990,57 +955,56 @@ Requested font "cmex7" at 6.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 Requested font "cmr12" at 12.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-)
 Requested font "cmr8" at 8.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 Requested font "cmr6" at 6.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+Requested font "SimSun/OT:script=hani;language=dflt;" at 12.0pt
+ -> C:/WINDOWS/fonts/simsun.ttc
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 14.
+(Font)              scaled to size 14.4pt on input line 9.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 14.4pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 14.
+(Font)              scaled to size 14.4pt on input line 9.
 Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 14.4pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
- (./gaoyi.toc
+ (./QM Exercises.toc
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
 Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
 Requested font "SimHei/OT:script=hani;language=dflt;" at 10.0pt
  -> C:/WINDOWS/fonts/simhei.ttf
-)
-\tf@toc=\write5
-\openout5 = `gaoyi.toc'.
-
- [1
-
-]
-Requested font "SimHei/OT:script=hani;language=dflt;" at 14.4pt
- -> C:/WINDOWS/fonts/simhei.ttf
 Requested font "SimSun/OT:script=hani;language=dflt;" at 10.0pt
  -> C:/WINDOWS/fonts/simsun.ttc
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 24.
+(Font)              scaled to size 7.0pt on input line 2.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 7.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 24.
+(Font)              scaled to size 5.0pt on input line 2.
 Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 5.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
 Requested font "cmex7" at 7.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 Requested font "cmex7" at 5.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+ [1
+
+] [2] [3] [4])
+\tf@toc=\write5
+\openout5 = `"QM Exercises.toc"'.
+
+ [5]
+Requested font "SimHei/OT:script=hani;language=dflt;" at 14.4pt
+ -> C:/WINDOWS/fonts/simhei.ttf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 7.0pt on input line 24.
+(Font)              scaled to size 7.0pt on input line 61.
 Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 7.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 5.0pt on input line 24.
+(Font)              scaled to size 5.0pt on input line 61.
 Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 5.0pt
  -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
 Requested font "cmmib10" at 10.0pt
@@ -1061,22 +1025,74 @@ Requested font "cmbx7" at 7.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 Requested font "cmbx5" at 5.0pt
  -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+ [6]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 101.
+Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 12.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
+Requested font "SimHei/OT:script=hani;language=dflt;" at 12.0pt
+ -> C:/WINDOWS/fonts/simhei.ttf
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 102.
+Requested font "[TeXGyreTermesX-Italic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Italic.otf
+Requested font "KaiTi/OT:script=hani;language=dflt;" at 10.0pt
+ -> C:/WINDOWS/fonts/simkai.ttf
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/it' will be
+(Font)              scaled to size 10.0pt on input line 117.
+Requested font "[TeXGyreTermesX-BoldItalic.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 10.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-BoldItalic.otf
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
- []
+LaTeX Font Warning: Font shape `TU/SimSun(0)/b/it' undefined
+(Font)              using `TU/SimSun(0)/b/n' instead on input line 117.
 
-[2] [3] (./gaoyi.aux)
-Package rerunfilecheck Info: File `gaoyi.out' has not changed.
-(rerunfilecheck)             Checksum: 045E58525F219837C646FDC5941A0E9C;166.
+[7]
+File: tanx.png Graphic file (type bmp)
+<tanx.png>
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 161.
+Requested font "[TeXGyreTermesX-Regular.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 9.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Regular.otf
+Requested font "cmmi9" at 9.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+Requested font "cmsy9" at 9.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+Requested font "cmex9" at 9.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+Requested font "cmr9" at 9.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+File: xtanx.png Graphic file (type bmp)
+<xtanx.png>
+File: -xcotx.png Graphic file (type bmp)
+<-xcotx.png>
+File: 3plot.png Graphic file (type bmp)
+<3plot.png>
+Requested font "SimSun/OT:script=hani;language=dflt;" at 9.0pt
+ -> C:/WINDOWS/fonts/simsun.ttc
+ [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31] [32] [33]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 1592.
+Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 8.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 6.0pt on input line 1592.
+Requested font "[TeXGyreTermesX-Bold.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;mapping=tex-text;" at 6.0pt
+ -> f:/texlive/2023/texmf-dist/fonts/opentype/public/newtx/TeXGyreTermesX-Bold.otf
+ [34] [35] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] (./QM Exercises.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `"QM Exercises".out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 31869 strings out of 476683
- 664225 string characters out of 5807576
- 1874012 words of memory out of 5000000
- 51568 multiletter control sequences out of 15000+600000
- 520640 words of font info for 92 fonts, out of 8000000 for 9000
+ 30408 strings out of 476683
+ 641047 string characters out of 5807576
+ 1888012 words of memory out of 5000000
+ 50104 multiletter control sequences out of 15000+600000
+ 521857 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 94i,6n,100p,1019b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 94i,19n,100p,492b,683s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on gaoyi.pdf (3 pages).
+Output written on QM Exercises.pdf (64 pages).
