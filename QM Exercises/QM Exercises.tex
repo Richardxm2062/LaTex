@@ -1,3 +1,4 @@
+\documentclass{article}
 \input{../preamble/preamble_article.tex}
 
 \title{量子力学习题集}
@@ -155,7 +156,7 @@
             \begin{subfigure}{0.48\textwidth}
                     
                 \centering
-                \wolframgraphics[png]{Plot[y=Tan[x],{x,0,2.5}]}{tanx}
+                %\wolframgraphics[png]{Plot[y=Tan[x],{x,0,2.5}]}{tanx}
                 \includegraphics[scale=0.4]{tanx.png}
                 \caption{$y=\tan{x}$}
                 
@@ -163,7 +164,7 @@
             \begin{subfigure}{0.48\textwidth}
                 
                 \centering
-                \wolframgraphics[png]{Plot[y=x*Tan[x],{x,0,2.5}]}{xtanx}
+                %\wolframgraphics[png]{Plot[y=x*Tan[x],{x,0,2.5}]}{xtanx}
                 \includegraphics[scale=0.4]{xtanx.png}
                 \caption{$y=x \tan{x}$}
 
@@ -177,7 +178,7 @@
             \begin{subfigure}{0.48\textwidth}
                     
                 \centering
-                \wolframgraphics[png]{Plot[y=-x*Cot[x],{x,0,2.5}]}{-xcotx}
+                %\wolframgraphics[png]{Plot[y=-x*Cot[x],{x,0,2.5}]}{-xcotx}
                 \includegraphics[scale=0.4]{-xcotx.png}
                 \caption{$y=-x \cot{x}$}
                 
@@ -185,7 +186,7 @@
             \begin{subfigure}{0.48\textwidth}
                 
                 \centering
-                \wolframgraphics[png]{Plot[{y=-x*Cot[x],y=x*Tan[x],y=Sqrt[4-x^2]},{x,0,2.5}]}{3plot}
+                %\wolframgraphics[png]{Plot[{y=-x*Cot[x],y=x*Tan[x],y=Sqrt[4-x^2]},{x,0,2.5}]}{3plot}
                 \includegraphics[scale=0.4]{3plot.png}
                 \caption{三个函数曲线}
 
@@ -929,9 +930,9 @@
              $$ \pdv{E_{n}}{\lambda} = \overline{\qty(\pdv{\vu*{H}}{\lambda})_{n}} $$
 
             泰勒级数
-            $$ \cos{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n)!} x^{2n} = \wolfram{Series[Cos[x],{x,0,5}]} $$
-            $$ \sin{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1} = \wolfram{Series[Sin[x],{x,0,5}]} $$
-            $$ e^{x} = \sum_{n=0}^{\infty} \frac{1}{n!} x^{n} = \wolfram{Series[Exp[x],{x,0,5}]} $$
+            $$ \cos{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n)!} x^{2n}  $$
+            $$ \sin{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1}  $$
+            $$ e^{x} = \sum_{n=0}^{\infty} \frac{1}{n!} x^{n}  $$
             
         \end{formal}
 
@@ -953,8 +954,8 @@
             结论需要背住(总结部分已经有了)
             \begin{formal}
                 两个三角函数的泰勒级数
-                $$ \cos{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n)!} x^{2n} = \wolfram{Series[Cos[x],{x,0,5}]} $$
-                $$ \sin{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1} = \wolfram{Series[Sin[x],{x,0,5}]} $$
+                $$ \cos{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n)!} x^{2n} $$
+                $$ \sin{x} = \sum_{n=0}^{\infty} \frac{(-1)^{n}}{(2n+1)!} x^{2n+1} $$
             \end{formal}
             
         
@@ -1029,7 +1030,7 @@
         \subsection{算符等式3}
             需要背住幂指数函数的展开式子
             \begin{formal}
-                $$ e^{x} = \sum_{n=0}^{\infty} \frac{1}{n!} x^{n} = \wolfram{Series[Exp[x],{x,0,5}]} $$
+                $$ e^{x} = \sum_{n=0}^{\infty} \frac{1}{n!} x^{n}  $$
             \end{formal}
         
         \subsection{角动量算符的本征值问题}
