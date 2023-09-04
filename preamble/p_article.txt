@@ -1,4 +1,4 @@
-\input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_article.tex}
+\input{./preamble_article.tex}
 
 
 \title{Title}

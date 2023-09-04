@@ -1,45 +1,45 @@
 \input{/Users/richard/Documents/Code/GitHub/LaTex/preamble/preamble_homework.tex}
 
-%ÒÔÏÂÎªÇ°ÑÔÎÄ¼þÒýÓÃµÄ°üÒÔ¼°Ïà¹ØÓÃ·¨
+%ï¿½ï¿½ï¿½ï¿½ÎªÇ°ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ÃµÄ°ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½ï¿½Ã·ï¿½
 
 \begin{comment}
 
     package iidef:
-        Ö¸¶¨Ñ§Ð£Ãû      \thecourseinstitute{}      
-        Ö¸¶¨¿Î³ÌÃû      \thecoursename{} 
-	Ö¸¶¨Ñ§ÆÚ        \theterm{}
-        ×÷ÒµÃû         \hwname{}
-        Éú³É×÷Òµ±êÌâ    \courseheader           ·ÅÔÚdocument»·¾³ÄÚ ²»ÐèÒªÔÙmaketile
-        Ãû×Ö           \name                   ·ÅÔÚdocument»·¾³ÄÚ
-        ×Ô¶¯±àºÅ»·¾³    \begin{enumerate}       
-            ÌâºÅ           \item               ×Ô¶¯±àºÅ 
-        Ö¤Ã÷           \begin{proof}           Ö¤Ã÷»·¾³ÓÉamsthm°üÌá¹©
-        Çó½â           \begin{solution}       
-        ·½³Ì           \begin{equation}        
-            ·½³Ì±àºÅ    \labe{eq:[number]}      Îª·½³ÌÉèÖÃ±àºÅ  
-            ÒýÓÃ·¿²ú    \eqref{eq:[number]}     ÒýÓÃ·½³Ì
-        ÐÐÄÚ·½³Ì        $...$
-        ¶àÐÐ¹«Ê½        \begin{align}           
+        Ö¸ï¿½ï¿½Ñ§Ð£ï¿½ï¿½      \thecourseinstitute{}      
+        Ö¸ï¿½ï¿½ï¿½Î³ï¿½ï¿½ï¿½      \thecoursename{} 
+	Ö¸ï¿½ï¿½Ñ§ï¿½ï¿½        \theterm{}
+        ï¿½ï¿½Òµï¿½ï¿½         \hwname{}
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½    \courseheader           ï¿½ï¿½ï¿½ï¿½documentï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½maketile
+        ï¿½ï¿½ï¿½ï¿½           \name                   ï¿½ï¿½ï¿½ï¿½documentï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        ï¿½Ô¶ï¿½ï¿½ï¿½Å»ï¿½ï¿½ï¿½    \begin{enumerate}       
+            ï¿½ï¿½ï¿½           \item               ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ 
+        Ö¤ï¿½ï¿½           \begin{proof}           Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½amsthmï¿½ï¿½ï¿½á¹©
+        ï¿½ï¿½ï¿½           \begin{solution}       
+        ï¿½ï¿½ï¿½ï¿½           \begin{equation}        
+            ï¿½ï¿½ï¿½Ì±ï¿½ï¿½    \labe{eq:[number]}      Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã±ï¿½ï¿½  
+            ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½    \eqref{eq:[number]}     ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
+        ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½        $...$
+        ï¿½ï¿½ï¿½Ð¹ï¿½Ê½        \begin{align}           
                             ... & = ... \\ 
                                 & = ...
                        \begin{array}{lcl}      
                             ... & = & ... \\ 
                             ... & = & ...
-        ·½³Ì×é          \begin{cases}
-                            ... & \mbox{if} x \mbox{is even} \\ ´ø¼ÙÉè
+        ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½          \begin{cases}
+                            ... & \mbox{if} x \mbox{is even} \\ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 \end{comment}
 
 
-\thecourseinstitute{ÖØÇì´óÑ§ÎïÀíÑ§Ôº}
-\thecoursename{Á¿×ÓÁ¦Ñ§}
-\theterm{2022Äê´º¼¾Ñ§ÆÚ}
-\hwname{¶¨Ì¬Ñ¦¶¨ÚÌ·½³Ì}
+\thecourseinstitute{ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½Ñ§Ôº}
+\thecoursename{ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ§}
+\theterm{2022ï¿½ê´ºï¿½ï¿½Ñ§ï¿½ï¿½}
+\hwname{ï¿½ï¿½Ì¬Ñ¦ï¿½ï¿½ï¿½Ì·ï¿½ï¿½ï¿½}
 
 
 \begin{document}
 \courseheader
-\name{ÂíÏéÜ¿20166085}
+\name{ï¿½ï¿½ï¿½ï¿½Ü¿20166085}
 
 
 \end{document}
