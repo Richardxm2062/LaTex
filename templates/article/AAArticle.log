@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  4 SEP 2023 12:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.8.24)  4 SEP 2023 12:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/richard/Documents/Code/GitHub/macos/LaTex/templates/article/article
-(/Users/richard/Documents/Code/GitHub/macos/LaTex/templates/article/article.tex
+**/Users/richard/Documents/Code/GitHub/macos/LaTex/templates/article/AAArticle
+(/Users/richard/Documents/Code/GitHub/macos/LaTex/templates/article/AAArticle.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24> (/usr/local/texlive/2022/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -392,8 +392,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 \c@thm=\count315
 \c@lemma=\count316
 
-No file article.aux.
-\openout1 = `article.aux'.
+No file AAArticle.aux.
+\openout1 = `AAArticle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
@@ -520,7 +520,7 @@ LaTeX Info: Redefining \ref on input line 26.
 LaTeX Info: Redefining \pageref on input line 26.
 LaTeX Info: Redefining \nameref on input line 26.
 \@outlinefile=\write3
-\openout3 = `article.out'.
+\openout3 = `AAArticle.out'.
 
 
 
@@ -534,7 +534,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
 \tf@toc=\write4
-\openout4 = `article.toc'.
+\openout4 = `AAArticle.toc'.
 
 [1
 
@@ -555,23 +555,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--73
 
 File: picture.jpeg Graphic file (type bmp)
 <picture.jpeg>
-[2] (./article.aux)
+[2] (./AAArticle.aux)
 
-Package rerunfilecheck Warning: File `article.out' has changed.
+Package rerunfilecheck Warning: File `AAArticle.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
-Package rerunfilecheck Info: Checksums for `article.out':
+Package rerunfilecheck Info: Checksums for `AAArticle.out':
 (rerunfilecheck)             Before: <no file>
 (rerunfilecheck)             After:  97C25F02F3C901422332A2CE37CBF74A;373.
  ) 
 Here is how much of TeX's memory you used:
- 15602 strings out of 476179
- 328649 string characters out of 5809544
- 674736 words of memory out of 5000000
+ 15603 strings out of 476179
+ 328682 string characters out of 5809544
+ 674742 words of memory out of 5000000
  36149 multiletter control sequences out of 15000+600000
  474173 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,440b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,6n,97p,442b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on article.pdf (2 pages).
+Output written on AAArticle.pdf (2 pages).
