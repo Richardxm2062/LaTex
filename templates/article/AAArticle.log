@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.4)  4 SEP 2023 16:22
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.4)  4 SEP 2023 17:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -396,8 +396,7 @@ Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
 Package hyperref Info: Option `colorlinks' set `true' on input line 15.
 \c@thm=\count315
 \c@lemma=\count316
-
-No file AAArticle.aux.
+ (./AAArticle.aux)
 \openout1 = `AAArticle.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -477,6 +476,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 26.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -512,11 +512,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 26.
+(./AAArticle.out) (./AAArticle.out)
 \@outlinefile=\write3
 \openout3 = `AAArticle.out'.
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \c@lstlisting=\count317
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -525,18 +523,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 28.
-No file AAArticle.toc.
+ (./AAArticle.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
+)
 \tf@toc=\write4
 \openout4 = `AAArticle.toc'.
 
-[1
+ [1
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 64.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 64.
-
 Underfull \hbox (badness 10000) in paragraph at lines 64--73
 
  []
@@ -549,20 +547,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--73
 File: picture.jpeg Graphic file (type bmp)
 <picture.jpeg>
 [2] (./AAArticle.aux)
-
-Package rerunfilecheck Warning: File `AAArticle.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `AAArticle.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  97C25F02F3C901422332A2CE37CBF74A;373.
+Package rerunfilecheck Info: File `AAArticle.out' has not changed.
+(rerunfilecheck)             Checksum: 97C25F02F3C901422332A2CE37CBF74A;373.
  ) 
 Here is how much of TeX's memory you used:
- 15839 strings out of 476683
- 338557 string characters out of 5807576
- 1854012 words of memory out of 5000000
- 35881 multiletter control sequences out of 15000+600000
+ 15850 strings out of 476683
+ 338698 string characters out of 5807576
+ 1855012 words of memory out of 5000000
+ 35884 multiletter control sequences out of 15000+600000
  516667 words of font info for 67 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,6n,97p,409b,905s stack positions out of 10000i,1000n,20000p,200000b,200000s
