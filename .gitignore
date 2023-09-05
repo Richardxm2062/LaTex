@@ -4,6 +4,15 @@
 *.out
 *.toc
 *.log
-*.log
 .DS_Store
-.DS_Store
+*.gz
+
+
+
+gzwl/gaoyi.log
+gzwl/gaoyi.synctex.gz
+QM Exercises/QM Exercises.aux
+QM Exercises/QM Exercises.log
+QM Exercises/QM Exercises.out
+QM Exercises/QM Exercises.synctex.gz
+QM Exercises/QM Exercises.toc
