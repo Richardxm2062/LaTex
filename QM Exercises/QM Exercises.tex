@@ -27,12 +27,28 @@
                 \item $r_{1}=\alpha + i \beta,r_{2} = \alpha - i \beta $为共轭复根(通常$\alpha$都是0)
                 $$ y = e^{\alpha x} (C_{1}\cos{\beta x} + C_{2}\sin{\beta x}) \quad or \quad y = C_{1}e^{i\beta x} + C_{2}e^{-i\beta x}$$
 
-                一阶微分变化值的关系
-                $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{\hbar^2}{2\mu}V(x)\psi(x)dx $$    
+                一阶微分变化值的关系(证明过程中$E$与$x$无关提出来,那一项积分为0)
+                $$ \triangle(\frac{d\psi}{dx}) = \int_{-\varepsilon}^{+\varepsilon}\frac{2\mu}{\hbar^2}V(x)\psi(x)dx $$    
 
-                $\delta$函数性质
+                $\delta$函数定义与性质
 
-                $$\int_{-\varepsilon}^{+\varepsilon} \delta(x) \psi(x) dx =\psi(0) \quad \delta(Rx) = \frac{1}{R} \delta(x) $$
+                $$
+                \delta(x) = 
+                    \begin{cases}
+                        0, & \text{当 } x \neq 0 \\
+                        \infty, & \text{当 } x = 0
+                    \end{cases}
+                $$
+
+
+
+                $$
+                \intff \delta(x) dx =1
+                \quad
+                \int_{-\varepsilon}^{+\varepsilon} \delta(x) \psi(x) dx =\psi(0) 
+                \quad 
+                \delta(Rx) = \frac{1}{\abs{R}} \delta(x) 
+                $$
 
                 常见三角函数的公式
                 $$\sin(x+y)=\sin{x} \cos{y}+\sin{y}\cos{x} \quad \cos(x+y)=\cos{x} \cos{y} - \sin{x}\sin{y}$$ 
