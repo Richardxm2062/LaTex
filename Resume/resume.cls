@@ -46,8 +46,8 @@
     number = {},
     format = \noindent \zihao{4} \heiti \__resume_section_title_format:n,
     indent = -1em,
-    afterskip = 0.5em,
-    beforeskip = 0.2em,
+    afterskip = 1em,
+    beforeskip = 2em,
   },
 }
 
@@ -112,7 +112,7 @@
     \zihao{-2} \heiti \g__resume_title_name_tl
   \end{center}
   % Reduce the space.
-  \vspace{-1.4em}
+  \vspace{-1em}
   \begin{center}
     \seq_use:Nnnn \g__resume_contacts_seq {~|~} {~|~} {~|~}
   \end{center}
