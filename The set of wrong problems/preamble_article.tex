@@ -95,7 +95,8 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \renewcommand{\qedsymbol}{}\endproof}                       %提供解环境
 \newtheorem{thm}{定理}[section]                              %定义一个新的环境 thm, 命名为定理,以 节 开始编号
 \newtheorem{lemma}{引理}[section]                            %定义新环境 lemma,命名为引理,以 节 开始编号
-\newtheorem{corollary}{推论}                                 %定义新环境 corollary,命名为推理,无编号
+\newtheorem{corollary}{推论}                                 %定义新环境 corollary,命名为推理,有编号
+\newtheorem*{corollary*}{推论}                                %定义新环境 corollary*,命名为推理,无编号
 \renewcommand{\proofname}{ \qquad \bf 证明}                  %更改proof为中文证明,proof环境默认存在
 
 %一些def
@@ -143,14 +144,14 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
         生成作业标题    \courseheader           放在document环境内 不需要再maketile
         名字           \name                   放在document环境内
         自动编号环境    \begin{enumerate}       
-        题号           \item               自动编号 
+        题号           \item                   自动编号 
         证明           \begin{proof}           证明环境由amsthm包提供
         求解           \begin{solution}       
         方程           \begin{equation}        
         方程编号        \labe{eq:[number]}      为方程设置编号  
         引用房产        \eqref{eq:[number]}     引用方程
         行内方程        $...$
-        多行公式        \begin{align}           
+        多行公式        \begin{align} \begin{align*}则不会编号  
                             ... & = ... \\ 
                                 & = ...
                        \begin{array}{lcl}      
@@ -159,7 +160,7 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
         方程组          \begin{cases}
                             ... & \mbox{if} x \mbox{is even} \\ 带假设
                        带编号
-                       \begin{numcases}
+                       \begin{numcases}{}
                             \label{1}   \\
                             \label{2}   
                        \end{numcases}
