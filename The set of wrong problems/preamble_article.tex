@@ -15,6 +15,7 @@
 
 %数学相关
 \usepackage{amsmath,amsthm}                                 %amsmath包应该在前
+\usepackage{cases}                                          %\begin{numcases}可以为方程编号
 
 
 %实用的内容说明包
@@ -28,7 +29,7 @@
 \usepackage{physics}
 \usepackage{xparse}                                         %physics需求的包
 
-% \eval{}        根据括号内容的大小在右边添加合适的竖线A|     ｜         \dv[n]{f}{x}          n阶微分算符 derivative
+% \eval{}        根据括号内容的大小在右边添加合适的竖线A|          ｜         \dv[n]{f}{x}          n阶微分算符 derivative
 % \abs{}         添加绝对值|A|                                ｜         \pdv[n]{f}{x}         n阶偏微分算符 partialderivative
 % \norm{}        模||A||                                      |          \bra \ket \braket    左、右、内积
 % \comm{}{}      对易子[A,B]                                  |          \op{}{}              外积(密度算符) outerproduct
@@ -157,6 +158,11 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
                             ... & = & ...
         方程组          \begin{cases}
                             ... & \mbox{if} x \mbox{is even} \\ 带假设
+                       带编号
+                       \begin{numcases}
+                            \label{1}   \\
+                            \label{2}   
+                       \end{numcases}
 
 \end{comment}
 
