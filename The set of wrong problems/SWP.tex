@@ -89,7 +89,6 @@
         \item 错选:\quad D
         \item 正解:\quad BD
         \item 总结:\quad 电容器的电压并非在一瞬间就获得,同样是电荷累计的结果
-        \item 扩展:\quad
     \end{itemize}
 
 
@@ -189,7 +188,7 @@
 
     \begin{itemize}
         \item 总结:\quad 在解方程组的时候,选择去消掉$t$直接得到$v = f(v_{0})$是非常困难的,事实上先解出$v = f(y)$求得最小的
-                  $y_{min}$,那么就可得到最小的$v_{ymin}$进而得到最小的$v$
+                  $y_{min}$,那么就可得到最小的$v_{ymin}$进而得到最小的$v = \sqrt{gh}$
     \end{itemize}
     
 
@@ -267,55 +266,154 @@
         y = 10\sin{\pi t} \quad t = \frac{1}{3}s \lra y = 10 \vdot \frac{\sqrt{3}}{2} = 5\sqrt{3}
         $$
     
-        \subsubsection{II-3}
-        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-3.png}
+    \subsubsection{II-3}
+    \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-3.png}
+
+    \begin{itemize}
+        \item 错选:\quad AC
+        \item 正解:\quad ACD
+        \item 总结:\quad 选项B, $E = - \frac{\triangle \Phi}{\triangle t}$,在高中阶段$\triangle t$比较小的时候为瞬时
+        电动势,当$\triangle t$比较大的时候,即为一个过程量得到的是$\overline{E}$,因此可以得到$\overline{I},\overline{F}$
+        \begin{align*}
+            \varepsilon &= \frac{\triangle \Phi}{\triangle t} = \frac{B \vdot \triangle S}{\triangle t}   \\
+            I &= \frac{\varepsilon}{2R} = \frac{B}{2R} \vdot \frac{\triangle S}{\triangle t} \\
+            F &= B I L = \frac{B^{2}L \triangle S}{2R \vdot \triangle t}    \\
+            F \vdot \triangle t &= \frac{B^{2} L \triangle S}{2 R} = m(v_{t} - v_{0})
+        \end{align*}
+        复杂变化的安培力对导体棒的冲量,仅仅与面积的改变量有关$\lra$速度的变化量仅与走过的面积有关 \\
+        选项D,恰好不能第二次碰撞即再次扫过2次磁场面积后速度为球2第一次碰后速度
+    \end{itemize}
     
-        \begin{itemize}
-            \item 错选:\quad AC
-            \item 正解:\quad ACD
-            \item 总结:\quad 选项B, $E = - \frac{\triangle \Phi}{\triangle t}$,在高中阶段$\triangle t$比较小的时候为瞬时
-            电动势,当$\triangle t$比较大的时候,即为一个过程量得到的是$\overline{E}$,因此可以得到$\overline{I},\overline{F}$
-            \begin{align*}
-                \varepsilon &= \frac{\triangle \Phi}{\triangle t} = \frac{B \vdot \triangle S}{\triangle t}   \\
-                I &= \frac{\varepsilon}{2R} = \frac{B}{2R} \vdot \frac{\triangle S}{\triangle t} \\
-                F &= B I L = \frac{B^{2}L \triangle S}{2R \vdot \triangle t}    \\
-                F \vdot \triangle t &= \frac{B^{2} L \triangle S}{2 R} = m(v_{t} - v_{0})
-            \end{align*}
-            复杂变化的安培力对导体棒的冲量,仅仅与面积的改变量有关$\lra$速度的变化量仅与走过的面积有关 \\
-            选项D,恰好不能第二次碰撞即再次扫过2次磁场面积后速度为球2第一次碰后速度
-        \end{itemize}
-        
-        \subsubsection{IV-1}
-        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-4.png}
+    \subsubsection{IV-1}
+    \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-4.png}
 
-        \begin{itemize}
-            \item 总结:好题收藏,第二问关键在与「沙粒随时间均匀漏下」,从已知条件中求出\textbf{沙粒平均流量},计算第二段的时间长度即可
-        \end{itemize}
+    \begin{itemize}
+        \item 总结:好题收藏,第二问关键在与「沙粒随时间均匀漏下」,从已知条件中求出\textbf{沙粒平均流量},计算第二段的时间长度即可
+    \end{itemize}
+
+    
+    \subsubsection{IV-2}
+    \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-5.png}
+    
+    \begin{itemize}
+        \item 总结:第一问当光垂直入射介面交界处 or 平行入射介面交界处,光路沿原方向继续传播
+        \item 第二问不难,即光线接触真空区域时,以临界角$\frac{\pi}{2}$射入,值的思考的是遮挡面积是一个圆形域
+    \end{itemize}
 
         
-        \subsubsection{IV-2}
-        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-5.png}
+    \subsubsection{IV-3}
+    \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-6.png}
+
+    \begin{itemize}
+        \item 总结:\quad 第一问考的\textbf{磁聚焦}(证明通过相似三角形),粒子旋转半径刚好为磁场半径$R$,也可以取特殊角度$\frac{\pi}{2}$
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=20em,keepaspectratio]{./pictures/1.3-7.png}
+        \end{figure}
+        \item 第二问不难,注意电场需要求出来,设射入电场的粒子$(x_{0},y_{0})$,位移为坐标的负数.$E = \frac{2mv^{2}}{qR} \quad y = - \frac{1}{R} x^{2}$
+        \item 第三问比较特殊,需要设$h$(距离下$x$轴的距离),去求不同高度下打到$y$轴上点的坐标,设进入第二磁场区域的速度方向与$x$轴成$\theta$角,打击点$ y = 2 r \cos{\theta}$
+        $$
+        \cos{\theta} = \frac{1}{\sqrt{1 + \frac{4h}{R}}} = 1 \quad \quad \quad r = \frac{mv}{qB_{2}} = \frac{mv_{0} \sqrt{1+\frac{4h}{R}}}{q B_{2}} = \frac{mv_{0} k}{qB_{2}}
+        $$
+        $$
+        2 r \cos{\theta} = \frac{2mv_{0}}{qB_{2}}
+        $$
+        因此不同速度的粒子打在$y$轴上的点为同一点
+        $$
+        h = 0 \lra r_{0} = \frac{mv_{0}}{qB_{2}} \quad \quad \quad h = R \lra r_{1} = \frac{\sqrt{5} m v_{0}}{qB_{2}} \quad \theta = 0.35\pi
+        $$
+        \begin{align*}
+            S_{0} &= \frac{1}{2} \vdot \pi r_{0}^{2} = \frac{\pi}{2} \vdot (\frac{mv_{0}}{qB_{2}})^{2} \\
+            S{1} &= \pi r_{1}^{2} (\frac{\pi - 2\theta}{2 \pi}) - r_{1}^{2} \sin{\theta} \cos{\theta} = (\frac{3\pi}{4} - 2) \vdot (\frac{m v_{0}}{qB_{2}})^{2} \\
+            S &= S_{0} - S_{1} = (\frac{8-\pi}{4}) \vdot (\frac{m v_{0}}{qB_{2}})^{2}
+        \end{align*}
+    \end{itemize}
         
+
+        \subsection{2022-2023南开中学高一下期末}
+        \subsubsection{I-6}
+        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-8.png}
         \begin{itemize}
-            \item 总结:第一问当光垂直入射介面交界处 or 平行入射介面交界处,光路沿原方向继续传播
-            \item 第二问不难,即光线接触真空区域时,以临界角$\frac{\pi}{2}$射入,值的思考的是遮挡面积是一个圆形域
+            \item 正解:\quad C
+            \item 总结:\quad 此为光波的另一种表现方式,同时\textbf{振动加强点包括波峰叠加和波谷叠加},D选项,质点$a$实际仅在平衡位置振动,并不产生其它方向的位移
         \end{itemize}
 
+        \subsubsection{I-8}
+        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-9.png}
+        \begin{itemize}
+            \item 正解:\quad A
+            \item 总结:\quad 单摆周期公式死记硬背,受迫振动:在周期性外力的持续作用下而进行的振动称为\textbf{受迫振动},振动稳定后齐\textbf{频率}等于外力驱动频率
+            $$
+            T = 2 \pi \sqrt{\frac{L}{g}}
+            $$
+            \begin{proof}
+                证明运动为简谐运动,仅需证明回复力$F = -kx$(多次进行小量近似,很简单)\\
+            \end{proof}
+
+            \begin{proof}
+                证明简谐运动的周期(更复杂的方法请参考朗道等高阶解法)
+                \begin{align*}
+                    F = -\frac{mg}{L} \vdot x &= m \dv[2]{x}{t} \\
+                    \dv[2]{x}{t} + \frac{g}{L}x &= 0 \\
+                    \text{令} \quad \omega &= \sqrt{\frac{g}{L}} \\
+                    \dv[2]{x}{t} + \omega^{2}x &= 0 \\
+                    \text{特征根方程} \quad r^{2} = \omega^{2} \quad r &= \pm \omega i  \\
+                    x = C \sin{(\omega t + \phi)} \quad \lra \quad T = \frac{2 \pi}{\omega} &= 2 \pi \sqrt{\frac{L}{g}}
+                \end{align*}
+            \end{proof}
+        \end{itemize}
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=\textwidth,keepaspectratio]{./pictures/1.3-10.png}
+        \end{figure}
+
         
-        \subsubsection{IV-3}
-        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-6.png}
+        \subsubsection{}
+        \includegraphics[width=50em,keepaspectratio]{./pictures/1.3-11.png}
 
         \begin{itemize}
-            \item 总结:第一问考的\textbf{磁聚焦},粒子旋转半径刚好为磁场半径$R$,也可以取特殊角度$\frac{\pi}{2}$
-            \begin{figure}[h]
-                \centering
-                \includegraphics[width=20em,keepaspectratio]{./pictures/1.3-7.png}
-            \end{figure}
-            \item 第二问不难,注意电场需要求出来,设射入电场的粒子$(x_{0},y_{0})$,位移为坐标的负数.
-            \item 
+            \item 正解:\quad C
+            \item 总结:\quad 
+            \begin{itemize}
+                \item 光的\textbf{频率}$\nu$是本质属性,在任何介质下传播都不发生改变
+                \item 同一介质中不同频率的光,\textbf{其折射率随频率单调递增}
+                \item 同一光在不同介质的折射率不同
+            \end{itemize}
+            \item 扩展:\quad   
+            \begin{formal}
+                符号说明 
+                
+                \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+                    \hline
+                    频率 & 折射率 & 速度 & 临界角 & 波长 & 动量 & 干涉 & 能量 & 逸出功 & 逃逸光子动能   \\
+                    \hline
+                    $f$ & $n$ & $v$ & $C$ & $\lambda$ & $p$ & $\triangle x$ & $\varepsilon$ & $w_{0}$ & $E_{k}$   \\
+                    \hline
+                \end{tabular}
+
+                \vspace*{2em}
+
+                \begin{itemize}
+                    \item 同一介质中不同频率的光  
+                    
+                    \vspace*{1em}
+                    \includegraphics[width=40em,keepaspectratio]{./pictures/1.3-12.png}
+
+                    \vspace*{2em}
+
+                    \item 同一频率的光在不同介质(下标表示不同介质中)中
+                    
+                    \vspace*{1em}
+                    \includegraphics[width=40em,keepaspectratio]{./pictures/1.3-13.png}
+
+                    
+                \end{itemize}
+            \end{formal}
         \end{itemize}
         
-        证明通过相似三角形
+
+        
 
         
     

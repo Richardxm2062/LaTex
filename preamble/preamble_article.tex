@@ -32,18 +32,18 @@
 
 % \eval{}        根据括号内容的大小在右边添加合适的竖线A|          ｜         \dv[n]{f}{x}          n阶微分算符 derivative
 % \abs{}         添加绝对值|A|                                ｜         \pdv[n]{f}{x}         n阶偏微分算符 partialderivative
-% \norm{}        模||A||                                      |          \bra \ket \braket    左、右、内积
+% \norm{}        模||A||                                     |          \bra \ket \braket    左、右、内积
 % \comm{}{}      对易子[A,B]                                  |          \op{}{}              外积(密度算符) outerproduct
 % \anticomm{}{}  反对易子{A,B}                                |          \ev{<力学量>}{<态>}    期望 expectationvalue
-% \vb{}          向量加粗字体                                 |          \mel{}{}{}           矩阵元 matrixelement
-% \va{}          向量                                         |           \mqty                生成矩阵,可跟{} () [] || &分列 \\分行 第一个表示外面无框
-% \vu{}          单位向量                                    ｜          \qty                 合适大小的{}、()等，例如 \qty(x)
+% \vb{}          向量加粗字体                                  |          \mel{}{}{}           矩阵元 matrixelement
+% \va{}          向量                                        |           \mqty                生成矩阵,可跟{} () [] || &分列 \\分行 第一个表示外面无框
+% \vu{}          单位向量                                     ｜          \qty                 合适大小的{}、()等，例如 \qty(x)
 % \vdot          点乘                                        ｜
 % \cross         叉乘                                        ｜
 % \grad          梯度 gradient                               ｜
 % \div           散度 divergenc                              ｜
-% \curl          旋度                                         |
-% \laplacian     拉普拉斯算符                                 |
+% \curl          旋度                                        |
+% \laplacian     拉普拉斯算符                                  |
 
 %文本底纹实现
 \usepackage{lipsum}                                         %该宏包是通过 \lipsum 命令生成一段本文，正式使用时不需要引用该宏包
@@ -82,7 +82,6 @@
 %直接使用wolfram代码
 % \wolfram[<format>]{<code>}    \wolframgraphics[<format>]{<code>}{<filename>} 
 %具体使用方法查看 latexalpha2.pdf
-
 
 
 %预设
@@ -132,8 +131,6 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \end{comment}
 
 
-
-
 %作业包(需要的时候再解除注释)
 %\usepackage{iidef}
 %建议使用自己的slt解环境
@@ -142,32 +139,34 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
     package iidef:
         指定学校名      \thecourseinstitute{}      
         指定课程名      \thecoursename{} 
-	    指定学期        \theterm{}
+	   指定学期        \theterm{}
         作业名         \hwname{}
         生成作业标题    \courseheader           放在document环境内 不需要再maketile
         名字           \name                   放在document环境内
         自动编号环境    \begin{enumerate}       
-        题号           \item                   自动编号 
+        题号           \item                   自动编号,\item[]则不带符号
         证明           \begin{proof}           证明环境由amsthm包提供
         求解           \begin{solution}       
         方程           \begin{equation}        
         方程编号        \labe{eq:[number]}      为方程设置编号  
         引用房产        \eqref{eq:[number]}     引用方程
         行内方程        $...$
+        
         多行公式        \begin{align} \begin{align*}则不会编号  
                             ... & = ... \\ 
                                 & = ...
                        \begin{array}{lcl}      
                             ... & = & ... \\ 
                             ... & = & ...
-        方程组          \begin{cases}
-                            ... & \mbox{if} x \mbox{is even} \\ 带假设
+        
+          方程组        \begin{cases}
+                       ... & \mbox{if} x \mbox{is even} \\ 带假设
+                       
                        带编号
                        \begin{numcases}{}
                             \label{1}   \\
                             \label{2}   
                        \end{numcases}
-
 \end{comment}
 
 
