@@ -5,7 +5,7 @@
 \usepackage{indentfirst}                                    %首行缩进
 \usepackage[dvipsnames,svgnames]{xcolor}                    %颜色包:\color{}
 \usepackage{enumitem}                                       %控制item的前置符号
-
+\usepackage{adjustbox}                                      %控制文字大小和添加底纹
 
 
 %图片宏包
@@ -16,6 +16,7 @@
 
 %数学相关
 \usepackage{amsmath,amsthm}                                 %amsmath包应该在前
+\usepackage{extarrows}                                      %使用长等号A \xlongequal{\quad\quad}B
 \usepackage{cases}                                          %\begin{numcases}可以为方程编号
 
 
@@ -98,7 +99,7 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \newtheorem{lemma}{引理}[section]                            %定义新环境 lemma,命名为引理,以 节 开始编号
 \newtheorem*{lemma*}{引理}                                   %定义新环境 lemma,命名为引理,无编号
 \newtheorem{corollary}{推论}                                 %定义新环境 corollary,命名为推理,有编号
-\newtheorem*{corollary*}{推论}                                %定义新环境 corollary*,命名为推理,无编号
+\newtheorem*{corollary*}{推论}                               %定义新环境 corollary*,命名为推理,无编号
 \renewcommand{\proofname}{ \qquad \bf 证明}                  %更改proof为中文证明,proof环境默认存在
 
 %一些def
@@ -107,7 +108,9 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \def\clindent{\setlength{\parindent}{4em}}                   %clindent
 \def\sdr{Schr\"{o}dinger}                                    %薛定谔名字
 \def\intff{\int_{-\infty}^{+\infty}}                         %积分为(-\infty,+\infty)的积分
+\def\ra{\rightarrow}                                         %右键头\ra
 \def\lra{\Longrightarrow}                                    %长右键头\lra
+\def\lla{\Longleftarrow}                                     %长左键头\lla
 \def\llra{\Longleftrightarrow}                               %等价箭头\llra
 
 \def\psii#1{\psi_{#1}}                                       %常用的\psi下标
@@ -126,6 +129,7 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
         远大于                  \gg
         远小于                  \ll
         花括号                  \left\{ \right\}   (建议使用\qty)
+        弧度                    37^{\circ}
 
 
 \end{comment}
@@ -139,7 +143,7 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
     package iidef:
         指定学校名      \thecourseinstitute{}      
         指定课程名      \thecoursename{} 
-	   指定学期        \theterm{}
+	    指定学期        \theterm{}
         作业名         \hwname{}
         生成作业标题    \courseheader           放在document环境内 不需要再maketile
         名字           \name                   放在document环境内
@@ -159,14 +163,35 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
                             ... & = & ... \\ 
                             ... & = & ...
         
-          方程组        \begin{cases}
+        方程组          $$
+                        \begin{cases}
                        ... & \mbox{if} x \mbox{is even} \\ 带假设
+                       $$
                        
                        带编号
                        \begin{numcases}{}
                             \label{1}   \\
                             \label{2}   
                        \end{numcases}
+        
+        文字大小和底纹
+                       
+                       \begin{adjustbox}{minipage=0.91\linewidth, bgcolor=gray!20, padding=1em}
+                       \small % 将字号变小为 small
+                        text
+                       \end{adjustbox}
+
+        居中            不要使用$$...$$,会对齐失效 使用$...$即可
+                        \begin{center}
+            
+                        \end{center}
+
+        左对齐           
+                        \begin{flushleft}
+            
+                        \end{flushleft}
+
+    
 \end{comment}
 
 
