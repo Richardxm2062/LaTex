@@ -484,6 +484,35 @@ $$
 
 \vspace{2em}
 
+\subsubsection{II-2:斜面弹簧组合体简谐振子}
+\includegraphics[width = 20em]{./pictures/2.1-7.png}
+\hspace{2em}
+\includegraphics[width = 20em]{./pictures/2.1-8.png}
+
+\begin{itemize}
+    \item 正解:AD
+    \item 总结:
+    题目的过程较为复杂,我们需要理清每一个阶段
+    \begin{enumerate}
+        \item 初始阶段,物块$A$静止,弹簧被压缩至$x_{1} = \frac{mg\sin{\alpha}}{k}$
+        \item 组合体阶段,题目的关键信息:组合体运动过程中\textbf{恰好}不离开弹簧,因此在恢复原长时组合体的速度为$0$.此时的回复力$F_{\text{回}} = 2mg\sin{\alpha}$(向下),
+        由简谐振动的性质,压缩到最大时的回复力大小也应该如此,因此$kx_{2} - 2mg\sin{\alpha} = 2mg\sin{\alpha} \quad \lra \quad x_{3} = \frac{4mg\sin{\alpha}}{k}$.
+        
+        由此可得弹簧的最大弹性势能$ E_{pmax} = \frac{1}{2}kx_{2}^{2} = \frac{8m^{2}g^{2}\sin^{2}{\alpha}}{k} = 8J \quad (J = \frac{m^{2}g^{2}\sin^{2}{\alpha}}{k} )$
+
+        \item 研究组合体最大的动能,显然我们需要找到谐振运动的平衡点即$F_{\text{回}} = 0$的位置$x_{2} = \frac{2mg\sin{\alpha}}{k} $.
+        
+        因此在组合体从弹簧原长位置到平衡位置的过程中,弹簧弹性势能增加量$ \triangle E_{p} = 2J $,重力势能的减少量$ \triangle E_{g}2mgx_{2}\sin{\alpha} = 4J $ ,所以组合体的动能为$2J$
+
+        \item 计算$PQ$距离重要在于研究初始位置$x_{1}$的碰撞问题得到速度,碰撞后成为组合体的动量守恒问题比较简单$ mv = 2mv^{'} \quad v^{'} = \frac{v}{2} $.组合体的速度从初始位置压缩到最大位置$x_{3}$(速度变为$0$),
+        其中重力势能的减少量$ \triangle E_{g} = 2mg(x_{3} - x_{1})\sin{\alpha} = 6J$,弹簧弹性势能的增加量$ \triangle E_{p} = 8J - \frac{1}{2}J  = \frac{15}{2}J$,所以组合体的初动能为$\frac{3}{2}J$,因策
+        得到$v^{'} = \sqrt{\frac{3mg^{2}\sin^{2}{\alpha}}{2k}} \quad \lra \quad v = 2 v^{'} \quad mgx_{PQ}\sin{\alpha} = \frac{1}{2}mv^{2} \quad x_{PQ} = \frac{3mg\sin{\alpha}}{k} $
+    \end{enumerate}
+\end{itemize}
+
+
+\vspace{2em}
+
 \subsubsection{IV-1:干涉计算}
 \includegraphics[width = 50em]{./pictures/2.1-4.png}
 
