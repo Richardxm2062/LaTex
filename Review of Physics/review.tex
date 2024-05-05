@@ -7,60 +7,230 @@
 
 
 \begin{document}
-    \maketitle
-    \tableofcontents
-    \newpage
+\maketitle
+\tableofcontents
+\zihao{-4}
+\newpage
 
-    \section{匀变速直线运动问题}
+\section{匀变速直线运动问题}
 
-    \subsection{中间时刻/平均速度}
-    中间时刻速度$v_{\frac{t}{2}}$与平均速度$\overline{v}$是同一个值
-    $$
-    v_{\frac{t}{2}} = v_{0} + \frac{at}{2} = \frac{v_{0}}{2} +  (\frac{v_{0}}{2} + \frac{at}{2})   = \frac{v_{0}+v_{t}}{2} = \overline{v}   
-    $$
-    中间位置速度
-    
-    \begin{numcases}{}
-        \label{1} 2 a\frac{x}{2} = v_{\frac{x}{2}}^{2} - v_{0}^{2}  \\
-        \label{2} 2 a\frac{x}{2} = v_{t}^{2} - v_{\frac{x}{2}}^{2} 
-    \end{numcases}
-    由方程$(1) - (2)$ 得到 $ v_{\frac{x}{2}} = \sqrt{\frac{v_{0}^{2} + v_{t}^{2}}{2}} $
-    
-    \subsection{纸带加速度问题}
-    纸带的特点是,每个打印点的时间间隔相同均为$T$,且$x_{n}$规定的是第$n$个时间间隔内的位移,并非到起点的距离
+\subsection{中间时刻/平均速度}
+中间时刻速度$v_{\frac{t}{2}}$与平均速度$\overline{v}$是同一个值
+$$
+    v_{\frac{t}{2}} = v_{0} + \frac{at}{2} = \frac{v_{0}}{2} +  (\frac{v_{0}}{2} + \frac{at}{2})   = \frac{v_{0}+v_{t}}{2} = \overline{v}
+$$
 
-    \begin{corollary*}
-        相邻位移之间的差为$aT^{2}$,等时位移比例式为$x_{1}:x_{2}:x_{3} : \dots : x_{n} = 1:3:5: \dots :2n-1  $
-    \end{corollary*}
+中间位置速度
+
+\begin{numcases}{}
+    \label{1} 2 a\frac{x}{2} = v_{\frac{x}{2}}^{2} - v_{0}^{2}  \\
+    \label{2} 2 a\frac{x}{2} = v_{t}^{2} - v_{\frac{x}{2}}^{2}
+\end{numcases}
+
+由方程$(1) - (2)$ 得到 $ v_{\frac{x}{2}} = \sqrt{\frac{v_{0}^{2} + v_{t}^{2}}{2}} $
+
+\subsection{纸带加速度问题}
+纸带的特点,每个计时点的时间间隔相同均为$T$,且$x_{n}$规定的是第$n$个时间间隔内的位移,并非到起点的距离
+
+\begin{corollary*}
+    相邻位移之间的差为$aT^{2}$,等时位移比例式为$x_{1}:x_{2}:x_{3} : \dots : x_{n} = 1:3:5: \dots :2n-1  $
+\end{corollary*}
+\begin{proof}
+    \begin{align*}
+        x_{n} = \frac{1}{2}a (nT)^{2} -  \frac{1}{2}a [(n-1)T]^{2} & = aT^{2} (\frac{2n-1}{2}) \\
+        x_{n-1}                                                    & = aT^{2} (\frac{2n-3}{2}) \\
+        x_{n} - x_{n-1}                                            & = aT^{2}
+    \end{align*}
+\end{proof}
+
+\begin{corollary*}
+    等位移比例式子($1m$,$2m$,$3m \dots$)    \\
+    前$1m,2m,3m \dots n \, m$所用时间比为$1:\sqrt{2}:\sqrt{3}:\dots:\sqrt{n}$,若是第$i\,m$内则向前减一个就行
     \begin{proof}
         \begin{align*}
-            x_{n} = \frac{1}{2}a (nT)^{2} -  \frac{1}{2}a [(n-1)T]^{2} &= aT^{2} (\frac{2n-1}{2}) \\
-            x_{n-1} &= aT^{2} (\frac{2n-3}{2})      \\
-            x_{n} - x_{n-1} &= aT^{2}
+            1 & = \frac{1}{2}a t_{1}^{2} \lra t_{1} =\sqrt{\frac{2}{a}} \vdot \sqrt{1} \\
+            2 & = \frac{1}{2}a t_{2}^{2} \lra t_{2} =\sqrt{\frac{2}{a}} \vdot \sqrt{2} \\
+            3 & = \frac{1}{2}a t_{3}^{2} \lra t_{3} =\sqrt{\frac{2}{a}} \vdot \sqrt{3} \\
+            n & = \frac{1}{2}a t_{n}^{2} \lra t_{n} =\sqrt{\frac{2}{a}} \vdot \sqrt{n} \\
         \end{align*}
     \end{proof}
-    
-    \begin{corollary*}
-        等位移比例式子($1m$,$2m$,$3m \dots$)    \\
-        前$1m,2m,3m \dots n \, m$所用时间比为$1:\sqrt{2}:\sqrt{3}:\dots:\sqrt{n}$,若是第$i\,m$内则向前减一个就行
-        \begin{proof}
-            \begin{align*}
-                1 &= \frac{1}{2}a t_{1}^{2} \lra t_{1} =\sqrt{\frac{2}{a}} \vdot \sqrt{1}     \\
-                2 &= \frac{1}{2}a t_{2}^{2} \lra t_{2} =\sqrt{\frac{2}{a}} \vdot \sqrt{2}     \\
-                3 &= \frac{1}{2}a t_{3}^{2} \lra t_{3} =\sqrt{\frac{2}{a}} \vdot \sqrt{3}     \\  
-                n &= \frac{1}{2}a t_{n}^{2} \lra t_{n} =\sqrt{\frac{2}{a}} \vdot \sqrt{n}     \\
-            \end{align*}
-            
-            
-            
-        \end{proof}
-    \end{corollary*}
-    
+\end{corollary*}
 
-    
+\vspace{2em}
+
+\section{机械振动}
+\subsection{简谐振动}
+\begin{itemize}
+    \item 定义: 具有平衡位置,回复力形如$F_{\text{回}} = -kx$(来自合外力或其分力)
+    \item 振子方程: $\sin{(\omega t + \varphi)}$
+    \item 同侧法: 质点振动速度方向$v_{f}$与波传播方向$u$在正弦函数线的同一侧
+    \item 摆周期: $T = 2\pi \sqrt{\frac{L}{g}}$
+    \item 受迫振动:在周期性外力的持续作用下而进行的振动称为\textbf{受迫振动},振动稳定后齐\textbf{频率}等于外力驱动频率
+    \item 等效绳长与等效加速度问题:
+    \begin{itemize}
+        \item 等效绳长: 确定为简谐振动,通过几何关系确定摆心
+        \item 等效加速度: 主要区别电梯摆和电场摆,前者需要变换参考系(非惯性力)
+    \end{itemize}
+    \item  造成波的多解性的三大原因:
+    \begin{itemize}
+        \item \textbf{波的周期性:}\hspace{1em}
+              $\begin{cases}
+                      \text{时间周期性:时间间隔}\triangle t \text{与周期} T \text{的关系不明确} \\
+                      \text{空间周期性:波传播距离}\triangle x \text{与波长} \lambda \text{的关系不明确}
+                  \end{cases}$
+
+        \item \textbf{波的双向性:}\hspace{1em}
+              $\begin{cases}
+                      \text{传播方向双向性:波的传播方向不确定} \\
+                      \text{振动方向双向性:质点振动方向不确定}
+                  \end{cases}$
+
+        \item \textbf{波形隐含性:}\hspace{1em}
+              $\begin{cases}
+                      \text{在波动问题中,有时只给出几个特殊点} \\
+                      \text{(大多是两个特殊的点)的运动状态,其余信息均处于隐含状态}
+                  \end{cases}$
+    \end{itemize}
+\end{itemize}
+
+\vspace{2em}
 
 
-    
+\subsection{数学准备}
+\begin{formal}
+    \begin{itemize}
+        \item 展开
+              $$ \sin{(\theta \pm \beta)} = \sin{\theta}\cos{\theta} \pm \cos{\theta}\sin{\theta} $$
+              $$ \cos{(\theta \pm \beta)} = \cos{\theta}\cos{\theta} \mp \sin{\theta}\sin{\theta} $$
+              $$ \tan{(\theta \pm \beta)} = \dfrac{\tan{\theta} \pm \tan{\beta}}{1 \mp \tan{\theta}\tan{\beta}}$$
+
+        \item 余补关系
+              $$ \sin{(\pi - \theta)} = \sin{\theta} \quad \cos{(\pi - \theta)} = - \cos{\theta} \quad \tan{(\pi - \theta)} = -\tan{\theta}$$
+
+              \includegraphics[width = 20em]{./pictures/1.png}
+
+        \item 正弦定理
+              $$ \dfrac{a}{\sin{\alpha}} = \dfrac{b}{\sin{\beta}} = \dfrac{c}{\sin{\gamma}}   $$
+
+        \item 余弦定理
+              $$ \cos{\gamma} = \dfrac{a^{2}+b^{2} - c^{2}}{2ab} $$
+
+        \item 二倍角
+              $$ \sin{2\theta} = 2\sin{\theta}\cos{\theta} \quad \cos{2\theta} = \cos^{2}{\theta} - \sin^{2}{\theta} \quad \tan{2\theta} = \dfrac{2\tan{\theta}}{1-\tan^{2}{\theta}}$$
+
+        \item 降次
+              $$ \sin^{2}{\theta} = \dfrac{1 - \cos{2\theta}}{2} \quad \cos^{2}{\theta} = \dfrac{1 + \cos{2\theta}}{2} \quad \tan^{2}{\theta} = \dfrac{1-\cos{2\theta}}{1+\cos{2\theta}}$$
+    \end{itemize}
+\end{formal}
+
+\vspace{2em}
+
+\vspace{2em}
+
+\section{光学}
+\subsection{折射率}
+
+\begin{itemize}
+    \item 定义式:
+          $$
+              n = \dfrac{\sin{\text{大角}}}{\sin{\text{小角}}}
+          $$
+    \item 决定式:
+          $$
+              n = \dfrac{c}{v}
+          $$
+    \item 全反射:
+          \begin{align*}
+              \text{光密介质} \, \ra \, \text{光疏介质} \quad \sin{\text{大角}} & = 1 \,(\text{大角} = \frac{\pi}{2}) \\
+              \text{临界角} \quad \sin{C}                                & = \frac{1}{\sin{\text{小角}}}
+          \end{align*}
+    \item 视深与视高:
+          \begin{itemize}
+              \item[] $H$为物点距离界面的高度;\,$h$为像点距离界面的高度
+              \item 视深: \quad
+                    从介质外看向介质内 \quad $h = \frac{1}{n} H$
+              \item 视高: \quad
+                    从介质内看向介质外 \quad $ h = n H $
+          \end{itemize}
+    \item 实验误差分析:
+          \begin{itemize}
+              \item 非平行玻璃砖 $\quad n_{\text{测}} = n_{\text{真}}$
+              \item 整体平移  $\quad d_{\text{测}} = d_{\text{玻}} \quad n_{\text{测}} = n_{\text{真}}$
+              \item 其他情况  $\quad n_{\text{测}} \text{和} n_{\text{真}} \text{的大小关系} \,\text{与}\, d_{\text{测}} \text{和} d_{\text{玻}}\text{的大小关系相反}$
+          \end{itemize}
+\end{itemize}
+
+\vspace{2em}
+
+\subsection{干涉实验}
+\begin{itemize}
+    \item[] 薄膜干涉: $\delta = 2d$
+        \begin{itemize}
+            \item[] 明暗条纹位置由波长和此处厚度共同决定
+            \item[] 相邻明(暗)条纹对应的薄膜厚度差为$\frac{\lambda}{2} \quad \lambda$应为光在介质中传播时的波长
+        \end{itemize}
+    \item[] 劈尖干涉: 样板下表面和被检查平面的上表面的反射光发生干涉
+
+        \hspace{5em}(标准板的厚度太厚大于相干长度)
+
+        \begin{itemize}
+            \item[] 验平问题:
+                \begin{itemize}
+                    \item[] 若待测板平整,干涉条纹等距
+                    \item[] 若条纹\textbf{偏头},则条纹提前出现,此处光程差偏大,因此待测样板此处凹
+                    \item[] 若条纹\textbf{偏尾},则条纹延后,此处光程差偏小,因此待测样板此处凸
+                \end{itemize}
+            \item[] 条纹间距问题:
+                \begin{itemize}
+                    \item[] 薄片(支撑两个板)的移动改变$\theta$角 $\quad \triangle l = \dfrac{\triangle d}{\tan{\theta}} \quad
+                            \triangle d = f(\lambda) = \dfrac{\lambda}{2}$
+                \end{itemize}
+            \item[] 增反膜;增透膜: 入射光能量 = 折射光能量 + 反射光能量
+
+                \hspace{4em}(注:光疏到光密反射光产生半波损失,$n_{\text{膜}}$介于空气和另一介质之间)
+
+                \hspace{4em}增透膜:反射光相消$2d = \frac{\lambda}{2} (2n+1)$
+
+                \hspace{4em}增反膜:反射光相长$2d = \frac{\lambda}{2} (2n) $
+        \end{itemize}
+
+    \item[] 双缝干涉: $\triangle d = \lambda \dfrac{L}{d} \,$ (条纹间距$\triangle d $,双缝间距$d$,缝板距离$L$)
+\end{itemize}
+
+\vspace{2em}
+
+\subsection{总结}
+\begin{formal}
+    符号说明
+
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+        \hline
+        频率  & 折射率 & 速度  & 临界角 & 波长        & 动量  & 干涉            & 能量            & 逸出功     & 逃逸光子动能  \\
+        \hline
+        $f$ & $n$ & $v$ & $C$ & $\lambda$ & $p$ & $\triangle x$ & $\varepsilon$ & $w_{0}$ & $E_{k}$ \\
+        \hline
+    \end{tabular}
+
+    \vspace*{2em}
+
+    \begin{itemize}
+        \item 同一介质中不同频率的光
+
+              \vspace*{1em}
+              \includegraphics[width=35em,keepaspectratio]{./pictures/2.png}
+
+              \vspace*{2em}
+
+        \item 同一频率的光在不同介质(下标表示不同介质中)中
+
+              \vspace*{1em}
+              \includegraphics[width=35em,keepaspectratio]{./pictures/3.png}
+    \end{itemize}
+\end{formal}
+
+
+
+
 
 
 
