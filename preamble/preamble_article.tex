@@ -25,11 +25,12 @@
 \usepackage{multirow}                                       %插入表格用到的宏包:\begin{tabular}{|c|c|},&分列,\\分行,\hline插入横线(第二个参数是列数)
 \usepackage{listings}                                       %插入代码等:\begin{lstlisting}[breaklines=true,backgroundcolor=\color{lightgray},title=]
 \usepackage{verbatim}                                       %使用 comment 环境进行注释
-\usepackage{extarrows}                                      %使用长等号\xlongequal
+
 
 %物理包
 \usepackage{physics}
 \usepackage{xparse}                                         %physics需求的包
+\usepackage{mhchem}                                         %输入原子核的表式\ce{^238_92U}
 
 % \eval{}        根据括号内容的大小在右边添加合适的竖线A|          ｜         \dv[n]{f}{x}          n阶微分算符 derivative
 % \abs{}         添加绝对值|A|                                ｜         \pdv[n]{f}{x}         n阶偏微分算符 partialderivative
@@ -109,9 +110,12 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \def\sdr{Schr\"{o}dinger}                                    %薛定谔名字
 \def\intff{\int_{-\infty}^{+\infty}}                         %积分为(-\infty,+\infty)的积分
 \def\ra{\rightarrow}                                         %右键头\ra
-\def\lra{\Longrightarrow}                                    %长右键头\lra
-\def\lla{\Longleftarrow}                                     %长左键头\lla
+\def\lra{\Longrightarrow}                                    %长(双)右键头\lra
+\def\lla{\Longleftarrow}                                     %长(双)左键头\lla
 \def\llra{\Longleftrightarrow}                               %等价箭头\llra
+\def\xlra{\xlongrightarrow{\quad\quad}}                      %超长右箭头
+\def\xlla{\xlongleftarrow{\quad\quad}}                       %超长左箭头
+\def\xlla{\xlongleftrightarrow{\quad\quad}}                  %超长等价箭头
 
 \def\psii#1{\psi_{#1}}                                       %常用的\psi下标
 \def\psiii#1#2{\psi_{#1} (#2)}                               %常用的\psi下标和括号
@@ -120,6 +124,8 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
 \def\pp#1#2{\psi_{#1}^{(#2)}}                                %波函数修正
 \def\ua{a_{+}}                                               %升算符
 \def\da{a_{-}}                                               %降算符
+
+\def\nuc#1#2#3{\ce{^{#1}_{#2}{#3}}}                          %原子核的表示形式
 
 
 %其他备注
@@ -175,11 +181,12 @@ linkcolor=black,urlcolor=blue}                              %对hyperref 包进�
                        \end{numcases}
         
         文字大小和底纹
-                       
+                       \vspace{-1em}
                        \begin{adjustbox}{minipage=0.91\linewidth, bgcolor=gray!20, padding=1em}
                        \small % 将字号变小为 small
                         text
                        \end{adjustbox}
+                       \vspace{-1em}
 
         居中            不要使用$$...$$,会对齐失效 使用$...$即可
                         \begin{center}
