@@ -1,28 +1,43 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,12pt,twoside]{article}
 \input{/Users/richard/Github/LaTex/preamble/preamble_article.tex}
 \usepackage{titlesec}
-\usepackage{fancyhdr}
+\usepackage{eso-pic}
+\usepackage{tikz}
 \definecolor{navy}{RGB}{31,67,103}
+% A4 双面裁切：从整页左、上边起量，保留区为 182 mm × 257 mm。
+% 右侧裁去 28 mm，下侧裁去 40 mm；版心与裁切线间保留安全边距。
+\geometry{a4paper,twoside,inner=6mm,outer=34mm,top=6mm,bottom=46mm}
+\renewcommand{\contentsname}{目录}
+% 每页标出裁切线：保留左上 182 mm × 257 mm，裁去右侧 28 mm 与下侧 40 mm。
+\AddToShipoutPictureFG{%%
+    \begin{tikzpicture}[remember picture,overlay]
+        \ifodd\value{page}
+            \draw[gray,densely dashed,line width=0.4pt]
+                ([xshift=182mm]current page.north west) --
+                ([xshift=182mm,yshift=-297mm]current page.north west);
+        \else
+            \draw[gray,densely dashed,line width=0.4pt]
+                ([xshift=28mm]current page.north west) --
+                ([xshift=28mm,yshift=-297mm]current page.north west);
+        \fi
+        \draw[gray,densely dashed,line width=0.4pt]
+            ([yshift=-257mm]current page.north west) --
+            ([xshift=210mm,yshift=-257mm]current page.north west);
+    \end{tikzpicture}
+}
 \titleformat{\section}{\Large\bfseries\color{navy}}{\thesection}{0.7em}{}[\color{navy}\titlerule]
 \titleformat{\subsection}{\large\bfseries\color{navy}}{\thesubsection}{0.6em}{}
 \titleformat{\subsubsection}{\normalsize\bfseries\color{navy}}{\thesubsubsection}{0.6em}{}
 \titlespacing*{\section}{0pt}{1.8ex plus .5ex}{1ex}
 \setlist[itemize]{leftmargin=2.2em,itemsep=.45ex,topsep=.5ex,parsep=0pt}
 \setlist[enumerate]{leftmargin=2.5em,itemsep=.8ex,topsep=.6ex}
-\setlength{\headheight}{15pt}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{高中物理\quad 磁场基础}
-\fancyhead[R]{知识框架与基本概念}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-\title{\vspace{-1.5em}\color{navy}\Huge 磁场\\[.35em]\large 知识框架与基本概念}
-\author{}\date{}
+\pagestyle{empty}
 \begin{document}
-\maketitle
-\vspace{-2em}
+\begin{center}
+    {\Large\bfseries\color{navy}磁场知识框架与基本概念}
+\end{center}
 \tableofcontents
-\newpage
+\cleardoublepage
 
 \section{磁现象与磁场}
 
@@ -165,7 +180,7 @@
     \item \textbf{矢量合成：}按平行四边形定则合成各分磁场，所得合矢量就是该点的磁感应强度。
 \end{enumerate}
 \[
-    \vb{B}=\vb{B}_1+\vb{B}_2+\cdots
+    \va{B}=\va{B}_1+\va{B}_2+\cdots
 \]
 \begin{itemize}
     \item 若各分磁场同向，合磁感应强度大小相加。
