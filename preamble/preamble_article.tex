@@ -6,6 +6,8 @@
 \usepackage[dvipsnames,svgnames]{xcolor}                    %颜色包:\color{}
 \usepackage{enumitem}                                       %控制item的前置符号
 \usepackage{adjustbox}                                      %控制文字大小和添加底纹
+\let\oldtextbf\textbf
+\renewcommand{\textbf}[1]{\raisebox{-0.1ex}{\oldtextbf{#1}}}%使得中文加粗的向下偏移
 
 
 %图片宏包
@@ -89,6 +91,10 @@
 %预设
 \geometry{a4paper,left=5em,right=5em,bottom=5em,top=5em}    %设置为a4paper最好,点击pacakge geometry 查看文档
 \setlength{\parindent}{2em}                                 %2em(注意不支持rem)代表每一段的首行缩进两个字符，某一行不缩进时使用 \noindent
+
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=$\circ$}
+\setlist[itemize,3]{label=$\rightarrow$}
 
 \hypersetup{hidelinks,colorlinks=true,
 linkcolor=black,urlcolor=blue}                              %对hyperref 包进行预设
